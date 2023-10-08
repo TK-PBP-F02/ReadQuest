@@ -2,11 +2,11 @@
 
 ### Angota Kelompok
 ------
-`Abbilhaidar Farras Zulfikar`
-`Johanes Wisanggeni`
-`Elena Zahra Kurniawan`
-`Muhammad Hafiz`
-`Rifqi Pratama Artyanto`
+`Abbilhaidar Farras Zulfikar`  
+`Johanes Wisanggeni`  
+`Elena Zahra Kurniawan`  
+`Muhammad Hafiz`  
+`Rifqi Pratama Artyanto`  
 
 ### Aplikasi ReadQuest
 ------
