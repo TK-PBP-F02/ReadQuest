@@ -1,5 +1,7 @@
 # ReadQuest
 
+![Alt text](ReadQuestLogo.png)
+
 ### Angota Kelompok
 ------
 `Abbilhaidar Farras Zulfikar`  
