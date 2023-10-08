@@ -17,11 +17,11 @@ Selain itu pengguna juga dapat membuat bukunya tersendiri dimana bukunya dapat d
 Dengan menggabungkan konsep permainan yang asik melalui misi, ranking dan achivement dan konsep literasi buku yang penting di dalam kehidupan, ReadQuest bertujuan menjadikan literasi buku yang terasa membosankan menjadi asik dengan memberika fitur-fitur seperti permainan ke dalam literasi. Serta menyediakan tempat dimana sesama pencinta buku dapat berdiskusi dan memberikan tanggapan-tanggapan mereka.
 
 Manfaat atau Tujuan ReadQuest :  
-..*Memberikan tempat dimana pengguna dapat mencari buku yang diingikanya serta measukanya ke dalam wishlistnya.
-..*ReadQuest menyediakan tempat diskusi antara sesama pencinta buku untuk asling berdiskusi dan memberikan tanggapan mereka.
-..*ReadQuest juga memberikan tempat bagi para pengguna yang tertarik untuk menulis buku, untuk menciptakan dan mengpublish bukunya sendiri ke dalam aplikasi.
-..*Untuk membuat literasi menjadi tidak terasa membosankan ReadQuest menggabungkan konsep bermain seperti ranking dan leaderboard.
-..*Pengguna dapat memperoleh point BC dan achivement untuk membuat literasi menjadi lebih asik.
+- Memberikan tempat dimana pengguna dapat mencari buku yang diingikanya serta measukanya ke dalam wishlistnya.
+- ReadQuest menyediakan tempat diskusi antara sesama pencinta buku untuk asling berdiskusi dan memberikan tanggapan mereka.
+- ReadQuest juga memberikan tempat bagi para pengguna yang tertarik untuk menulis buku, untuk menciptakan dan mengpublish bukunya sendiri ke dalam aplikasi.
+- Untuk membuat literasi menjadi tidak terasa membosankan ReadQuest menggabungkan konsep bermain seperti ranking dan leaderboard.
+- Pengguna dapat memperoleh point BC dan achivement untuk membuat literasi menjadi lebih asik.
 
 ### Modul Aplikasi ReadQuest
 ------
