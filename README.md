@@ -25,7 +25,10 @@ Manfaat atau Tujuan ReadQuest :
 
 ### Modul Aplikasi ReadQuest
 ------
-
+1. *Round Table* : Forum diskusi dimana pengguna dapat berinteraksi satu sama lain, membahas segala macam topik seperti memberi tanggapan atau penilaian pada suatu buku.
+2. *Inventory* : Isi dari buku-buku wishlist buku yang ingin dibaca, buku yang sedang dibaca ataupun buku yang sudah pernah dibaca oleh pengguna.
+3. *Make Journey Jurnal* : Pengguna mebuat bukunya sendiri yang kemudian dapat dipublish dan dibaca oleh pengguna-pengguna lain.
+4. *Quest* : Achivement-achivement atau misi-misi yang dapat dilaksanakan oleh pengguna untuk memperoleh point.
 
 ### Sumber Dataset Katalog
 ------
@@ -35,4 +38,4 @@ Manfaat atau Tujuan ReadQuest :
 ------
 1. *Unlogin/Unprepared Warrior* : Pengguna yang tidak login atau tidak memiliki akun, maka pengguna tetap dapat mengakses aplikasi seperti mengakses katalog buku tetapi dengan fitur yang jauh lebih sedikit.  
 2. *Login/Prepared Warrior* : Pengguna yang memiliki akun dan sudah login, maka pengguna dapat memiliki fitur tambahan seperti memiliki wishlist, membuat buku, memulai forum diskusi dan memperoleh point.  
-3. *Aplication Master/Admin* : Admin yang memiliki privilage otoritas yang lebih banyak dan lebih tinggi dibanding pengguna-pengguna lain, seperti dapat memeriksa info user, memblokir user dan sebagainya.  
+3. *Aplication Master/Admin* : Admin yang memiliki privilage otoritas yang lebih banyak dan lebih tinggi dibanding pengguna-pengguna lain, seperti dapat memeriksa info user, memblokir user, membuat quest dan sebagainya.  
