@@ -31,7 +31,7 @@ Manfaat atau Tujuan ReadQuest :
 2. *Inventory* : Isi dari buku-buku wishlist buku yang ingin dibaca, buku yang sedang dibaca ataupun buku yang sudah pernah dibaca oleh pengguna.
 3. *Make Journey Jurnal* : Pengguna membuat bukunya sendiri yang kemudian dapat dipublish dan dibaca oleh pengguna-pengguna lain.
 4. *Quest* : Achivement-achivement atau misi-misi yang dapat dilaksanakan oleh pengguna untuk memperoleh point.
-5. *Quest Calender* : Membuat jadwal membaca buku atau membuat buku atau melakukan aktifitas lainnya.
+5. *Leaderboard Ranking* : Ranking leaderboard untuk tiap user yang mendaftarkan dirinya ke dalam leaderboard untuk bisa di ranking di dalam sistem ranking leaderboard.
 
 ### Sumber Dataset Katalog
 ------
