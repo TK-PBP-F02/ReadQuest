@@ -29,7 +29,7 @@ Manfaat atau Tujuan ReadQuest :
 ------
 1. *Round Table* : Forum diskusi dimana pengguna dapat berinteraksi satu sama lain, membahas segala macam topik seperti memberi tanggapan atau penilaian pada suatu buku.
 2. *Inventory* : Isi dari buku-buku wishlist buku yang ingin dibaca, buku yang sedang dibaca ataupun buku yang sudah pernah dibaca oleh pengguna.
-3. *Make Journey Jurnal* : Pengguna mebuat bukunya sendiri yang kemudian dapat dipublish dan dibaca oleh pengguna-pengguna lain.
+3. *Make Journey Jurnal* : Pengguna membuat bukunya sendiri yang kemudian dapat dipublish dan dibaca oleh pengguna-pengguna lain.
 4. *Quest* : Achivement-achivement atau misi-misi yang dapat dilaksanakan oleh pengguna untuk memperoleh point.
 5. *Quest Calender* : Membuat jadwal membaca buku atau membuat buku atau melakukan aktifitas lainnya.
 
