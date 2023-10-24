@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+{% block content %}
 <head>
     <title>Add Books from Google Books API</title>
 </head>
@@ -15,4 +15,4 @@
     
     <a href="{% url 'books:display_all_books' %}">Back to Home</a>
 </body>
-</html>
+{% endblock content %}
