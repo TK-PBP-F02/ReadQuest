@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Book by ID</title>
+</head>
+<body>
+    <h1>Remove Book by ID</h1>
+    <p>Enter the ID of the book you want to remove:</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="number" name="pk" required>
+        <button type="submit">Remove Book</button>
+    </form>
+    <a href="{% url 'books:display_all_books' %}">Cancel</a>
+</body>
+</html>
