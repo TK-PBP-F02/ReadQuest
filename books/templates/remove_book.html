@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+{% block content %}
 <head>
     <title>Remove Book by ID</title>
 </head>
@@ -13,4 +13,4 @@
     </form>
     <a href="{% url 'books:display_all_books' %}">Cancel</a>
 </body>
-</html>
+{% endblock content %}

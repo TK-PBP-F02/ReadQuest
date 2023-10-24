@@ -6,6 +6,7 @@ from .models import Book
 # Create your views here.
 
 api = 'AIzaSyDXkWtSpUh78YnFk1AFNBvszdmxffY2nEI'
+
 def add_books_from_google_books_api(query, api_key):
     url = f'https://www.googleapis.com/books/v1/volumes?q={query}&key={api_key}'
     response = requests.get(url)
@@ -42,8 +43,18 @@ def add_books(request):
 
 def display_all_books(request):
     books = Book.objects.all()
+    return render(request, 'book.html', {'books': books})
+
+def books_dataset(request):
+    books = Book.objects.all()
     return render(request, 'books.html', {'books': books})
 
+from django.shortcuts import render, get_object_or_404
+from .models import Book
+
+def book_detail(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    return render(request, 'book_detail.html', {'book': book})
 
 
 def remove_book(request):
@@ -54,3 +65,11 @@ def remove_book(request):
             book.delete()
 
     return render(request, 'remove_book.html')
+
+def search_books(request):
+    if 'q' in request.GET:
+        query = request.GET['q']
+        results = Book.objects.filter(title__icontains=query)
+    else:
+        results = None
+    return render(request, 'search_result.html', {'results': results, 'q':query})
