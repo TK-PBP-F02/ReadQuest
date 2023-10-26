@@ -1,0 +1,15 @@
+@import url('<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">');
+
+*{
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #9eca;
+}
+
+.wrapper{}
