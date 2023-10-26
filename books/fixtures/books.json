@@ -1,0 +1,1602 @@
+[
+    {
+        "model": "books.Book",
+        "pk": 1,
+        "fields": {
+            "isbn": "9786020312927",
+            "title": "Sherlock Holmes: Koleksi Kasus 2",
+            "description": "Dalam Koleksi Kasus Sherlock Holmes 1, kita dikejutkan dengan tewasnya detektif fenomenal itu akibat duel maut dengan Dr. Moriarty di Air Terjun Reichenbach. Membuat Dr. Watson harus memecahkan kasus-kasus pelik seorang diri. Didesak oleh para pencinta novel misteri, Sir Arthur Conan Doyle akhirnya menghidupkan kembali tokoh detektif legendaris tersebut. Koleksi Kasus Sherlock Holmes 2 ini dimulai dengan Kembalinya Sherlock Holmes yang mempertemukan kembali Dr. John Watson dengan Holmes. Memasuki masa senja, Sherlock Holmes yang ingin pensiun menjadi detektif terpaksa kembali menghadapi ingar-bingar kriminal internasional dalam Salam Terakhir Sherlock Holmes. Lembah Ketakutan menyajikan kasus yang begitu pelik dan memaksa Holmes berhadapan lagi dengan musuh bebuyutannya, Dr. Moriarty. Dalam Koleksi Kasus Sherlock Holmes, Dr. Watson mencatat berbagai kasus yang akan mengundang decak kagum, membangkitkan rasa haru, dan menegangkan.",
+            "author": "Sir Arthur Conan Doyle",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2015-02-04",
+            "page_count": 816,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=qtNCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 2,
+        "fields": {
+            "isbn": "9789792280012",
+            "title": "Koleksi Kasus Sherlock Holmes",
+            "description": "Nama Sherlock Holmes tentu tidak asing lagi bagi pembaca setianya. Anda telah menyaksikan kiprahnya sejak Petualangan Sherlock Holmes, saat Anda mulai berkenalan dengan detektif eksentrik itu dan mengunjungi kamar sewaanya di Baker Street. Anda barangkali terpukul ketika membaca Memoar Sherlock Holmes, dan melihat duel mautnya dengan Profesor Moriarty-Napoleon-nya dunia kejahatan. Dunia memang menjadi tempat yang lebih aman sejak Holmes menyingkirkan si Profesor, namun prestasi itu harus ditebusnya dengan nyawa. Bersama sobat setianya, Dr. Watson, tentu Anda menyambut gembira Kembalinya Sherlock Holmes, dan kembali mengikuti aksinya sampai ia memasuki masa pensiun. Namun Anda tak perlu bersedih ketika detektif kesayangan Anda ini menyampaikan Salam Terakhir, karena Watson sudah menyiapkan peipur lara. Dalam Koleksi Kasus Sherlock Holmes, Watson mencatat berbagai kasus itu dijamin akan mengundang decak kagum, membangkitkan rasa haru, bahkan menegakkan bulu kuduk Anda.",
+            "author": "Sir Arthur Conan Doyle",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2012-12-03",
+            "page_count": 368,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=UlFFDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 3,
+        "fields": {
+            "isbn": "9786023751082",
+            "title": "99 Cara Berpikir Ala Sherlock Holmes",
+            "description": "Berpikir kritis dengan penalaran deduktif gunakan etode ilmiah hipotesis logis proses sederhana menemukan solusi terbaik jangan takut bereksperimen berburu fakta teori mengupas bawang teknik melacak imajinasi jangan takut bernegosiasi demi menemukan solusi fokus Dll.",
+            "author": "Monica Anggen",
+            "publisher": "Gramedia Widiasarana Indonesia",
+            "publication_date": "2015-07-23",
+            "page_count": 224,
+            "category": "Self-Help",
+            "image_url": "http://books.google.com/books/content?id=mvlTDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 4,
+        "fields": {
+            "isbn": "9789792279993",
+            "title": "Petualangan Sherlock Holmes",
+            "description": "\"Melalui tokoh-tokoh kliennya yang datang minta pertolongan kepada konsultan detektif pertama di dunia ini, pembaca diajak mengunjungi kamar sewaan di Baker Street No. 221B yang termasyur itu, di mana Holmes yang eksentrik dan Dr. Watson yang istimewa pernah tinggal. Lalu, pembaca akan juga dibawa untuk menikmati daerah pedesaan di Inggris bersama ahli pengambil kesimpulan ini, ketika ia menguakkan sebuah misteri, memecahkan teka-teki, dan menangkap para pelaku kejahatan-atau kadang-kadang melepaskan mereka begitu saja. Mulai dari Skandal di Bohemia di mana Holmes berjumpa dengan wanita yang sangat dikaguminya, sampai pengalamannya yang mendebarkan dalam Petualangan di Copper Beeches, cara-cara penyelesaian masalah yang dilakukannya sangat di luar dugaan, sedangkan alur ceritanya sendiri benar-benar sangat memukau.\"",
+            "author": "Sir Arthur Conan Doyle",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2013-07-25",
+            "page_count": 504,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=RlFFDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 5,
+        "fields": {
+            "isbn": "9786020312910",
+            "title": "Sherlock Holmes: Koleksi Kasus 1",
+            "description": "Sejak muncul pertama kali tahun 1887, Sherlock Holmes menjadi tokoh fi ksi yang paling fenomenal. Dia menjadi jagoan klasik yang legendaris dan menginspirasi dalam budaya pop bahkan hingga abad ke-21. Bersama Dr. John Watson, Sherlock Holmes memecahkan kasus-kasus rumit berdasarkan kemampuannya menemukan petunjuk-petunjuk yang sering diabaikan orang lain. Koleksi Kasus Sherlock Holmes 1 ini dimulai dengan novel pertama Penelusuran Benang Merah yang memperkenalkan Sherlock Holmes si eksentrik yang genius ini dengan Dr. Watson. Empat Pemburu Harta yang menyajikan kejutan penuh teka-teki. Perjumpaannya dengan wanita yang sangat dikaguminya di Petualangan Sherlock Holmes. Peristiwa pertama yang mempertemukannya dengan musuh bebuyutannya, Dr. Moriarty, di Memoar Sherlock Holmes. Dan petualangan dalam Anjing Setan Sherlock Holmes yang menegakkan bulu kuduk.",
+            "author": "Sir Arthur Conan Doyle",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2015-02-04",
+            "page_count": 832,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=Zro8DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 6,
+        "fields": {
+            "isbn": "9781853268960",
+            "title": "Sherlock Holmes",
+            "description": "It is more than a century since the ascetic, gaunt and enigmatic detective, Sherlock Holmes, made his first appearance in A Study in Scarlet. From 1891, beginning with The Adventures of Sherlock Holmes, the now legendary and pioneering Strand Magazine began serialising Arthur Conan Doyle's matchless tales of detection, featuring the incomparable sleuth patiently assisted by his doggedly loyal and lovably pedantic friend and companion, Dr Watson. The stories are illustrated by the remarkable Sydney Paget from whom our images of Sherlock Holmes and his world derive and who first equipped Holmes with his famous deerstalker hat. The literary cult of Sherlock Holmes shows no sign of fading with time as each new generation comes to love and revere the penetrating mind and ruthless logic which were the undoing of so many Victorian master criminals.",
+            "author": "Arthur Conan Doyle",
+            "publisher": "Wordsworth Editions",
+            "publication_date": "1996-04-29",
+            "page_count": 1136,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=Fq1uKmT02aMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 7,
+        "fields": {
+            "isbn": "9786020611471",
+            "title": "Memoar Sherlock Holmes (The Memoirs of Sherlock Holmes) * Hard Cover",
+            "description": "Bersama Watson, Holmes menyelidiki kasus-kasus pelik seperti lenyapnya Silver Blaze---kuda pacuan yang dijagokan dalam Kejuaraan Piala Wessex---dan misteri kematian Kolonel Barclay dari Kesatuan Royal Mallows yang diduga dibunuh oleh istrinya sendiri. Sambil mengenang masa lalu di depan perapian pada musim dingin, Holmes menuturkan kepada Watson kasus-kasus yang pernah ditanganinya sewaktu dia masih meniti karier. Rahasia di balik meledaknya Kapal Gloria Scott dan harta terpendam yang terkandung dalam Ritual Keluarga Musgrave adalah dua di antaranya. Sebelas cuplikan perjuangan Sherlock Holmes memerangi kejahatan dibeberkan dalam memoar ini, diakhiri dengan duel antara detektif kondang itu dengan Profesor Moriarty, sang Napoleon dunia kejahatan, di Air Terjun Reichenbach.",
+            "author": "Sir Arthur Conan Doyle",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2020-02-24",
+            "page_count": 304,
+            "category": "Young Adult Fiction",
+            "image_url": "http://books.google.com/books/content?id=VcnTDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 8,
+        "fields": {
+            "isbn": "9780486115382",
+            "title": "The Return of Sherlock Holmes",
+            "description": "Back by popular demand, the world's most famous detective returns from a seemingly fatal encounter with his nemesis, Professor Moriarty. Thirteen stories include \"The Empty House,\" \"The Dancing Men,\" and \"The Six Napoleons.\"",
+            "author": "Sir Arthur Conan Doyle",
+            "publisher": "Courier Corporation",
+            "publication_date": "2012-03-06",
+            "page_count": 256,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=778gq6qon-8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 9,
+        "fields": {
+            "isbn": "9780786468409",
+            "title": "Sherlock Holmes for the 21st Century",
+            "description": "The 21st century is a good time to be Sherlock Holmes. He stars in the Guy Ritchie films, with Robert Downey, Jr.; an internationally popular BBC television series featuring Benedict Cumberbatch; a novel sanctioned by the Arthur Conan Doyle Estate; and dozens of additional novels and short stories, including two by Neil Gaiman. Add to this the videogames, comic books, and fan-created works, plus a potent Internet and social media presence. Holmes' London has become a prime destination for cinematic tourists. The evidence is clearly laid out in this collection of 14 new essays: Holmes and Watson are more popular than ever. The detective has been portrayed as hero, and antihero. He's tech savvy, and scientifically detached--even psychologically aberrant. He has been romantically linked to The Woman and bromantically to Watson. Whether Victorian or modern, he continues to fascinate. These essays explain why he is destined to be with us for years to come. Instructors considering this book for use in a course may request an examination copy here.",
+            "author": "Lynnette Porter",
+            "publisher": "McFarland",
+            "publication_date": "2012-07-30",
+            "page_count": 219,
+            "category": "Literary Criticism",
+            "image_url": "http://books.google.com/books/content?id=kBoR-5-ohoEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 10,
+        "fields": {
+            "isbn": "9788175994317",
+            "title": "The Complete Novel of Sherlock Holmes",
+            "description": "There's the scarlet thread of murder running through the colourless skein of life and our duty is to unravel it and isolate it and expose every inch of it.\" Sherlock Holmes Consulting Detective 221B Baker Street London. This is where begins a historical partnership between Dr. Watson-- the archetypal gentleman from the Victorian era-- and the eccentric, legendary sleuth, Sherlock Holmes. Join them as they gather clues, ranging from bloodstains and footprints to cigarette ash and wedding rings and arrive at unusual and surprising conclusions. This book is a collection of the four novels written by Sir Arthur Conan Doyle: A Study in Scarlet (1887), The Sign of the Four (1890), The Hound of the Baskervilles (1902) and The Valley of Fear (1915). Featuring the timeless detective Sherlock Holmes, these novels have been successfully engrossing readers for more than a century now.\"",
+            "author": "Arthur Conan Doyle",
+            "publisher": "Fingerprint! Publishing",
+            "publication_date": "2017-01-10",
+            "page_count": 0,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=WZ2JwwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 11,
+        "fields": {
+            "isbn": "9786020333700",
+            "title": "English Classics: Sherlock Holmes - Short Stories#1",
+            "description": "\"Crime is common. Logic is rare. Therefore it is upon the logic rather than upon the crime that you should dwell\"",
+            "author": "Sir Arthur Conan Doyle",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2017-02-06",
+            "page_count": 176,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=6NNCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 12,
+        "fields": {
+            "isbn": "9781847496164",
+            "title": "The Adventures of Sherlock Holmes",
+            "description": "This edition contains all the stories originally published under this collection and it's illustrated by David Mackintosh. From his Baker Street apartment, Sherlock Holmes wields his powers of deduction in pursuit of justice and truth, venturing out into foggy Victorian London accompanied by his faithful sidekick Dr Watson. This classic collection of Holmes tales includes many of the detective's most-loved exploits: Holmes is confronted by a venomous snake in 'The Adventure of the Speckled Band', mystified by a missing thumb in 'The Adventure of the Engineer's Thumb' and beguiled by a beautiful opera singer in 'A Scandal in Bohemia', never once losing his famous cool. First appearing separately in the Strand Magazine, these stories were published together in 1892 in a volume that rapidly became one of the most popular Sherlock Holmes collections. Showcasing Arthur Conan Doyle's inimitable genius for mystery and storytelling, these tales are proof that the famous detective remains one of the greatest crime fighters ever created.",
+            "author": "Sir Arthur Conan Doyle",
+            "publisher": "Alma Classics",
+            "publication_date": "2016-10-20",
+            "page_count": 0,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=qZvrjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 13,
+        "fields": {
+            "isbn": "9786020326214",
+            "title": "Karya Agatha Christie Pilihan Favorit Pembaca Sedunia (The World's",
+            "description": "Untuk memperingati ulang tahun ke-25 Ratu Kriminal Agatha Christie, diadakan pengumpulan suara dari seluruh pembaca di seluruh dunia. Ketiga judul inilah yang menempati urutan teratas . Ketiganya mewakili puncak penulisan novel kriminal, padat dengan pembunuhan, ketegangan, dan akhir yang sangat tak bisa ditebak pembaca selama berpuluh-puluh tahun ini. Ketiganya tidak berkaitan, tetapi sama-sama menampilkan kecerdikan Agatha Christie.",
+            "author": "Agatha Christie",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2016-03-01",
+            "page_count": 620,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=1NNCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 14,
+        "fields": {
+            "isbn": "9786020338729",
+            "title": "Karya Agatha Christie: Kumpulan Kisah Terbaik Hercule Poirot (The Best of Hercule Poirot)",
+            "description": "Penggemar Agatha Christie pasti mengenal Hercule Poirot. Kecerdasan dan kejelian analisis Poirot sebagai detektif swasta memikat para pembaca di seluruh dunia sejak kemunculannya pertama kali dalam The Mysterious Affair at Styles (Misteri di Styles). Semua itu ditambah penampilan Poirot yang selalu rapi dan sempurna dengan ciri khas kumis kaku, menjadikannya tokoh yang paling dicintai para penggemar kisah kriminal. Ketiga judul ini: \u2022 The ABC Murders (Pembunuhan ABC) \u2022 Five Little Pigs (Menguak Pembunuhan) \u2022 Curtain: Poirot\u2019s Last Case (Tirai) merupakan judul-judul kasus Hercule Poirot yang terpilih menjadi favorit pembaca Agatha Christie. Meski ketiga kasus tersebut tidak berkaitan, Agatha Christie dengan Hercule Poirot-nya berhasil menghadirkan ketegangan dan kejutan dalam penyelesaian setiap misteri.",
+            "author": "Agatha Christie",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2017-03-06",
+            "page_count": 597,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=AtRCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 15,
+        "fields": {
+            "isbn": "9786020636689",
+            "title": "Yang Terakhir (The Last S\u008eance)",
+            "description": "Bagi para pencinta kisah supernatural, hadir kumpulan cerita berhantu dan mengerikan dari Agatha Christie. Meski dunia mengenalnya sebagai Ratu Kisah Kriminal, pada awal karier menulisnya, Agatha Christie mencoba menulis kisah-kisah misteri yang tidak wajar. Misalnya, kisah wanita yang mendapat penglihatan seperti cenayang, momok yang menjulang di balik kegelapan, pertemuan dengan dewa-dewa, pesan-pesan menyeramkan dari Dunia Lain, bahkan kisah pria yang bertukar tubuh dengan seekor kucing\u00c9 Kisah-kisah itu disatukan dalam kumpulan cerita paling mengerikan berjudul The Last S\u008eance (Yang Terakhir). Beberapa kisah di dalamnya juga melibatkan Hercule Poirot dan Miss Marple. Kumpulan cerita ini semakin menampilkan sisi gelap Agatha Christie, dengan sepuluh cerita di antaranya yang disebut sang penulis sebagai cerita pendek favoritnya.",
+            "author": "Agatha Christie",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2019-12-16",
+            "page_count": 334,
+            "category": "Young Adult Fiction",
+            "image_url": "http://books.google.com/books/content?id=WCvGDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 16,
+        "fields": {
+            "isbn": "9786020620022",
+            "title": "Musuh dalam Selimut (The Secret Adversary)",
+            "description": "Ketika kapal Lusitania ditorpedo, seorang laki-laki yang tampak ketakutan mendatangi Jane Finn. Ia membawa dokumen penting bagi Inggris, dan meminta Jane untuk menyimpannya di tempat aman. Setelah itu, Jane pun menghilang dan segala usaha pencarian atas dirinya serta dokumen tersebut sia-sia. Lima tahun kemudian, dokumen rahasia itu kembali dicari. Jika sampai jatuh ke tangan yang salah, dikhawatirkan akan terjadi pemogokan kaum buruh dan teror pemerintahan. Dengan iming-iming bayaran tinggi, dua petualang muda, Tuppence dan Tommy ikut dalam pencarian tersebut. Namun semakin jauh mereka terlibat, semakin besar pula bahaya yang mengancam\u2026",
+            "author": "Agatha Christie",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2018-11-26",
+            "page_count": 368,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=niCEDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 17,
+        "fields": {
+            "isbn": "9786020650531",
+            "title": "Kumpulan Kisah Terbaik Miss Marple (The Best of Miss Marple) - HC",
+            "description": "Jane Marple, atau Miss Marple, memiliki tempat tersendiri di hati para penggemar Agatha Christie. Dia tinggal di St. Mary Mead dengan pengamatan jeli terhadap gerak-gerik semua orang di sekitarnya. Rasa ingin tahunya yang besar memberinya analisis tajam yang sering kali membantu, dan beberapa kali justru mempermalukan, para polisi. Kemunculannya yang pertama adalah dalam novel The Murder at the Vicarage (Pembunuhan di Wisma Pendeta) dan seketika ketajaman analisisnya menjadikannya tokoh yang digemari semua orang. Ketiga judul berikut: \u00a5 The Murder at the Vicarage (Pembunuhan di Wisma Pendeta) \u00a5 A Murder is Announced (Iklan pembunuhan) \u00a5 A Caribbean Mystery (Misteri Karibia) merupakan judul-judul kasus Miss Marple yang terpilih sebagai favorit pembaca Agatha Christie. Ketiga kasus tersebut memang tidak berkaitan, namun Agatha Christie selalu berhasil menghadirkan kejutan-kejutan yang jauh di luar dugaan dalam setiap penyelesaiannya.",
+            "author": "Agatha Christie",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2021-05-28",
+            "page_count": 605,
+            "category": "Young Adult Fiction",
+            "image_url": "http://books.google.com/books/content?id=0xIxEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 18,
+        "fields": {
+            "isbn": "9780062006523",
+            "title": "Agatha Christie's Secret Notebooks",
+            "description": "Agatha Christie\u2019s Secret Notebooks is the fascinating exploration of the contents of Agatha Christie\u2019s long hidden notebooks, including illustrations, analyses, and two previously unpublished Hercule Poirot short stories. Not only will Christie\u2019s legions of ardent fans find a treasure chest of new material from the author of such classics as And Then There Were None, Murder on the Orient Express, and Death on the Nile, but Agatha Christie\u2019s Secret Notebooks is also a must-read tutorial for writers who want to learn the intricacies of constructing crime novels.",
+            "author": "John Curran",
+            "publisher": "Harper Collins",
+            "publication_date": "2010-03-30",
+            "page_count": 503,
+            "category": "Biography & Autobiography",
+            "image_url": "http://books.google.com/books/content?id=3TPw8JAW0xAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 19,
+        "fields": {
+            "isbn": "9789792235081",
+            "title": "Mr. Quin Yang Misterius (The Mysterious Mr. Quin)",
+            "description": "Harley Quin seperti teka-teki. Ia muncul di tengah spektrum cahaya dari balik kaca mosaik dan bisa menghilang begitu saja. Bahkan Mr. Satterthwaite, sahabatnya, tak tahu bagaimana pria itu melakukannya. Kemunculan Mr. Quin yang misterius selalu menjadi pertanda peristiwa penuh cinta\u2026 yang sayangnya disertai kematian.",
+            "author": "Agatha Christie",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2017-07-17",
+            "page_count": 392,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=3eA8DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 20,
+        "fields": {
+            "isbn": "9789792292145",
+            "title": "PEMBUNUHAN ATAS ROGER ACKROYD (THE MURDER OF ROGER ACKROYD)",
+            "description": "Roger Ackroyd tahu terlalu banyak. Ia tahu bahwa wanita yang ia cintai meracuni suami pertamanya yang kejam. Ia juga curiga bahwa wanita itu diperas seseorang. Dan kini\u2026 wanita itu bunuh diri. Malam itu Roger menerima sepucuk surat berisi informasi yang sangat fatal. Sayang sekali, sebelum ia sempat membaca surat itu sampai selesai, seseorang menikamnya hingga tewas. Hercule Poirot pun terpaksa menunda masa pensiunnya untuk menyelidiki kasus ini.",
+            "author": "AGATHA CHRISTIE",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2017-07-17",
+            "page_count": 352,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=veI8DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 21,
+        "fields": {
+            "isbn": "9786020623917",
+            "title": "Kumpulan Karya Agatha Christie (The Agatha Christie Express) *Hard Cover",
+            "description": "The Agatha Christie Express menghadirkan empat karya pilihan Agatha Christie yang melibatkan peristiwa kejahatan di dalam kereta, yaitu: The Mystery of The Blue Train (Misteri Kereta Api Biru) The ABC Murders (Pembunuhan ABC) 4:50 from Paddington (Kereta 4.50 dari Paddington) Murder on The Orient Express (Pembunuhan di Orient Express) Bersama Hercule Poirot dan Miss Marple, para pembaca dibawa bertualang di atas Kereta Orient Express, Kereta Api Biru, dan kereta pukul 4:50 sore dari Paddington, serta memecahkan misteri pembunuhan yang melibatkan buku panduan kereta api ABC. Hanya Agatha Christie, sang ratu penulis criminal, yang bisa membuat kereta menjadi tempat pembunuhan misterius dan menegangkan.",
+            "author": "Agatha Christie",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2019-06-24",
+            "page_count": 852,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=62GhDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 22,
+        "fields": {
+            "isbn": "9789792267051",
+            "title": "Parker Pyne Investigates - Parker Pyne Menyelidiki",
+            "description": "\"\"\"Anda punya masalah? Atau tidak bahagia? Berkonsultasilah pada Mr. Parker Pyne. Pria gemuk yang ramah ini menyediakan layanan konsultasi dan penyelidikan yang dijamin memuaskan. Mulai dari mengatasi masalah suami yang cemburu, istri yang curiga, sampai kasus kematian yang mencurigakan di Sungai Nil. Mr. Parker Pyne sangat ahli dalam menilai sifat manusia, jadi jangan coba-coba mengelabuinya. Bisa-bisa Anda akan sangat menyesal sesudahnya. Satu lagi tokoh memikat dari Agatha Christie\u2014MR. PARKER PYNE\u2014yang tidak kalah cerdik dari Hercule Poirot dan Miss Marple\"\"\"",
+            "author": "Agatha Christie",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2014-01-09",
+            "page_count": 264,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=9U9FDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 23,
+        "fields": {
+            "isbn": "9781472269553",
+            "title": "Agatha Christie",
+            "description": "'Laura Thompson's outstanding biography . . . is a pretty much perfect capturing of a life' - Kate Mosse It has been 100 years since Agatha Christie wrote her first novel and created the formidable Hercule Poirot. In this biography, Laura Thompson describes the Edwardian world in which she grew up, explores the relationships she had, including those with her two husbands and daughter, and investigates the mysteries still surrounding Christie's life - including her disappearance in 1926. Agatha Christie is a mystery and writing about her is a detection job in itself. But, with access to all of Christie's letters, papers and writing notebooks, as well as interviews with her grandson, daughter, son-in-law and their living relations, Thompson is able to unravel not only the detailed workings of Christie's detective fiction, but the truth behind her private life as well. First published in 2007 as 'Agatha Christie: An English Mystery', this is a fully updated edition with a new introduction by the author",
+            "author": "Laura Thompson",
+            "publisher": "Headline",
+            "publication_date": "2020-04-30",
+            "page_count": 544,
+            "category": "Biography & Autobiography",
+            "image_url": "http://books.google.com/books/content?id=0lOrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 24,
+        "fields": {
+            "isbn": "9780786451685",
+            "title": "The Detective Novels of Agatha Christie",
+            "description": "The most popular mystery writer of all time concocted a rich recipe of intrigue, character, and setting. All of Agatha Christie\u2019s 66 detective novels are covered here in great detail. Each chapter begins with general comments on a novel\u2019s geographical and historical setting, identifying current events, fashions, fads and popular interests that relate to the story. A concise plot summary and comprehensive character listing follow, and each novel is discussed within Christie\u2019s overall body of work, with an emphasis on the development of themes, narrative technique, and characters over the course of her prolific career. An appendix translates Poirot\u2019s French and defines the British idiomatic words and phrases that give Christie\u2019s novels so much of their flavor.",
+            "author": "James Zemboy",
+            "publisher": "McFarland",
+            "publication_date": "2010-08-10",
+            "page_count": 448,
+            "category": "Literary Criticism",
+            "image_url": "http://books.google.com/books/content?id=RIBz9x6BPZkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 25,
+        "fields": {
+            "isbn": "9780486283470",
+            "title": "The Story of King Arthur",
+            "description": "Recounts Arthur's chief adventures including his becoming King, his marriage to Guinevere, and his benevolent but troubled reign over England.",
+            "author": "Tom Crawford",
+            "publisher": "Courier Corporation",
+            "publication_date": "1994-09-09",
+            "page_count": 98,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=d4fKy7LfttAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 26,
+        "fields": {
+            "isbn": "9781250099907",
+            "title": "The King Arthur Trilogy",
+            "description": "It takes a remarkable writer to make an old story as fresh and compelling as the first time we heard it. Bernard Cornwell's Internationally bestselling King Arthur Trilogy tells the mythic saga of King Arthur and is the work of a magnificent storyteller at the height of his powers. THE WINTER KING The novel is set in Dark Age Britain in a land where Arthur has been banished and Merlin has disappeared, where a child-king sits unprotected on the throne, where religion vies with magic for the souls of the people. It is to this desperate land that Arthur returns, a man at once utterly human and truly heroic; a man who loves Guinevere more passionately than he should; a man whose life is at once tragic and triumphant. ENEMY OF GOD Having defeated the last holdouts of civil war in southern Britain, Arthur has secured Mordred's throne. But he must still face raging conflicts between the old ways and the new, as well as foes more powerful and more dangerous--because they pose as friends. EXCALIBUR The unforgettable tale of Arthur's final struggles against the Saxons and his last attempts to triumph over a ruined marriage and ravaged dreams as forces both earthly and unearthly threaten everything Arthur stands for. Peopled by princesses and bards, by warriors and magicians, Excalibur is the story of love, war, loyalty, and betrayal.",
+            "author": "Bernard Cornwell",
+            "publisher": "St. Martin's Griffin",
+            "publication_date": "2015-10-06",
+            "page_count": 1146,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=kteLCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 27,
+        "fields": {
+            "isbn": "9781504063258",
+            "title": "King Arthur and the Knights of the Round Table",
+            "description": "This classic fifteenth-century chronicle of King Arthur and his knights is the essential interpretation of Arthurian legend in the English language. Full of adventure, magic, and romance, these are the timeless tales of Arthur, the great warrior king of Britain; his loyal knight Lancelot; the beautiful Queen Guinevere; and the mysterious Merlin. Based on French Arthurian romances reaching back to the twelfth century, Sir James Knowles\u2019s narrative tells of the goings-on at Camelot, epic battles against invading Saxon enemies, and Arthur\u2019s quest for the Holy Grail, among many other exciting events. Sometimes published as Le Morte d\u2019Arthur, these accounts of chivalry and daring escapades have inspired generations of storytellers, from the Romantic poet Alfred, Lord Tennyson to T. H. White, author of The Once and Future King, from American satirist Mark Twain to British comedy troupe Monty Python.",
+            "author": "Thomas Malory",
+            "publisher": "Open Road Media",
+            "publication_date": "2020-05-12",
+            "page_count": 266,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=YXPhDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 28,
+        "fields": {
+            "isbn": "9780143106951",
+            "title": "The Death of King Arthur",
+            "description": "Acclaimed biographer Peter Ackroyd vibrantly resurrects the legendary epic of Camelot in this modern adaptation The names of Arthur, Merlin, Lancelot, Guinevere, Galahad, the sword of Excalibur, and the court of Camelot are as recognizable as any from the world of myth. Although many versions exist of the stories of King Arthur and the Knights of the Round Table, Le Morte d'Arthur by Sir Thomas Malory endures as the most moving and richly inventive. In this abridged retelling the inimitable Peter Ackroyd transforms Malory's fifteenth-century work into a dramatic modern story, vividly bringing to life a world of courage and chivalry, magic, and majesty. The golden age of Camelot, the perilous search for the Holy Grail, the love of Guinevere and Lancelot, and the treachery of Arthur's son Mordred are all rendered into contemporary prose with Ackroyd's characteristic charm and panache. Just as he did with his fresh new version of Chaucer's The Canterbury Tales, Ackroyd now brings one of the cornerstones of English literature to a whole new audience. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators.",
+            "author": "Thomas Malory",
+            "publisher": "National Geographic Books",
+            "publication_date": "2012-10-30",
+            "page_count": 0,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=A6OMEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 29,
+        "fields": {
+            "isbn": "9781136609824",
+            "title": "King Arthur In Legend and History",
+            "description": "Presenting selections from medieval Latin, Welsh, English, French and German literature, Richard White traces the Arthurian legend from the earliest mentions of Arthur in Latin chronicles to Thomas Malory's Le Morte d'Arthur. Many of these selections are translated here for the time into English. Bringing together an extensive range of diverse material which reveals the development of the figure of Arthur, this anthology enables the reader to understand how the Arthurian legend developed over a period of more than five hundred years. King Arthur in Legend and History also includes a chronology of key Arthurian texts, an appendix of the Arthurian Courts, a list of sources, suggestions for further reading and bibliography. Also inlcludes five maps.",
+            "author": "Richard White",
+            "publisher": "Routledge",
+            "publication_date": "1998-02-12",
+            "page_count": 572,
+            "category": "History",
+            "image_url": "http://books.google.com/books/content?id=b3YWDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 30,
+        "fields": {
+            "isbn": "9781134373772",
+            "title": "King Arthur",
+            "description": "King Arthur is often written off as a medieval fantasy, the dream of those yearning for an age of strong, just rulers and a contented kingdom. Those who accept his existence at all generally discard the stories that surround him. This exciting new investigation argues not only that Arthur did exist, as a Dark Age chieftain, but that many of the romantic tales - of Merlin, Camelot and Excalibur - are rooted in truth. In his quest for the real King Arthur, Rodney Castleden uses up-to-date archaeological and documentary evidence to recreate the history and society of Dark Age Britain and its kings. He revives the possibility that Tintagel was an Arthurian legend, and proposes a radical new theory - that Arthur escaped alive from his final battle. A location is even suggested for perhaps the greatest mystery, the whereabouts of Arthur's grave. King Arthur: The Truth Behind the Legend offers a more complete picture of Arthur's Britain and his place in it than ever before. The book's bold approach and compelling arguments will be welcomed by all readers with an interest in Arthuriana.",
+            "author": "Rodney Castleden",
+            "publisher": "Routledge",
+            "publication_date": "2003-03-13",
+            "page_count": 280,
+            "category": "History",
+            "image_url": "http://books.google.com/books/content?id=TA_UI8M2gnAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 31,
+        "fields": {
+            "isbn": "9780486474359",
+            "title": "King Arthur in Search of His Dog and Other Curious Puzzles",
+            "description": "This fanciful, original collection for readers of all ages features arithmetic puzzles, logic problems related to crime detection, and logic and arithmetic puzzles involving King Arthur and his Dogs of the Round Table.",
+            "author": "Raymond M. Smullyan",
+            "publisher": "Courier Corporation",
+            "publication_date": "2010-04-21",
+            "page_count": 162,
+            "category": "Mathematics",
+            "image_url": "http://books.google.com/books/content?id=Fwk_AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 32,
+        "fields": {
+            "isbn": "9781612308128",
+            "title": "King Arthur",
+            "description": "The tales of King Arthur and the Knights of the Round Table are among the best-known stories in the world, but they are often relegated to the realm of legend. However, Arthur was a man, not a myth. In this book, acclaimed historian Christopher Hibbert vividly brings to life the sixth-century British monarch and his extraordinary court.",
+            "author": "Christopher Hibbert",
+            "publisher": "New Word City",
+            "publication_date": "2014-10-10",
+            "page_count": 106,
+            "category": "Biography & Autobiography",
+            "image_url": "http://books.google.com/books/content?id=7F7CBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 33,
+        "fields": {
+            "isbn": "9781101545904",
+            "title": "The Death of King Arthur",
+            "description": "Acclaimed biographer Peter Ackroyd vibrantly resurrects the legendary epic of Camelot in this modern adaptation. The names of Arthur, Merlin, Lancelot, Guinevere, Galahad, the sword of Excalibur, and the court of Camelot are as recognizable as any from the world of myth. Although many versions exist of the stories of King Arthur and the Knights of the Round Table, Le Morte d'Arthur by Sir Thomas Malory endures as the most moving and richly inventive. In this abridged retelling the inimitable Peter Ackroyd transforms Malory's fifteenth-century work into a dramatic modern story, vividly bringing to life a world of courage and chivalry, magic, and majesty. The golden age of Camelot, the perilous search for the Holy Grail, the love of Guinevere and Lancelot, and the treachery of Arthur's son Mordred are all rendered into contemporary prose with Ackroyd's characteristic charm and panache. Just as he did with his fresh new version of Chaucer's The Canterbury Tales, Ackroyd now brings one of the cornerstones of English literature to a whole new audience.",
+            "author": "Thomas Malory",
+            "publisher": "Penguin",
+            "publication_date": "2011-11-10",
+            "page_count": 336,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=z-FCtr3sGksC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 34,
+        "fields": {
+            "isbn": "9788026884347",
+            "title": "The Legends of King Arthur and His Knights",
+            "description": "The Legends of King Arthur and His Knights is a collection of legends and myths about legendary British King Arthur, his castle and court Camelot, his Noble Knights of the Round Table, and many more. King Arthur is a legendary British ruler who, according to medieval histories and romances, led the defense of Britain against Saxon invaders in the late 5th and early 6th centuries AD. The details of Arthur's story are mainly composed of folklore and literary invention. The Prophecies of Merlin, and the Birth of Arthur The Miracle of the Sword and Stone, and the Coronation of King Arthur \u2014 The Sword Excalilur \u2014 The War with the Eleven Kings The Adventure of the Questing Beast \u2014 King Arthur drives the Saxons from the Realm \u2014 The Battles of Celidon Forest and Badon Hill King Arthur Conquers Ireland and Norway, Slays the Giant of St. Michael's Mount, and Conquers Gaul \u2014 The Adventures of Sir Balin Sir Balin Smites the Dolorous Stroke, and Fights with his Brother, Sir Balan The Marriage of King Arthur and Queen Guinevere, and the Founding of the Round Table \u2014 The Adventure of the Hart and Hound King Arthur and Sir Accolon of Gaul King Arthur conquers Rome, and is crowned Emperor The Adventures of Sir Lancelot du Lake Adventures of Sir Beaumains or Sir Gareth The Adventures of Sir Tristram of Lyonesse The Quest of the Sangreal, and the Adventures of Sir Percival, Sir Bors, and Sir Galahad Sir Lancelot and the Fair Maid of Astolat The War between King Arthur and Sir Lancelot and the Death of King Arthur",
+            "author": "James Knowles",
+            "publisher": "e-artnow",
+            "publication_date": "2018-03-06",
+            "page_count": 192,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=7IVjDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 35,
+        "fields": {
+            "isbn": "9781134614288",
+            "title": "King Arthur",
+            "description": "This seminal new study explores how and why historians and writers from the Middle Ages to the present day have constructed different accounts of this well-loved figure. N. J Higham offers an in-depth examintaion of the first two Arthurian texts: the History of the Britons and the Welsh Annals. He argues that historians have often been more influenced by what the idea of Arthur means in their present context than by such primary sources King Arthur: Myth-making and History illuminates and discusses some central points of debate: * What role was Arthur intended to perform in the political and cultural worlds that constructed him? * How did the idea of King Arthur evolve? * What did the myth of Arthur mean to both authors and their audiences? King Arthur: Myth-making and History is fascinating reading for anyone interested in the origins and evolution of the Arthurian legend.",
+            "author": "N. J. Higham",
+            "publisher": "Routledge",
+            "publication_date": "2005-07-05",
+            "page_count": 345,
+            "category": "History",
+            "image_url": "http://books.google.com/books/content?id=FxxqcoVa7b8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 36,
+        "fields": {
+            "isbn": "9783375082871",
+            "title": "La Mort D'Arthure: The History of King Arthur and of the Knights of the Round Table",
+            "description": "Reprint of the original, first published in 1865. Edited from the Text of the Edition of 1634, With Introduction and Noted by Thomas Wright.",
+            "author": "Thomas Malory",
+            "publisher": "BoD \u2013 Books on Demand",
+            "publication_date": "2022-07-06",
+            "page_count": 354,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=Odp5EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 37,
+        "fields": {
+            "isbn": "9781512451177",
+            "title": "Arthur & Lancelot",
+            "description": "King Arthur rules his realm from the shining castle of Camelot. Arthur relies on the wisdom of his wife, Guinivere, and on the bravery of his Knights of the Round Table. But dark forces are at work in Camelot. Enemies in Arthur's midst seek to take his throne. Rumors about Guinivere and Arthur's best knight and friend, Lancelot, set in motion a terrible conflict. Will Arthur fight to restore the peace in his kingdom, or is this the end of Camelot?",
+            "author": "Jeff Limke",
+            "publisher": "Graphic Universe \u2122",
+            "publication_date": "2017-01-01",
+            "page_count": 48,
+            "category": "Juvenile Nonfiction",
+            "image_url": "http://books.google.com/books/content?id=yeulDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 38,
+        "fields": {
+            "isbn": "9781623340162",
+            "title": "Lancelot",
+            "description": "Nothing, it seems, can harm the valiant Lancelot. The most brilliant warrior to join the Knights of the Round Table, he vanquishes beasts and villains at every turn. But Lancelot's own pride and conflicts of loyalty threaten to destroy the hero, whose passion and instincts are the source of his greatest strength and gravest danger. In this fourth volume of the Tales of King Arthur picture-book series, Hudson Talbott's dramatic vision sends readers on an unforgettable adventure. Narration by Christian Coulson (Tom Riddle, Harry Potter and the Chamber of Secrets).",
+            "author": "Hudson Talbott",
+            "publisher": "StarWalk Kids Media",
+            "publication_date": "2012-10-01",
+            "page_count": 40,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=5h3xAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 39,
+        "fields": {
+            "isbn": "9791041817443",
+            "title": "Lancelot And Elaine",
+            "description": "\" Elaine the fair, Elaine the loveable, Elaine, the lily maid of Astolat, High in her chamber up a tower to the east Guarded the sacred shield of Lancelot; Which first she placed where the morning's earliest ray Might strike it, and awake her with the gleam; Then fearing rust or soilure fashioned for it A case of silk, and braided thereupon All the devices blazoned on the shield In their own tinct, and added, of her wit, A border fantasy of branch and flower, And yellow-throated nestling in the nest. Nor rested thus content, but day by day, Leaving her household and good father, climbed That eastern tower, and entering barred her door, Stript off the case, and read the naked shield, Now guessed a hidden meaning in his arms, Now made a pretty history to herself Of every dint a sword had beaten in it, And every scratch a lance had made upon it, Conjecturing when and where: this cut is fresh; That ten years back; this dealt him at Caerlyle; That at Caerleon; this at Camelot: And ah God's mercy, what a stroke was there! And here a thrust that might have killed, but God Broke the strong lance, and rolled his enemy down, And saved him: so she lived in fantasy.\"",
+            "author": "Alfred Lord Tennyson",
+            "publisher": "BoD - Books on Demand",
+            "publication_date": "2023-06-21",
+            "page_count": 42,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=GbzGEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 40,
+        "fields": {
+            "isbn": "9781101142103",
+            "title": "Sir Lancelot, Where Are You? #6",
+            "description": "The evil witch Morgana le Fay has put a terrible curse on Sir Lancelot, and it's up to Wiglaf and his DSA buddies to find and save him. But they're just dragon-slayers-in-training. Can they really outsmart the trolls, witches, and other villains that stand in their way?",
+            "author": "Kate McMullan",
+            "publisher": "Penguin",
+            "publication_date": "2003-09-15",
+            "page_count": 114,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=chrNJFWd0NsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 41,
+        "fields": {
+            "isbn": "9780820340531",
+            "title": "Lancelot, Or, The Knight of the Cart",
+            "description": "In this verse translation of Chr\u00e9tien de Troyes's Lancelot, Ruth Harwood Cline revives the original story of the immortal love affair between Sir Lancelot and Queen Guinevere, a tale that has spawned interpretations ranging from Malory's Le Morte d'Arthur to Lerner and Lowe's Camelot By remaining faithful to Chr\u00e9tien's highly structured form, Cline preserves the pace, the pungency of proverbial expressions, and the work's poetical devices and word play in translating this archetypal tale of courtly love from Old French into modern English. Cline's introduction--containing a description of Arthur in history and literature, a discussion of courtly love, and an account of the continuations of the story of Lancelot and Guinevere--makes Lancelot an ideal classroom text.",
+            "author": "Chr\u00e9tien de Troyes",
+            "publisher": "University of Georgia Press",
+            "publication_date": "2011-03-15",
+            "page_count": 231,
+            "category": "Poetry",
+            "image_url": "http://books.google.com/books/content?id=uwv7AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 42,
+        "fields": {
+            "isbn": "9780307422125",
+            "title": "The Knight of the Sacred Lake",
+            "description": "Last in a line of proud queens elected to rule the fertile lands of the West, true owner of the legendary Round Table, guardian of the Great Goddess herself . . . a woman whose story has never been told--until now. As High King and Queen, Arthur and Guenevere reign supreme across the many kingdoms of Great Britain. Still, Guenevere secretly mourns the loss of her beloved Lancelot, who has returned to the Sacred Lake of his boyhood, hoping to restore his faith in chivalry in the place where he learned to be a knight. In a glittering Pentecost ceremony, new knights are sworn to the Round Table, including Arthur's nephews, Agravain and Gawain. After many years of strife, peace is restored to Guenevere's realm. But betrayal, jealousy, and ancient blood feuds fester unseen. Morgan Le Fay, now the mother of Arthur's only son, Mordred, has become the focus of Merlin's age-old quest to ensure the survival of the house of Pendragon. From the east comes the shattering news that Guenevere may have a rival for Lancelot's love. A bleak shadow falls again across Camelot--and across the sacred isle of Avalon, where Roman priests threaten the life of the Lady herself. At the center of the storm is Guenevere, torn between her love for her husband, her people, and Sir Lancelot of the Lake. With rare and intuitive magic, Rosalind Miles brings to life a legendary woman's bravery and passion, and all the pageantry, heartbreak, violence, and beauty of an age gone by.",
+            "author": "Rosalind Miles",
+            "publisher": "Crown",
+            "publication_date": "2007-12-18",
+            "page_count": 464,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=XH2wyzXc040C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 43,
+        "fields": {
+            "isbn": "9781101664100",
+            "title": "Knights of the Round Table: Lancelot",
+            "description": "Strong and powerful warriors of nobility and honor, the Knights of the Round Table fought for kings, rescued damsels, and undertook dangerous quests. But true love may be the most perilous quest of all\u2026 Sir Lancelot, First Knight of King Arthur\u2019s realm and the Queen\u2019s champion, cannot be defeated by any earthly man\u2014as long as he keeps his oaths to Arthur and Guinevere. Though arrogant and supremely confident, he will be brought to his knees by a mere maiden: Elaine of Corbenic. Together, they will have a son, Galahad\u2014the knight destined to find the Holy Grail. Lancelot du Lac is the greatest knight of a peerless age, blessed by the Lady of the Lake with extraordinary military prowess. His fighting ability has earned him a place at King Arthur's side, but the powers the Lady has given him come with a terrible price. Elaine of Corbenic is struggling to hold her impoverished family together. The keep is a wreck and the peasants, starving, are on the brink of rebellion. Elaine's father is obsessed with finding the Holy Grail, and her older brother, maimed by Lancelot in a joust, is a bitter drunkard. Without a dowry, she has little hope for the future. Incognito, Lancelot rides into Corbenic on his way to the king's tournament. He finds the practical Elaine irresistible. Thoroughly dismayed when she reveals her contempt for \"Lancelot,\" he must face his own arrogance to win her hand. For only with Elaine at his side will Lancelot have the strength to free himself from the enchantments that bind him\u2026",
+            "author": "Gwen Rowley",
+            "publisher": "Penguin",
+            "publication_date": "2006-09-05",
+            "page_count": 368,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=BLJvBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 44,
+        "fields": {
+            "isbn": "9780266297147",
+            "title": "The Legend of Sir Lancelot Du Lac",
+            "description": "Excerpt from The Legend of Sir Lancelot Du Lac: Studies Upon Its Origin, Development, and Position in the Arthurian Romantic Cycle In certain cases I have little doubt as to the verdict. So far as the evidence concerning the sources of Malory. About the Publisher Forgotten Books publishes hundreds of thousands of rare and classic books. Find more at www.forgottenbooks.com This book is a reproduction of an important historical work. Forgotten Books uses state-of-the-art technology to digitally reconstruct the work, preserving the original format whilst repairing imperfections present in the aged copy. In rare cases, an imperfection in the original, such as a blemish or missing page, may be replicated in our edition. We do, however, repair the vast majority of imperfections successfully; any imperfections that remain are intentionally left to preserve the state of such historical works.",
+            "author": "Jessie L. Weston",
+            "publisher": "Forgotten Books",
+            "publication_date": "2017-10-14",
+            "page_count": 270,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=AeePswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 45,
+        "fields": {
+            "isbn": "9780761343462",
+            "title": "Arthur and Lancelot",
+            "description": "A retelling of the English legend in which enemies in Arthur's midst seek to take his throne. In graphic novel format.",
+            "author": "Jeff Limke",
+            "publisher": "Lerner Books [UK]",
+            "publication_date": "2009-03-01",
+            "page_count": 52,
+            "category": "Camelot (Legendary place)",
+            "image_url": "http://books.google.com/books/content?id=2NmWCSQVuKcC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 46,
+        "fields": {
+            "isbn": "9780755147175",
+            "title": "The Summer Of Sir Lancelot",
+            "description": "Sir Lancelot Spratt, respected and feared senior consultant at St Swithan's has finally taken the plunge and retired. Unable to fill his days terrorising staff and patients alike, he turns instead to a new passion - a spot of trout fishing. However his solace and quiet reverie is soon broken by his mischievous and rather attractive niece.",
+            "author": "Richard Gordon",
+            "publisher": "House of Stratus",
+            "publication_date": "2014-07-01",
+            "page_count": 146,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=9G6vDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 47,
+        "fields": {
+            "isbn": "9780755147120",
+            "title": "Love And Sir Lancelot",
+            "description": "St Swithan's Hospital keeps the rooms of its male and female students separate, but love will always find a way. Simon Sparrow chooses the American film star Ann Beverley to lavish his attentions on. But how will he and others ever make the grade with Sir Lancelot bulldozing through the complex web of their emotions?",
+            "author": "Richard Gordon",
+            "publisher": "House of Stratus",
+            "publication_date": "2014-07-01",
+            "page_count": 132,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=pGyvDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 48,
+        "fields": {
+            "isbn": "9780755131204",
+            "title": "Love And Sir Lancelot",
+            "description": "St Swithan's Hospital keeps the rooms of its male and female students separate, but love will always find a way. Simon Sparrow chooses the American film star Ann Beverley to lavish his attentions on. But how will he and others ever make the grade with Sir Lancelot bulldozing through the complex web of their emotions?",
+            "author": "Richard Gordon",
+            "publisher": "House of Stratus",
+            "publication_date": "2012-09-30",
+            "page_count": 132,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=Sa-XDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 49,
+        "fields": {
+            "isbn": "9780753549933",
+            "title": "Complete Jack The Ripper",
+            "description": "Fully updated and revised, Donald Rumbelow\u2019s classic work is the ultimate examination of the facts, theories, fictions and fascinations surrounding the greatest whodunit in history. The Complete Jack the Ripper lays out all the evidence in the most comprehensive summary ever written about the Ripper. Rumbelow, a former London Metropolitan policeman, and an authority on crime, has subjected every theory \u2013 including those that have emerged in recent years \u2013 to the same deep scrutiny. He also examines the mythology surrounding the case and provides some fascinating insights into the portrayal of the Ripper on stage and screen and on the printed page. More seriously, he also examines the horrifying parallel crimes of the D\u00fcsseldorf Ripper and the Yorkshire Ripper in an attempt to throw further light on the atrocities of Victorian London.",
+            "author": "Donald Rumbelow",
+            "publisher": "Random House",
+            "publication_date": "2016-02-18",
+            "page_count": 400,
+            "category": "True Crime",
+            "image_url": "http://books.google.com/books/content?id=FJWGCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 50,
+        "fields": {
+            "isbn": "9781780337098",
+            "title": "The Complete History of Jack the Ripper",
+            "description": "The murders in London between 1888-91 attributed to Jack the Ripper constitute one of the most mysterious unsolved criminal cases. This story is the result of many years meticulous research. The author reassesses all the evidence and challenges everything we thought we knew about the Victorian serial killer and the vanished East End he terrorized.",
+            "author": "Philip Sugden",
+            "publisher": "Hachette UK",
+            "publication_date": "2012-03-01",
+            "page_count": 560,
+            "category": "True Crime",
+            "image_url": "http://books.google.com/books/content?id=-2aeBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 51,
+        "fields": {
+            "isbn": "9781101971147",
+            "title": "The Big Book of Jack the Ripper",
+            "description": "Edgar Award\u2013winning editor Otto Penzler's latest anthology takes its inspiration from the historical enigma whose name has become synonymous with fear: Jack the Ripper. Of the real-life serial killers whose gruesome acts have been splashed across headlines, none has reached the mythical status of Jack the Ripper. In the Ripper's wake, terror swept through the streets of London\u2019s East End in the fall of 1888. As quickly as his nightmarish reign came, Saucy Jack vanished without a trace\u2014leaving future generations to speculate upon his identity and whereabouts. He was diabolical in a way never seen before\u2014a killer who taunted the police, came up with his own legendary monikers, and, ultimately, got away with his heinous crimes. More than a century later, the man \u201cfrom hell\u201d continues to live on in the imaginations of readers everywhere\u2014and in some of the most spec\u00adtacularly unnerving stories, both fiction and nonfiction, ever written. The Big Book of Jack the Ripper immerses you in the utterly chilling world of Red Jack\u2019s London, where his unprecedented evil still lurks. Including: \u00b7 Legendary stories by Marie Belloc Lowndes, Robert Bloch, and Ellery Queen \u00b7 Captivating essays from George Bernard Shaw, Stephen Hunter, and Peter Underwood \u00b7 Riveting new stories by contemporary masters Jeffrey Deaver, Loren D. Estleman, Lyndsay Faye, and many more \u00b7 Astonishing theories from the world\u2019s foremost Ripperologists From the Ripper Vault: \u00b7 Demonic letters from Jack himself \u00b7 Gruesome postmortem exams documenting all the bits and pieces of the cases \u00b7 Harrowing witness statements taken on those hellish nights \u00b7 Breaking newspaper accounts of the East End hysteria",
+            "author": "Otto Penzler",
+            "publisher": "Vintage Crime/Black Lizard",
+            "publication_date": "2016-10-04",
+            "page_count": 866,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=bsLVCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 52,
+        "fields": {
+            "isbn": "9781780573793",
+            "title": "The Trial of Jack the Ripper",
+            "description": "A shocking and brutal murder had taken place in the city in February that year, and the words 'Jack Ripper is at the back of this door' were found written in chalk on a door at the scene of the crime. When he was arrested, the accused, William Bury, admitted that he was 'afraid he would be arrested as Jack the Ripper'. The police investigation uncovered some disturbing details. William Bury was a small dark-haired man who was known to have been violent towards women. He had been born and brought up in the Midlands but had moved to the East End of London in the late autumn of 1887. On 20 January 1889, he and his wife travelled by boat to Dundee. This meant that he had arrived in London before the start of the Jack the Ripper murders and had left around the same time that they ceased. Could this be coincidence, people wondered. Could it also be a coincidence that the murder in Dundee carried all the hallmarks of a 'ripper' murder? In the month before the trial, the local newspapers in Dundee began to run sensational stories linking the accused with the notorious Whitechapel murders. When the trial opened to a packed courtroom, many in the public gallery were wondering if the man standing in the dock was none other than Jack the Ripper himself. In this sensational and ground-breaking book, Euan Macpherson presents the evidence that the long arm of the law really did catch up with Jack the Ripper ... in a dingy basement flat in Dundee in the cold winter months of early 1889.",
+            "author": "E Macpherson",
+            "publisher": "Random House",
+            "publication_date": "2011-11-18",
+            "page_count": 192,
+            "category": "Biography & Autobiography",
+            "image_url": "http://books.google.com/books/content?id=OGc7fSbUQiYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 53,
+        "fields": {
+            "isbn": "9781402280580",
+            "title": "Autobiography of Jack the Ripper",
+            "description": "A stunning new entry into the unsolved mystery of Jack the Ripper, by a man who claimed to be the Ripper himself In the Whitechapel neighborhood of London in 1888, five women were horribly mutilated and murdered by the infamous killer, Jack the Ripper. Though there were many suspects, no one was ever caught. This recently discovered memoir from the 1920s introduces a new suspect: James Willoughby Carnac, who claims to have been the Ripper. He describes the events and geography of Whitechapel in 1888 with chilling accuracy and gives a credible motive for becoming the murderer\u2014and for ending the killings. Ultimately the reader must decide if this is simply one of the earliest imaginings of the case...or if it is the words of Jack the Ripper himself.",
+            "author": "James Carnac",
+            "publisher": "Sourcebooks",
+            "publication_date": "2013-09-03",
+            "page_count": 0,
+            "category": "True Crime",
+            "image_url": "http://books.google.com/books/content?id=O1QtngEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 54,
+        "fields": {
+            "isbn": "9781481479448",
+            "title": "Jack the Ripper",
+            "description": "Looks at one of historys most infamous serial killers known for committing gruesome murders in the late nineteenth-century who remains one of the world's most infamous criminals",
+            "author": "Michael Burgan",
+            "publisher": "Simon and Schuster",
+            "publication_date": "2017-08-15",
+            "page_count": 208,
+            "category": "Juvenile Nonfiction",
+            "image_url": "http://books.google.com/books/content?id=VCEwDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 55,
+        "fields": {
+            "isbn": "9781446465356",
+            "title": "The Autobiography of Jack the Ripper",
+            "description": "This memoir was recently discovered and appears to have been written in the 1920s by somone who asserts that he was Jack the Ripper. This person is James Carnac, this memoir written shortly before his death is an account of his entire life, including a few short months in 1888 when he became the murderer known to posterity as Jack the Ripper. This book introduces a new suspect for the infamous murders in Whitechapel in 1888. There is information in this book that does not appear to be derived from contemporary newspapers or any other publications and the descriptions of Tottenham in the 1870s, the visits to performances of Jekyll and Hyde, the intricate geography of Whitechapel in 1888 are written with pin-point accuracy. There is also a credible motive given for James becoming the murderer Jack and also a reason for the end of the murders. Given the fact that the author also appear to have knowledge about aspects of the case not in the public arena at the time it could be that this actually is the autobiography of Jack the Ripper. Ultimately it is up to the reader to decide if they believe the mystery has been solved at last but even if they end up deciding the account to be a work of fiction it would still be one of the very earliest imaginings of the Ripper case, written in the early years of the twentieth century, a fascinating piece of period writing and a worthy addition to the Ripper canon. Whatever side they come down on there is no question that this book will be a source of much debate.",
+            "author": "James Carnac",
+            "publisher": "Random House",
+            "publication_date": "2012-01-19",
+            "page_count": 432,
+            "category": "Biography & Autobiography",
+            "image_url": "http://books.google.com/books/content?id=w0eERm3-42wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 56,
+        "fields": {
+            "isbn": "9781445621685",
+            "title": "Capturing Jack The Ripper",
+            "description": "Explores life in the Victorian police force from the time of Jack the Ripper, from training to discovering a murder.",
+            "author": "Neil R. A. Bell",
+            "publisher": "Amberley Publishing Limited",
+            "publication_date": "2014-11-15",
+            "page_count": 288,
+            "category": "True Crime",
+            "image_url": "http://books.google.com/books/content?id=wklpCAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 57,
+        "fields": {
+            "isbn": "9780062296399",
+            "title": "They All Love Jack",
+            "description": "For over a hundred years, the mystery of Jack the Ripper has been a source of unparalleled fascination and horror, spawning an army of obsessive theorists and endless volumes purporting to finally reveal the identity of the brutal murderer who terrorized Victorian England. But what if there was never really any mystery at all? What if the Ripper was always hiding in plain sight, deliberately leaving a trail of clues to his identity for anyone who cared to look, while cynically mocking those who were supposedly attempting to bring him to justice? In They All Love Jack, the award-winning film director and screenwriter Bruce Robinson exposes the cover-up that enabled one of history's most notorious serial killers to remain at large. More than twelve years in the writing, this is no mere radical reinterpretation of the Jack the Ripper legend and an enthralling hunt for the killer. A literary high-wire act reminiscent of Tom Wolfe or Hunter S. Thompson, it is an expressionistic journey through the cesspools of late-Victorian society, a phantasmagoria of highly placed villains, hypocrites, and institutionalized corruption. Polemic forensic investigation and panoramic portrait of an age, underpinned by deep scholarship and delivered in Robinson's inimitably vivid and scabrous prose, They All Love Jack is an absolutely riveting and unique book, demolishing the theories of generations of self-appointed experts\u2014the so-called Ripperologists\u2014to make clear, at last, who really did it; and, more important, how he managed to get away with it for so long.",
+            "author": "Bruce Robinson",
+            "publisher": "Harper Collins",
+            "publication_date": "2015-10-13",
+            "page_count": 864,
+            "category": "History",
+            "image_url": "http://books.google.com/books/content?id=IGSdBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 58,
+        "fields": {
+            "isbn": "9781782191551",
+            "title": "The Diary of Jack the Ripper - The Chilling Confessions of James Maybrick",
+            "description": "The pages of The Diary of Jack the Ripper reveal the unimaginable - that over a century ago, the legendary serial killer at work in London's Whitechapel kept a record of his bestial mutilations of women. The writer of the horrific journal is James Maybrick, a depraved drug-taking, womanising, 49-year-old Liverpool cotton merchant with a history of domestic violence. In this analysis of his diary, investigative author Shirley Harrison explains all about the origins of the text, the rigorous scientific analysis it has endured and reveals startling new information about Maybrick's shadowy background. All this combines with a chilling confession scratched into a watch, 'I am Jack. J Maybrick,' provide powerful justification that Maybrick was Jack the Ripper. The diary itself is reproduced in full, so that you too can judge whether these are the deeply distributing words of Jack the Ripper himself, reaching out from across the abyss of more than a century.",
+            "author": "Shirley Harrison",
+            "publisher": "Kings Road Publishing",
+            "publication_date": "2010-04-05",
+            "page_count": 317,
+            "category": "True Crime",
+            "image_url": "http://books.google.com/books/content?id=dTutDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 59,
+        "fields": {
+            "isbn": "9780316273503",
+            "title": "Stalking Jack the Ripper",
+            "description": "This #1 New York Times bestseller and deliciously creepy horror novel has a storyline inspired by the Ripper murders and an unexpected, blood-chilling conclusion. Seventeen-year-old Audrey Rose Wadsworth was born a lord's daughter, with a life of wealth and privilege stretched out before her. But between the social teas and silk dress fittings, she leads a forbidden secret life. Against her stern father's wishes and society's expectations, Audrey often slips away to her uncle's laboratory to study the gruesome practice of forensic medicine. When her work on a string of savagely killed corpses drags Audrey into the investigation of a serial murderer, her search for answers brings her back to her own sheltered world. The story's shocking twists and turns, augmented with real, sinister period photos, will make this dazzling, #1 New York Times bestselling debut from author Kerri Maniscalco impossible to forget.",
+            "author": "Kerri Maniscalco",
+            "publisher": "Hachette UK",
+            "publication_date": "2016-09-20",
+            "page_count": 337,
+            "category": "Young Adult Fiction",
+            "image_url": "http://books.google.com/books/content?id=_f0rDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 60,
+        "fields": {
+            "isbn": "9781562827045",
+            "title": "The Diary of Jack the Ripper",
+            "description": "The discovery, the investigation, the debate. Includes the full text of the diary and the arguments for and against its authenticity.",
+            "author": "Shirley Harrison",
+            "publisher": "Hyperion",
+            "publication_date": "1993-10-31",
+            "page_count": 0,
+            "category": "Jack",
+            "image_url": "http://books.google.com/books/content?id=Ma27jgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 61,
+        "fields": {
+            "isbn": "9780385354318",
+            "title": "The Strange Library",
+            "description": "From internationally acclaimed author Haruki Murakami\u2014a fantastical illustrated short novel about a boy imprisoned in a nightmarish library. Opening the flaps on this unique little book, readers will find themselves immersed in the strange world of best-selling Haruki Murakami's wild imagination. The story of a lonely boy, a mysterious girl, and a tormented sheep man plotting their escape from a nightmarish library, the book is like nothing else Murakami has written. Designed by Chip Kidd and fully illustrated, in full color, throughout, this small format, 96 page volume is a treat for book lovers of all ages.",
+            "author": "Haruki Murakami",
+            "publisher": "Knopf",
+            "publication_date": "2014-12-02",
+            "page_count": 92,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=T_59BAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 62,
+        "fields": {
+            "isbn": "9780307269478",
+            "title": "What I Talk About When I Talk About Running",
+            "description": "An intimate look at writing, running, and the incredible way they intersect, What I Talk About When I Talk About Running is an illuminating glimpse into the solitary passions of one of our greatest artists. While training for the New York City Marathon, Haruki Murakami decided to keep a journal of his progress. The result is a memoir about his intertwined obsessions with running and writing, full of vivid recollections and insights, including the eureka moment when he decided to become a writer. By turns funny and sobering, playful and philosophical, here is a rich and revelatory work that elevates the human need for motion to an art form.",
+            "author": "Haruki Murakami",
+            "publisher": "Vintage",
+            "publication_date": "2008-07-29",
+            "page_count": 193,
+            "category": "Biography & Autobiography",
+            "image_url": "http://books.google.com/books/content?id=5IH75VXZxU4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 63,
+        "fields": {
+            "isbn": "9780385352116",
+            "title": "Colorless Tsukuru Tazaki and His Years of Pilgrimage",
+            "description": "An instant #1 New York Times Bestseller One of the most revered voices in literature today gives us a story of love, friend\u00adship, and heartbreak for the ages. Colorless Tsukuru Tazaki and His Years of Pilgrimage is the remarkable story of a young man haunted by a great loss; of dreams and nightmares that have unintended consequences for the world around us; and of a journey into the past that is necessary to mend the present. A New York Times and Washington Post notable book, and one of the Financial Times, St. Louis Post-Dispatch, Slate, Mother Jones, The Daily Beast, and BookPage's best books of the year",
+            "author": "Haruki Murakami",
+            "publisher": "Vintage",
+            "publication_date": "2014-08-12",
+            "page_count": 272,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=hfvfAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 64,
+        "fields": {
+            "isbn": "9781448103713",
+            "title": "The Elephant Vanishes",
+            "description": "A dizzying short story collection that displays Murakami's genius for uncovering the surreal in the everyday, the extraordinary within the ordinary *Featuring the story \u2018Barn Burning\u2019, the inspiration behind the Palme d\u2019Or nominated film Burning* When a man's favourite elephant vanishes, the balance of his whole life is subtly upset. A couple's midnight hunger pangs drive them to hold up a McDonald's. A woman finds she is irresistible to a small green monster that burrows through her front garden. An insomniac wife wakes up in a twilight world of semi-consciousness in which anything seems possible - even death. In every one of these stories Murakami makes a determined assault on the normal.",
+            "author": "Haruki Murakami",
+            "publisher": "Random House",
+            "publication_date": "2011-10-10",
+            "page_count": 43,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=CnMXMbZEhAoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 65,
+        "fields": {
+            "isbn": "9780307777683",
+            "title": "Dance Dance Dance",
+            "description": "Dance Dance Dance\u2014a follow-up to A Wild Sheep Chase\u2014is a tense, poignant, and often hilarious ride through Murakami\u2019s Japan, a place where everything that is not up for sale is up for grabs. As Murakami\u2019s nameless protagonist searches for a mysteriously vanished girlfriend, he is plunged into a wind tunnel of sexual violence and metaphysical dread. In this propulsive novel, featuring a shabby but oracular Sheep Man, one of the most idiosyncratically brilliant writers at work today fuses together science fiction, the hardboiled thriller, and white-hot satire.",
+            "author": "Haruki Murakami",
+            "publisher": "Vintage",
+            "publication_date": "2010-11-17",
+            "page_count": 418,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=NadjlQqyYnEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 66,
+        "fields": {
+            "isbn": "9780307762719",
+            "title": "Norwegian Wood",
+            "description": "From the bestselling author of Kafka on the Shore: A magnificent coming-of-age story steeped in nostalgia, \u201ca masterly novel\u201d (The New York Times Book Review) blending the music, the mood, and the ethos that were the sixties with a young man\u2019s hopeless and heroic first love. Toru, a serious young college student in Tokyo, is devoted to Naoko, a beautiful and introspective young woman, but their mutual passion is marked by the tragic death of their best friend years before. As Naoko retreats further into her own world, Toru finds himself drawn to a fiercely independent and sexually liberated young woman. Stunning and elegiac, Norwegian Wood first propelled Haruki Murakami into the forefront of the literary scene.",
+            "author": "Haruki Murakami",
+            "publisher": "Vintage",
+            "publication_date": "2010-08-11",
+            "page_count": 307,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=1EhPf1ZptXwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 67,
+        "fields": {
+            "isbn": "9781452943060",
+            "title": "The Forbidden Worlds of Haruki Murakami",
+            "description": "In an \u201cother world\u201d composed of language\u2014it could be a fathomless Martian well, a labyrinthine hotel or forest\u2014a narrative unfolds, and with it the experiences, memories, and dreams that constitute reality for Haruki Murakami\u2019s characters and readers alike. Memories and dreams in turn conjure their magical counterparts\u2014people without names or pasts, fantastic animals, half-animals, and talking machines that traverse the dark psychic underworld of this writer\u2019s extraordinary fiction. Fervently acclaimed worldwide, Murakami\u2019s wildly imaginative work in many ways remains a mystery, its worlds within worlds uncharted territory. Finally in this book readers will find a map to the strange realm that grounds virtually every aspect of Murakami\u2019s writing. A journey through the enigmatic and baffling innermost mind, a metaphysical dimension where Murakami\u2019s most bizarre scenes and characters lurk, The Forbidden Worlds of Haruki Murakami exposes the psychological and mythological underpinnings of this other world. Matthew Carl Strecher shows how these considerations color Murakami\u2019s depictions of the individual and collective soul, which constantly shift between the tangible and intangible but in this literary landscape are undeniably real. Through these otherworldly depths The Forbidden Worlds of Haruki Murakami also charts the writer\u2019s vivid \u201cinner world,\u201d whether unconscious or underworld (what some Japanese critics call achiragawa, or \u201cover there\u201d), and its connectivity to language. Strecher covers all of Murakami\u2019s work\u2014including his efforts as a literary journalist\u2014and concludes with the first full-length close reading of the writer\u2019s newest novel, Colorless Tsukuru Tazaki and His Years of Pilgrimage.",
+            "author": "Matthew Carl Strecher",
+            "publisher": "U of Minnesota Press",
+            "publication_date": "2014-10-01",
+            "page_count": 347,
+            "category": "Literary Criticism",
+            "image_url": "http://books.google.com/books/content?id=6S90DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 68,
+        "fields": {
+            "isbn": "9781473597112",
+            "title": "Murakami T",
+            "description": "The international literary icon opens his eclectic closet and shares photos of his extensive unique personal T-shirt collection, accompanied by essays that reveal a side of the writer rarely seen by the public. Haruki Murakami's books have galvanized millions around the world. Many of his fans know about his 10,000-vinyl-record collection, and his obsession with running, but few have heard about a more intimate, and perhaps more unique, passion: his T-shirt-collecting habit. In Murakami T, the famously reclusive novelist shows us his T-shirts - including gems found in bookshops, charity shops and record stores - from those featuring whisky, animals, cars and superheroes, to souvenirs of marathons and a Beach Boys concert in Honolulu, to the shirt that inspired the beloved short story 'Tony Takitani'. Accompanied by short, frank essays that have been translated into English for the first time, these photographs reveal much about Murakami's multifaceted and wonderfully eccentric persona. 'The world's most popular cult novelist' Guardian",
+            "author": "Haruki Murakami",
+            "publisher": "Random House",
+            "publication_date": "2021-11-23",
+            "page_count": 192,
+            "category": "Biography & Autobiography",
+            "image_url": "http://books.google.com/books/content?id=yJUmEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 69,
+        "fields": {
+            "isbn": "9781473563810",
+            "title": "Birthday Girl",
+            "description": "Birthday Girl is a beguiling, exquisitely satisfying short story . A taste of master storytelling, published to celebrate Murakami's 70th birthday. She waited on tables as usual that day, her twentieth birthday. She always worked Fridays, but if things had gone according to plan on that particular Friday, she would have had the night off. One rainy Tokyo night, a waitress's uneventful twentieth birthday takes a strange and fateful turn when she's asked to deliver dinner to the restaurant's reclusive owner. Birthday Girl is a beguiling, exquisitely satisfying taste of master storytelling, published to celebrate Murakami's 70th birthday. Birthday Girl is also available in Birthday Stories and Blind Willow, Sleeping Woman.",
+            "author": "Haruki Murakami",
+            "publisher": "Random House",
+            "publication_date": "2019-01-24",
+            "page_count": 48,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=IWBgDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 70,
+        "fields": {
+            "isbn": "9780375413469",
+            "title": "Sputnik Sweetheart",
+            "description": "Part romance, part detective story, Sputnik Sweetheart tells the story of a tangled triangle of uniquely unrequited love. K is madly in love with his best friend, Sumire, but her devotion to a writerly life precludes her from any personal commitments. At least, that is, until she meets an older woman to whom she finds herself irresistibly drawn. When Sumire disappears from an island off the coast of Greece, K is solicited to join the search party\u2014and finds himself drawn back into her world and beset by ominous visions. Subtle and haunting, Sputnik Sweetheart is a profound meditation on human longing.",
+            "author": "Haruki Murakami",
+            "publisher": "Vintage",
+            "publication_date": "2001-05-22",
+            "page_count": 235,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=ao0i74dbkxQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 71,
+        "fields": {
+            "isbn": "9780307430014",
+            "title": "Vintage Murakami",
+            "description": "Vintage Readers are a perfect introduction to some of the greatest modern writers presented in attractive, accessible paperback editions. \u201cMurakami\u2019s bold willingness to go straight over the top is a signal indication of his genius. . . . A world-class writer who has both eyes open and takes big risks.\u201d \u2014The Washington Post Book World Not since Yukio Mishima and Yasunari Kawabata has a Japanese writer won the international acclaim enjoyed by Haruki Murakami. His genre-busting novels, short stories and reportage, which have been translated into 35 languages, meld the surreal and the hard-boiled, deadpan comedy and delicate introspection. Vintage Murakami includes the opening chapter of the international bestseller Norwegian Wood; \u201cLieutenant Mamiya\u2019s Long Story: Parts I and II\u201d from his monumental novel The Wind-Up Bird Chronicle; \u201cShizuko Akashi\u201d from Underground, his non-fiction book on the Toyko subway attack of 1995; and the short stories \u201cBarn Burning,\u201d \u201cHoneypie.\u201d Also included, for the first time in book form, the short story, \u201cIce Man.\u201d",
+            "author": "Haruki Murakami",
+            "publisher": "Vintage",
+            "publication_date": "2007-12-18",
+            "page_count": 189,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=kB65Rva1XM0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 72,
+        "fields": {
+            "isbn": "9789794334645",
+            "title": "The Divine Message of DNA",
+            "description": "Berdasarkan temuan2 ini, dan fakta bahwa kode genetik terlalu kompleks untuk terbentuk secara kebetulan, Dr. Murakami berkesimpulan bahwa ada kekuatan yang lebih besar di alam semesta ini. Ia menyebutnya \"sang Agung\". Ia yakin bahwa segala kehidupan datang dari sumber itu-sang asal mula, ata yang kita sebut sebagai Tuhan. [Mizan, Ilmu, Pengetahuan, Indonesia]",
+            "author": "Dr. Kazuo Murakami",
+            "publisher": "Mizan Pustaka",
+            "publication_date": "2006-04-28",
+            "page_count": 197,
+            "category": "Ethics",
+            "image_url": "http://books.google.com/books/content?id=_uNIaC53_rwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 73,
+        "fields": {
+            "isbn": "9786020663852",
+            "title": "Funiculi Funicula 2: Kisah-Kisah yang Baru Terungkap",
+            "description": "Funiculi Funicula, sebuah kafe di gang sempit di Tokyo, masih kerap didatangi orang-orang yang ingin menjelajahi waktu. Peraturan-peraturan yang merepotkan masih berlaku, tetapi itu semua tidak menyurutkan harapan mereka untuk memutar waktu. Kali ini ada seorang pria yang ingin kembali ke masa lalu untuk menemui sahabat yang putrinya ia besarkan, seorang putra putus asa yang tidak menghadiri pemakaman ibunya, seorang pria sekarat yang ingin melompat ke dua tahun kemudian untuk memastikan kekasihnya bahagia, dan seorang detektif yang ingin memberi istrinya hadiah ulang tahun untuk pertama sekaligus terakhir kalinya. Kenyataan memang akan tetap sama. Namun dalam singkatnya durasi sampai kopi mendingin, mungkin masih tersisa waktu bagi mereka untuk menghapus penyesalan, membebaskan diri dari rasa bersalah, atau mungkin melihat terwujudnya harapan...",
+            "author": "Toshikazu Kawaguchi",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2022-11-21",
+            "page_count": 204,
+            "category": "Young Adult Fiction",
+            "image_url": "http://books.google.com/books/content?id=WlueEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 74,
+        "fields": {
+            "isbn": "9786020671727",
+            "title": "Funiculi Funicula#3: Dona Dona",
+            "description": "Di sebuah lereng indah tak bernama di Hakodate, Hokkaido, berdiri Kafe Dona Dona yang menawarkan layanan istimewa kepada pengunjungnya: perjalananan melintasi waktu. Seperti di Funiculi Funicula yang ada di Tokyo, hal tersebut hanya dapat dilakukan jika berbagai peraturan yang merepotkan dipenuhi dan dengan secangkir kopi yang dituangkan oleh perempuan di keluarga Tokita. Mereka yang ingin memutar waktu adalah seorang wanita muda yang menyimpan dendam kepada orangtua yang menjadikannya yatim piatu kesepian, seorang komedian yang kehilangan tujuan hidup setelah berhasil mewujudkan impian mendiang istrinya, seorang adik yang khawatir kakaknya takkan bisa tersenyum lagi setelah kepergiannya, dan seorang pemuda yang tak mampu mengungkapkan cinta terpendam kepada sahabatnya. Mungkin perjalanan mereka hanya akan menyisakan kenangan. Namun, kehangatannya akan membekas dan barangkali, pada akhirnya, menumbuhkan tekad baru untuk menjalani hidup\u00c9",
+            "author": "Toshikazu Kawaguchi",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2023-08-25",
+            "page_count": 267,
+            "category": "Young Adult Fiction",
+            "image_url": "http://books.google.com/books/content?id=OlrTEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 75,
+        "fields": {
+            "isbn": "9786020651941",
+            "title": "Funiculi Funicula (K\u014dh\u012b Ga Samenai Uchi ni---Before the Coffee Gets Cold)",
+            "description": "Di sebuah gang kecil di Tokyo, ada kafe tua yang bisa membawa pengunjungnya menjelajahi waktu. Keajaiban kafe itu menarik seorang wanita yang ingin memutar waktu untuk berbaikan dengan kekasihnya, seorang perawat yang ingin membaca surat yang tak sempat diberikan suaminya yang sakit, seorang kakak yang ingin menemui adiknya untuk terakhir kali, dan seorang ibu yang ingin bertemu dengan anak yang mungkin takkan pernah dikenalnya. Namun ada banyak peraturan yang harus diingat. Satu, mereka harus tetap duduk di kursi yang telah ditentukan. Dua, apa pun yang mereka lakukan di masa yang didatangi takkan mengubah kenyataan di masa kini. Tiga, mereka harus menghabiskan kopi khusus yang disajikan sebelum kopi itu dingin. Rentetan peraturan lainnya tak menghentikan orang-orang itu untuk menjelajahi waktu. Akan tetapi, jika kepergian mereka tak mengubah satu hal pun di masa kini, layakkah semua itu dijalani?",
+            "author": "Toshikawa Kawaguchi",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2021-09-16",
+            "page_count": 159,
+            "category": "Young Adult Fiction",
+            "image_url": "http://books.google.com/books/content?id=gO5EEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 76,
+        "fields": {
+            "isbn": "9780369748577",
+            "title": "Before the Coffee Gets Cold: A Toshikazu Kawaguchi Book Set",
+            "description": "What would you do if you could travel back in time? Discover the internationally bestselling novels of Toshikazu Kawaguchi\u2019s Before the Coffee Gets Cold series, now a worldwide phenomenon and BookTok sensation, in this special new box set. Step inside Tokyo\u2019s whimsical Caf\u00e9 Funiculi Funicula and travel back in time with a cast of unforgettable characters, including: Before the Coffee Gets Cold: estranged sisters, a newly pregnant customer, and the wife of a man with early onset Alzheimer\u2019s Tales from the Caf\u00e9: a detective with a gift, a son with regrets, and a man chasing \u201cthe one who got away\u201d Before Your Memory Fades: a comedian with big dreams, a grieving sister, and childhood lovers For new and longtime fans alike, this boxed set is the perfect collection of heartwarming, uplifting tales that remind us we \u201cdon\u2019t have to live burdened by regret\u201d (New York Times). Translated from Japanese in the signature prose of Geoffrey Trousselot, each installment of this series brings new adventure that has captivated millions of readers around the world.",
+            "author": "Toshikazu Kawaguchi",
+            "publisher": "Harlequin",
+            "publication_date": "2023-06-13",
+            "page_count": 566,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=aFu7EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 77,
+        "fields": {
+            "isbn": "9781529050875",
+            "title": "Tales from the Cafe",
+            "description": "The million-copy bestselling series. Toshikazu Kawaguchi\u2019s heartwarming Tales from the Cafe, translated from Japanese by Geoffrey Trousselot, explores the age-old question: what would you do if you could travel back in time? More importantly, who would you want to meet, maybe for one last time? In a small back alley in Tokyo, there is a cafe which has been serving carefully brewed coffee for more than one hundred years. But this coffee shop offers its customers a unique experience: the chance to travel back in time . . . From the author of Before the Coffee Gets Cold comes a story of four new customers each of whom is hoping to take advantage of Cafe Funiculi Funicula's time-travelling offer. Among some faces that will be familiar to readers, we will be introduced to: The man who goes back to see his best friend who died 22 years ago The son who was unable to attend his own mother\u2019s funeral The man who travelled to see the girl who he could not marry The old detective who never gave his wife that gift . . . This beautiful tale tells the story of people who must face up to their past, in order to move on with their lives. Continue the heartwarming storytelling with Before Your Memory Fades and Before We Say Goodbye.",
+            "author": "Toshikazu Kawaguchi",
+            "publisher": "Pan Macmillan",
+            "publication_date": "2020-09-17",
+            "page_count": 180,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=OnnYDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 78,
+        "fields": {
+            "isbn": "9781488077210",
+            "title": "Before the Coffee Gets Cold",
+            "description": "*NOW AN LA TIMES BESTSELLER* *OVER ONE MILLION COPIES SOLD* *AN INTERNATIONAL BESTSELLER* If you could go back in time, who would you want to meet? In a small back alley of Tokyo, there is a caf\u00e9 that has been serving carefully brewed coffee for more than one hundred years. Local legend says that this shop offers something else besides coffee\u2014the chance to travel back in time. Over the course of one summer, four customers visit the caf\u00e9 in the hopes of making that journey. But time travel isn\u2019t so simple, and there are rules that must be followed. Most important, the trip can last only as long as it takes for the coffee to get cold. Heartwarming, wistful, mysterious and delightfully quirky, Toshikazu Kawaguchi\u2019s internationally bestselling novel explores the age-old question: What would you change if you could travel back in time? Meet more wonderful characters in the next captivating novel in the Before the Coffee Gets Cold series, Before We Say Goodbye, releasing November 14, 2023! Read the rest of the Before the Coffee Gets Cold series: Tales from the Cafe Before Your Memory Fades",
+            "author": "Toshikazu Kawaguchi",
+            "publisher": "Harlequin",
+            "publication_date": "2020-11-17",
+            "page_count": 222,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=MOPMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 79,
+        "fields": {
+            "isbn": "9780369722690",
+            "title": "Before Your Memory Fades",
+            "description": "The third novel in the international bestselling Before the Coffee Gets Cold series, following four new customers in a cafe where customers can travel back in time. On the hillside of Mount Hakodate in northern Japan, Cafe Donna Donna is fabled for its dazzling views of Hakodate port. But that\u2019s not all. Like the charming Tokyo cafe Funiculi Funicula, Cafe Donna Donna offers its customers the extraordinary experience of travelling through time. From the author of Before the Coffee Gets Cold and Tales from the Cafe comes another story of four new customers, each of whom is hoping to take advantage of the cafe's time-travelling offer. Among some familiar faces from Toshikazu Kawaguchi\u2019s previous novels, readers will also be introduced to: A daughter who begrudges her deceased parents for leaving her orphaned A comedian who aches for his beloved and their shared dreams A younger sister whose grief has become all-consuming A young man who realizes his love for his childhood friend too late Translated from Japanese by Geoffrey Trousselot and featuring signature heart-warming characters and wistful storytelling, in Before Your Memory Fades, Kawaguchi once again invites the reader to ask themselves: what would you change if you could travel back in time?",
+            "author": "Toshikazu Kawaguchi",
+            "publisher": "Harlequin",
+            "publication_date": "2022-11-15",
+            "page_count": 249,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=zYpbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 80,
+        "fields": {
+            "isbn": "9781035023448",
+            "title": "Before We Say Goodbye",
+            "description": "The million-copy bestselling series. Toshikazu Kawaguchi\u2019s poignant Before We Say Goodbye, translated from Japanese, explores the age-old question: what would you do if you could travel back in time? More importantly, who would you want to meet, maybe for one last time? The regulars at the magical Cafe Funiculi Funicula are well acquainted with its famous legend and extraordinary, secret menu time travel offering. Many patrons have reunited with old flames, made amends with estranged family, and visited loved ones. But the journey is not without risks and there are rules to follow. Travellers must have visited the cafe previously and most importantly, must return to the present in the time it takes for their coffee to go cold. In the tradition of Kawaguchi\u2019s sensational 'Before the Coffee Gets Cold' series, readers are be introduced to a new set of visitors: - The husband with something important left to say - The woman who couldn\u2019t bid her dog farewell - The woman who couldn\u2019t answer a proposal - The daughter who drove her father away . . . In the hauntingly beautiful Before We Say Goodbye, Kawaguchi invites us to join his characters as they embark on a journey to revisit one crucial moment in time. Catch up on the rest of the series with Before the Coffee Gets Cold, Tales from the Cafe and Before Your Memory Fades.",
+            "author": "Toshikazu Kawaguchi",
+            "publisher": "Pan Macmillan",
+            "publication_date": "2023-09-14",
+            "page_count": 157,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=HVepEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 81,
+        "fields": {
+            "isbn": "9781457417160",
+            "title": "Mandolin Gold",
+            "description": "This wonderful collection of music for the mandolin includes bluegrass; old-time fiddle tunes; classical music (including the complete solo part for the Vivaldi mandolin concerto and the \"Canzonetta\" from Mozart's \"Don Giovanni\"); American, Irish, Jewish, Russian and Italian songs; reels; jigs; hornpipes; hymns and gospel songs; minstrel songs; patriotic; blues and jazz; children's songs; and cowboy and country ballads. This collection consists of over a hundred selections in standard music notation and TAB. Lyrics for singing and chord symbols for optional accompaniment is included. Also included are tremolo exercises, a guide to fingering, chord charts for guitar and mandolin, the history of the mandolin, and interesting comments about the history and performance of each song.",
+            "author": "Dan Fox",
+            "publisher": "Alfred Music",
+            "publication_date": "2005-05-03",
+            "page_count": 156,
+            "category": "Music",
+            "image_url": "http://books.google.com/books/content?id=TBvz5b-4cnAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 82,
+        "fields": {
+            "isbn": "9781440839979",
+            "title": "Music of the First World War",
+            "description": "This book discusses WWI-era music in a historical context, explaining music's importance at home and abroad during WWI as well as examining what music was being sung, played, and danced to during the years prior to America's involvement in the Great War. Why was music so important to soldiers abroad during World War I? What role did music\u2014ranging from classical to theater music, rags, and early jazz\u2014play on the American homefront? Music of the First World War explores the tremendous importance of music during the years of the Great War\u2014when communication technologies were extremely limited and music often took the place of connecting directly with loved ones or reminiscing via recorded images. The book's chapters cover music's contribution to the war effort; the variety of war-related songs, popular hits, and top recording artists of the war years; the music of Broadway shows and other theater productions; and important composers and lyricists. The author also explores the development of the fledgling recording industry at this time.",
+            "author": "Don Tyler",
+            "publisher": "Bloomsbury Publishing USA",
+            "publication_date": "2016-03-21",
+            "page_count": 324,
+            "category": "History",
+            "image_url": "http://books.google.com/books/content?id=lBjHEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 83,
+        "fields": {
+            "isbn": "9786020633763",
+            "title": "Sembilan Orang Asing (Nine Perfect Strangers)",
+            "description": "Sembilan orang asing berkumpul di resor kesehatan terpencil. Ada yang datang untuk menurunkan berat badan, ada yang datang untuk memulai kehidupan baru, dan ada yang datang untuk alasan-alasan yang bahkan tidak bisa mereka akui sendiri. Frances Welty, mantan penulis novel romantis terkenal, tiba di Tranquillum House dengan punggung sakit dan hati hancur. Ia langsung tertarik pada tamu-tamu lain di sana, tapi orang yang paling menarik perhatiannya adalah pemilik dan direktur Tranquillum House yang aneh dan karismatik. Apakah Frances harus menyingkirkan keraguannya dan menerima semua yang ditawarkan Tranquillum House? Atau apakah ia harus kabur selagi masih bisa? Tak lama kemudian, semua tamu di Tranquillum House juga mengajukan pertanyaan yang sama. Karena ada sesuatu yang mengintai di balik kemewahan resor kesehatan itu. Dan kesembilan orang asing di sana sama sekali tidak tahu apa yang akan menerjang mereka...",
+            "author": "Liane Moriarty",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2020-09-21",
+            "page_count": 404,
+            "category": "Young Adult Fiction",
+            "image_url": "http://books.google.com/books/content?id=ukP-DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 84,
+        "fields": {
+            "isbn": "9780817321406",
+            "title": "Staging America",
+            "description": "A comprehensive history of the Provincetown Players and their influence on modern American theatre The Provincetown Players created a revolution in American theatre, making room for truly modern approaches to playwriting, stage production, and performance unlike anything that characterized the commercial theatre of the early twentieth century. In Staging America: The Artistic Legacy of the Provincetown Players, Jeffery Kennedy gives readers the unabridged story in a meticulously researched and comprehensive narrative that sheds new light on the history of the Provincetown Players. This study draws on many new sources that have only become available in the last three decades; this new material modifies, refutes, and enhances many aspects of previous studies. At the center of the study is an extensive account of the career of George Cram Cook, the Players\u2019 leader and artistic conscience, as well as one of the most significant facilitators of modernist writing in early twentieth-century American literature and theatre. It traces Cook\u2019s mission of \u201ccultural patriotism,\u201d which drove him toward creating a uniquely American identity in theatre. Kennedy also focuses on the group of friends he calls the \u201cRegulars,\u201d perhaps the most radical collection of minds in America at the time; they encouraged Cook to launch the Players in Provincetown in the summer of 1915 and instigated the move to New York City in fall 1916. Kennedy has paid particular attention to the many legends connected to the group (such as the \u201cdiscovery\u201d of Eugene O\u2019Neill), and also adds to the biographical record of the Players\u2019 forty-seven playwrights, including Susan Glaspell, Neith Boyce, Edna St. Vincent Millay, Floyd Dell, Rita Wellman, Mike Gold, Djuna Barnes, and John Reed. Kennedy also examines other fascinating artistic, literary, and historical personalities who crossed the Players\u2019 paths, including Emma Goldman, Charles Demuth, Berenice Abbott, Sophie Treadwell, Theodore Dreiser, Claudette Colbert, and Charlie Chaplin. Kennedy highlights the revolutionary nature of those living in bohemian Greenwich Village who were at the heart of the Players and the America they were responding to in their plays.",
+            "author": "Jeffery Kennedy",
+            "publisher": "University of Alabama Press",
+            "publication_date": "2023-01-24",
+            "page_count": 641,
+            "category": "Drama",
+            "image_url": "http://books.google.com/books/content?id=FUmWEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 85,
+        "fields": {
+            "isbn": "9781101195819",
+            "title": "Kokoro",
+            "description": "The father of modern Japanese literature's best-loved novel, in its first new English translation in half a century No collection of Japanese literature is complete without Natsume Soseki's Kokoro, his most famous novel and the last he completed before his death. Published here in the first new translation in more than fifty years, Kokoro\u2014meaning \"heart\"\u2014is the story of a subtle and poignant friendship between two unnamed characters, a young man and an enigmatic elder whom he calls \"Sensei.\" Haunted by tragic secrets that have cast a long shadow over his life, Sensei slowly opens up to his young disciple, confessing indiscretions from his own student days that have left him reeling with guilt, and revealing, in the seemingly unbridgeable chasm between his moral anguish and his student's struggle to understand it, the profound cultural shift from one generation to the next that characterized Japan in the early twentieth century.",
+            "author": "Natsume Soseki",
+            "publisher": "Penguin",
+            "publication_date": "2010-02-23",
+            "page_count": 257,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=qRsV8Ygs5rgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 86,
+        "fields": {
+            "isbn": "9786024240325",
+            "title": "Seri Sastra Dunia: Rahasia Hati",
+            "description": "RAHASIA HATI melukiskan kesepian manusia dalam dunia modern. Tokoh Sensei yang merasa asing dalam masyarakat, bahkan terhadap istrinya, justru sadar bahwa sikapnya itu merupakan suatu dosa. Dan dosa itu harus mendapat hukuman\u2014bukan dari manusia lain, tapi dari dirinya sendiri.",
+            "author": "Natsume Soseki",
+            "publisher": "Kepustakaan Populer Gramedia",
+            "publication_date": "2016-04-27",
+            "page_count": 272,
+            "category": "Juvenile Fiction",
+            "image_url": "http://books.google.com/books/content?id=WNRCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 87,
+        "fields": {
+            "isbn": "9780141938073",
+            "title": "Sanshiro",
+            "description": "One of Soseki's most beloved works of fiction, the novel depicts the 23-year-old Sanshiro leaving the sleepy countryside for the first time in his life to experience the constantly moving 'real world' of Tokyo, its women and university. In the subtle tension between our appreciation of Soseki's lively humour and our awareness of Sanshiro's doomed innocence, the novel comes to life. Sanshiro is also penetrating social and cultural commentary.",
+            "author": "Natsume Soseki",
+            "publisher": "Penguin UK",
+            "publication_date": "2009-11-26",
+            "page_count": 288,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=V44kYO8PM7UC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 88,
+        "fields": {
+            "isbn": "9781478021926",
+            "title": "A Fictional Commons",
+            "description": "Modernity arrived in Japan, as elsewhere, through new forms of ownership. In A Fictional Commons, Michael K. Bourdaghs explores how the literary and theoretical works of Natsume S\u014dseki (1867\u20131916), widely celebrated as Japan's greatest modern novelist, exploited the contradictions and ambiguities that haunted this new system. Many of his works feature narratives about inheritance, thievery, and the struggle to obtain or preserve material wealth while also imagining alternative ways of owning and sharing. For S\u014dseki, literature was a means for thinking through\u2014and beyond\u2014private property. Bourdaghs puts S\u014dseki into dialogue with thinkers from his own era (including William James and Mizuno Rentar\u014d, author of Japan\u2019s first copyright law) and discusses how his work anticipates such theorists as Karatani K\u014djin and Franco Moretti. As Bourdaghs shows, S\u014dseki both appropriated and rejected concepts of ownership and subjectivity in ways that theorized literature as a critical response to the emergence of global capitalism.",
+            "author": "Michael K. Bourdaghs",
+            "publisher": "Duke University Press",
+            "publication_date": "2021-08-09",
+            "page_count": 146,
+            "category": "Literary Criticism",
+            "image_url": "http://books.google.com/books/content?id=_9c7EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 89,
+        "fields": {
+            "isbn": "9781910709061",
+            "title": "The Miner",
+            "description": "The Miner is the most daringly experimental and least well-known novel of the great Meiji writer Natsume Soseki. An absurdist tale about the indeterminate nature of human personality, written in 1908, it was in many ways a precursor to the work of Joyce and Beckett. The result is a novel that is both absurd and comical, and a true modernist classic.",
+            "author": "Natsume Soseki",
+            "publisher": "Gallic Books",
+            "publication_date": "2015-09-07",
+            "page_count": 320,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=kh1NCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 90,
+        "fields": {
+            "isbn": "9780231536189",
+            "title": "Light and Dark",
+            "description": "Light and Dark, Natsume Soseki's longest novel and masterpiece, although unfinished, is a minutely observed study of haute-bourgeois manners on the eve of World War I. It is also a psychological portrait of a new marriage that achieves a depth and exactitude of character revelation that had no precedent in Japan at the time of its publication and has not been equaled since. With Light and Dark, Soseki invented the modern Japanese novel. Recovering in a clinic following surgery, thirty-year-old Tsuda Yoshio receives visits from a procession of intimates: his coquettish young wife, O-Nobu; his unsparing younger sister, O-Hide, who blames O-Nobu's extravagance for her brother's financial difficulties; his self-deprecating friend, Kobayashi, a ne'er-do-well and troublemaker who might have stepped from the pages of a Dostoevsky novel; and his employer's wife, Madam Yoshikawa, a conniving meddler with a connection to Tsuda that is unknown to the others. Divergent interests create friction among this closely interrelated cast of characters that explodes into scenes of jealousy, rancor, and recrimination that will astonish Western readers conditioned to expect Japanese reticence. Released from the clinic, Tsuda leaves Tokyo to continue his convalescence at a hot-springs resort. For reasons of her own, Madam Yoshikawa informs him that a woman who inhabits his dreams, Kiyoko, is staying alone at the same inn, recovering from a miscarriage. Dissuading O-Nobu from accompanying him, Tsuda travels to the spa, a lengthy journey fraught with real and symbolic obstacles that feels like a passage from one world to another. He encounters Kiyoko, who attempts to avoid him, but finally manages a meeting alone with her in her room. Soseki's final scene is a sublime exercise in indirection that leaves Tsuda to \"explain the meaning of her smile.\"",
+            "author": "S\u014dseki Natsume",
+            "publisher": "Columbia University Press",
+            "publication_date": "2013-12-03",
+            "page_count": 464,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=Ie1mAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 91,
+        "fields": {
+            "isbn": "9780824864095",
+            "title": "Reflections in a Glass Door",
+            "description": "Much has been written about Natsume Soseki (1867\u20131916), one of Japan\u2019s most celebrated writers. Known primarily for his novels, he also published a large and diverse body of short personal writings (shohin) that have long lived in the shadow of his fictional works. The essays, which appeared in the Asahi shinbun between 1907 and 1915, comprise a fascinating autobiographical mosaic, while capturing the spirit of the Meiji era and the birth of modern Japan. In Reflections in a Glass Door, Marvin Marcus introduces readers to a rich sampling of Soseki\u2019s shohin. The writer revisits his Tokyo childhood, recalling family, friends, and colleagues and musing wistfully on the transformation of his city and its old neighborhoods. He painfully recounts his two years in London, where he immersed himself in literary research even as he struggled with severe depression. A chronic stomach ailment causes Soseki to reflect on his own mortality and what he saw as the spiritual afflictions of modern Japanese: rampant egocentrism and materialism. Throughout he adopts a number of narrative voices and poses: the peevish husband, the harried novelist, the convalescent, the seeker of wisdom. Marcus identifies memory and melancholy as key themes in Soseki\u2019s personal writings and highlights their relevance in his fiction. He balances Soseki\u2019s account of his Tokyo household with that of his wife, Natsume Kyoko, who left a straightforward record of life with her celebrated husband. Soseki crafted a moving and convincing voice in his shohin, which can now be pondered and enjoyed for their penetrating observation and honesty, as well as the fresh perspective they offer on one of Japan\u2019s literary giants.",
+            "author": "Marvin Marcus",
+            "publisher": "University of Hawaii Press",
+            "publication_date": "2009-07-15",
+            "page_count": 281,
+            "category": "Biography & Autobiography",
+            "image_url": "http://books.google.com/books/content?id=JY0BEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 92,
+        "fields": {
+            "isbn": "9781681951652",
+            "title": "Botchan",
+            "description": "A Comic Japanese Novel \u201cOne may be branded foolishly honest if he takes seriously the apologies others might offer. We should regard all apologies a sham and forgiving also as a sham; then everything would be all right. If one wants to make another apologize from his heart, he has to pound him good and strong until he begs for mercy from his heart\u201d \u2015 Natsume S\u014dseki, Botchan Botchan by Natsume S\u014dseki is a classic Japanese coming of age novel about a young man who is sent from Tokyo to the countryside to teach mathematics at a middle school. This Xist Classics edition has been professionally formatted for e-readers with a linked table of contents. This eBook also contains a bonus book club leadership guide and discussion questions. We hope you\u2019ll share this book with your friends, neighbors and colleagues and can\u2019t wait to hear what you have to say about it.",
+            "author": "Natsume Soseki",
+            "publisher": "Xist Publishing",
+            "publication_date": "2015-07-02",
+            "page_count": 173,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=5uMmCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 93,
+        "fields": {
+            "isbn": "9786020652108",
+            "title": "Botchan - cover baru",
+            "description": "Seperti cerita The Adventures of Huckleberry Finn, Botchan mengisahkan pemberontakan seorang guru muda terhadap \u00d2sistem\u00d3 di sebuah sekolah desa. Sifat Botchan yang selalu terus terang dan tidak mau berpura-pura sering membuat ia mengalami kesulitan dalam berinteraksi dengan orang-orang di sekitarnya. Cerita yang dituturkan secara humoris ini sangat populer di kalangan tua dan muda di Jepang, dan barangkali merupakan novel klasik yang paling banyak dibaca di Jepang modern.",
+            "author": "Natsume Soseki",
+            "publisher": "Gramedia Pustaka Utama",
+            "publication_date": "2021-04-19",
+            "page_count": 219,
+            "category": "Young Adult Fiction",
+            "image_url": "http://books.google.com/books/content?id=K20qEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "id"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 94,
+        "fields": {
+            "isbn": "9780143105190",
+            "title": "Kusamakura",
+            "description": "A stunning new English translation\u2014the first in more than forty years\u2014of a major novel by the father of modern Japanese fiction Natsume Soseki's Kusamakura\u2014meaning \u201cgrass pillow\u201d\u2014follows its nameless young artist-narrator on a meandering walking tour of the mountains. At the inn at a hot spring resort, he has a series of mysterious encounters with Nami, the lovely young daughter of the establishment. Nami, or \"beauty,\" is the center of this elegant novel, the still point around which the artist moves and the enigmatic subject of Soseki's word painting. In the author's words, Kusamakura is \"a haiku-style novel, that lives through beauty.\" Written at a time when Japan was opening its doors to the rest of the world, Kusamakura turns inward, to the pristine mountain idyll and the taciturn lyricism of its courtship scenes, enshrining the essence of old Japan in a work of enchanting literary nostalgia.",
+            "author": "Natsume Soseki",
+            "publisher": "National Geographic Books",
+            "publication_date": "2008-01-29",
+            "page_count": 0,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=76GMEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 95,
+        "fields": {
+            "isbn": "9781590175873",
+            "title": "The Gate",
+            "description": "An NYRB Classics Original A humble clerk and his loving wife scrape out a quiet existence on the margins of Tokyo. Resigned, following years of exile and misfortune, to the bitter consequences of having married without their families\u2019 consent, and unable to have children of their own, S\u014dsuke and Oyone find the delicate equilibrium of their household upset by a new obligation to meet the educational expenses of S\u014dsuke\u2019s brash younger brother. While an unlikely new friendship appears to offer a way out of this bind, it also soon threatens to dredge up a past that could once again force them to flee the capital. Desperate and torn, S\u014dsuke finally resolves to travel to a remote Zen mountain monastery to see if perhaps there, through meditation, he can find a way out of his predicament. This moving and deceptively simple story, a melancholy tale shot through with glimmers of joy, beauty, and gentle wit, is an understated masterpiece by one of Japan\u2019s greatest writers. At the end of his life, Natsume S\u014dseki declared The Gate, originally published in 1910, to be his favorite among all his novels. This new translation captures the oblique grace of the original while correcting numerous errors and omissions that marred the first English version.",
+            "author": "Natsume Soseki",
+            "publisher": "National Geographic Books",
+            "publication_date": "2012-12-04",
+            "page_count": 0,
+            "category": "Fiction",
+            "image_url": "http://books.google.com/books/content?id=SjCQEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 96,
+        "fields": {
+            "isbn": "9781462922390",
+            "title": "Soseki Natsume's I Am A Cat: The Manga Edition",
+            "description": "Japan's beloved literary masterpiece brought to life in manga form! Soseki Natsume's comic masterpiece, I Am a Cat, satirizes the foolishness of upper-middle-class Japanese society in early 20th century Tokyo. Written with biting wit and sardonic perspective, it follows the whimsical adventures of a rather cynical stray kitten. He finds his way into the home of an English teacher, where his running commentary on the follies and foibles of the people around him has been making readers laugh for more than a century. This is the very first manga edition in English of this classic piece of Japanese literature. The story lends itself well to a graphic novel format, allowing readers to pick up on the more subtle cues of the expressive cat, while also being immersed in the world of his perceptive narration. It is true to classic manga form, and is read back to front. The cast of characters includes: Kushami--His master, who is not good at his job and quite stupid The Kenedas--A conceited couple with a spoiled daughter Meitei--Kushami's friend who is fond of jokes and tall tales A group of local cats including lovely Mikeko, and violent Kuro Beautifully illustrated by Japanese artist Chiroru Kobato, this edition provides a visual, entertaining look at a unique period in Japan's history--filled with cultural and societal changes, rapid modernization and a feeling of limitless possibility--through the eyes of an unlikely narrator.",
+            "author": "Soseki Natsume",
+            "publisher": "Tuttle Publishing",
+            "publication_date": "2021-09-28",
+            "page_count": 212,
+            "category": "Comics & Graphic Novels",
+            "image_url": "http://books.google.com/books/content?id=z9EtEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 97,
+        "fields": {
+            "isbn": "9781847064097",
+            "title": "William Shakespeare",
+            "description": "A concise, accessible introduction to Shakespeare's life and work which focuses on what we know, assessing the differing theories and avoiding speculation.",
+            "author": "William Baker",
+            "publisher": "A&C Black",
+            "publication_date": "2009-11-01",
+            "page_count": 191,
+            "category": "Literary Criticism",
+            "image_url": "http://books.google.com/books/content?id=miSeN4lkDbsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 98,
+        "fields": {
+            "isbn": "9781119605317",
+            "title": "The Life of the Author: William Shakespeare",
+            "description": "Discover an invigorating new perspective on the life and work of William Shakespeare The Life of the Author: William Shakespeare delivers a fresh and exciting new take on the life of William Shakespeare, offering readers a biography that brings to the foreground his working life as a poet, playwright, and actor. It also explores the nature of his relationships with his friends, colleagues, and family, and asks important questions about the stories we tell about Shakespeare based on the evidence we actually have about the man himself. The book is written using scholarly citations and references, but with an approachable style suitable for readers with little or no background knowledge of Shakespeare or the era in which he lived. The Life of the Author: William Shakespeare asks provocative questions about the playwright-poet\u2019s preoccupation with gender roles and sexuality, and explores why it is so challenging to ascertain his political and religious allegiances. Conservative or radical? Misogynist or proto-feminist? A lover of men or women or both? Patriot or xenophobe? This introduction to Shakespeare\u2019s life and works offers no simple answers, but recognizes a man intensely responsive to the world around him, a playwright willing and able to collaborate with others and able to collaborate with others, and, of course, his exceptional, perhaps unique, contribution to literature in English. The book covers the entirety of William Shakespeare\u2019s life (1564-1616), taking him from his childhood in Stratford-upon-Avon to his success in the theatre world of London and then back to his home town and comfortable retirement. The Life of the Author: William Shakespeare sets his achievement as a writer within the dangerous, vibrant cultural world that was Elizabethan and Jacobean England, revealing a writer\u2019s life of frequent collaboration, occasional crisis, but always of profound creativity. Perfect for undergraduate students in Literature, Drama, Theatre Studies, History, and Cultural Studies courses, The Life of the Author: William Shakespeare will also earn a place in the libraries of students interested in Gender Studies and Creative Writing.",
+            "author": "Anna Beer",
+            "publisher": "John Wiley & Sons",
+            "publication_date": "2021-07-06",
+            "page_count": 192,
+            "category": "Literary Criticism",
+            "image_url": "http://books.google.com/books/content?id=q0k3EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 99,
+        "fields": {
+            "isbn": "9780762447565",
+            "title": "William Shakespeare",
+            "description": "Miniature guide to the Bard featuring synopses and character profiles from Shakepeare's 38 timeless plays, with one-color illustrations throughout.",
+            "author": "Joelle Herr",
+            "publisher": "RP Minis",
+            "publication_date": "2012-08-28",
+            "page_count": 330,
+            "category": "Humor",
+            "image_url": "http://books.google.com/books/content?id=FekfAQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "lang": "en"
+        }
+    },
+    {
+        "model": "books.Book",
+        "pk": 100,
+        "fields": {
+            "isbn": "9781626862760",
+            "title": "The Complete Works of William Shakespeare",
+            "description": "No library is complete without the classics! This edition includes the complete works of the playwright and poet William Shakespeare, considered by many to be the English language\u2019s greatest writer. Romeo and Juliet, A Midsummer Night\u2019s Dream, King Lear, Hamlet, and Macbeth\u2014the works of William Shakespeare still resonate in our imaginations four centuries after they were written. The timeless characters and themes of the Bard\u2019s plays fascinate us with their joys, struggles, and triumphs, and now they are available in a special volume for Shakespeare fans everywhere. This Canterbury Classics edition of William Shakespeare\u2019s works includes all of his poems and plays in a single volume. Whether for a Shakespeare devotee or someone just discovering him, this is the perfect place to experience the drama of Shakespeare\u2019s words. A scholarly introduction provides additional context and insight into the poems and plays.",
+            "author": "William Shakespeare",
+            "publisher": "Simon and Schuster",
+            "publication_date": "2014-10-01",
+            "page_count": 1392,
+            "category": "Drama",
+            "image_url": "http://books.google.com/books/content?id=jipZDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "lang": "en"
+        }
+    }
+]
