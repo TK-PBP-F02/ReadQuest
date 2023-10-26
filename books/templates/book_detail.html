@@ -7,13 +7,16 @@
 <body>
     <div>
         <div style="text-align: center;">
-            <img src="{{ book.thumbnail }}" alt="{{ book.title }}">
+            <img src="{{ book.image_url }}" alt="{{ book.title }}">
             <div>
                 <h2>{{ book.title }}</h2>
-                <p>Book Id = {{ book.pk }}</p>
+                <p>Book Id: {{ book.pk }}</p>
                 <p>Author: {{ book.author }}</p>
+                <p>Publisher: {{ book.publisher }}</p>
+                <p>Published Date: {{ book.publication_date }}</p>
+                <p>Pages: {{ book.page_count }}</p>
+                <p>Genre: {{ book.category }}</p>
                 <p>{{ book.description }}</p>
-                <p>Published Date: {{ book.published_date }}</p>
             </div>
         </div>
     </div>
