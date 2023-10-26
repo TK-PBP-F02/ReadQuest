@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+    <title>Register as {{ role }}</title>
+    <style>
+        .box {
+            min-height: 100vh; /* minimum height = screen height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+{% endblock meta %}
+
+{% block content %}  
+<div class="box">
+    
+    <div class="card text-white bg-dark mb-3" style="width: 35rem; height: 45rem;">   
+        <div class = "card-header" style="padding-top: 1rem; text-align: center; vertical-align: middle;">
+            <h1>Register as {{ role }}</h1> 
+        </div>
+        <form method="POST" action="">
+            <div class="card-body" style="padding-top: 2rem; text-align: center; vertical-align: middle;">
+                {% csrf_token %}
+                <table class="card-title">
+                    {{ form.as_table }}  
+                    <tr>  
+                        <td></td>
+                        <td><input type="submit" name="submit" value="Daftar"/></td>  
+                    </tr> 
+                </table>
+                <div class="card-body" style="padding-top: 2rem; text-align: center; vertical-align: middle;">Want to register as <a href='{{ link }}'>{{ other_role }}</a></div>
+
+                </form>
+                {% if messages %}  
+                    <ul>   
+                        {% for message in messages %}  
+                            <li>{{ message }}</li>  
+                            {% endfor %}  
+                    </ul>   
+                {% endif %}
+            </div>
+    </div>
+</div>
+
+{% endblock content %}
