@@ -91,7 +91,7 @@ def remove_book(request):
     return render(request, 'remove_book.html', {'username':user.username, 'role':role})
 
 def search_books(request):
-    user = user.request
+    user = request.user
     if 'q' in request.GET:
         query = request.GET['q']
         results = Book.objects.filter(title__icontains=query)

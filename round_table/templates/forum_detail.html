@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+{% load static %}
+<head>
+  <title>{{ forum.title }}</title>
+</head>
+<body>
+  <div class="row w-100">
+    <div class="card w-100 ml-5 mr-4 mt-3">
+      <div class="card-header">
+        <div style="display: flex; justify-content: space-between;">
+          <h5 class="card-title">{{ forum.title }}</h5>
+          {% if user.is_authenticated and user == forum.author %}
+            <a href="{% url 'round_table:delete_forum' forum.id %}" class="btn btn-danger">Delete</a>
+          {% endif %}
+        </div>
+        <p class="card-text">{{ forum.author.username }} - Posted on {{ forum.created_at|date:"F d, Y" }}</p>
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ forum.content|linebreaks }}</p>
+        <a href="{% url 'round_table:show_all_forum' %}" class="btn btn-secondary">Back to Forums</a>
+        <a href="{% url 'round_table:add_reply' forum.id %}" class="btn btn-success">Add Reply</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="margin-left: 30px; margin-top: 10px;">Replies</h2>
+  <div class="row">
+    {% for reply in replies %}
+      <div class="card w-100 ml-5 mr-5 mt-2">
+        <div class="card-header">
+          <div style="display: flex; justify-content: space-between;">
+            <p class="card-text">{{ reply.author.username }} - Replying on {{ reply.created_at|date:"F d, Y" }}</p>
+            {% if user.is_authenticated and user == reply.author %}
+              <a href="{% url 'round_table:delete_reply' reply.id %}" class="btn btn-danger">Delete</a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{ reply.content|linebreaks }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+{% endblock %}

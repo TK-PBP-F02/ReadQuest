@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Forum, Replies
+from round_table.models import Forum, Replies
  
 class CreateForum(ModelForm):
     class Meta:

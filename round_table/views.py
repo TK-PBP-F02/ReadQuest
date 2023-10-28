@@ -1,75 +1,79 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Forum, Replies
-from books.models import Book
+from round_table.models import Forum, Replies
 from users.models import User
+from django.http import HttpResponse, HttpResponseNotFound
 from .forms import CreateForum, CreateReplies
+
+def roler(user):
+    role = 'none'
+    if user.role == "PENGGUNA":
+        role = 'pengguna'
+    elif user.role == "ADMIN":
+        role = 'admin'
+    return role
 
 def show_all_forum(request):
     forums = Forum.objects.all()
-    return render(request, 'your_template.html', {'forums':forums})
-
-def show_forum_per_book(request, idBook):
-    book = get_object_or_404(Book, id=idBook)
-    forums = Forum.objects.filter(book_section=book)
-    return render(request, 'your_template.html', {'forums':forums})
+    return render(request, 'forum.html', {'forums':forums,'role':roler(request.user)})
 
 def forum_detail(request, id):
     forum = get_object_or_404(Forum, id=id)
     replies = Replies.objects.filter(parent_forum=forum)
-    return render(request, 'your_template.html', {'forums':forum,'replies':replies})
+    return render(request, 'forum_detail.html', {'forum':forum,'replies':replies,'role':roler(request.user)})
 
-def add_forum(request, book_id):
-    book = get_object_or_404(Book, id=book_id)
-    form = CreateForum()
+def add_forum(request):
+    form = CreateForum(request.POST or None)
 
-    if request.method == 'POST':
-        form = CreateForum(request.POST)
-        if form.is_valid():
-            forum = form.save(commit=False)
-            forum.book_section = book
-            forum.author = request.user
-            forum.save()
-            return redirect('view-forum', book_id=book.id)
+    if request.user.is_anonymous:
+        return redirect('user:login')
+    elif form.is_valid() and request.method == 'POST':
+        forum = form.save(commit=False)
+        forum.author = request.user
+        forum.save()
+        return redirect('round_table:show_all_forum')
 
-    return render(request, 'forum/add_forum.html', {'forum':form})
+    return render(request, 'add_forum.html', {'form':form,'role':roler(request.user)})
 
-def reply(request, forum_id):
-    forum = get_object_or_404(Forum, id=forum_id)
-    form = CreateReplies()
+def add_reply(request, id):
+    forum = get_object_or_404(Forum, id=id)
+    form = CreateReplies(request.POST or None)
     
-    if request.method == 'POST':
-        form = CreateReplies(request.POST)
-        if form.is_valid():
-            reply = form.save(commit=False)
-            reply.parent_forum = forum
-            reply.author = request.user
-            reply.save()
-            return redirect('view-forum', book_id=forum.book_section.id)
+    if request.user.is_anonymous:
+        return redirect('user:login')
+    elif form.is_valid() and request.method == 'POST':
+        reply = form.save(commit=False)
+        reply.parent_forum = forum
+        reply.author = request.user
+        reply.save()
+        return redirect('round_table:forum_detail', id=id)
 
-    context = {
-        'forum': forum,
-        'form': form,
-    }
+    return render(request, 'add_reply.html', {'forum':forum,'form':form,'role':roler(request.user)})
 
-    return render(request, 'forum/respond_forum.html', context)
-
-@login_required
-def delete_forum(request, forum_id):
-    forum = get_object_or_404(Forum, id=forum_id)
+def delete_forum(request, id):
+    forum = get_object_or_404(Forum, id=id)
     
     if request.user == forum.author:
         forum.delete()
-        return redirect('view-forum', book_id=forum.book_section.id)
-    else:
-        print()
-
-@login_required    
-def delete_reply(request, reply_id):
-    reply = get_object_or_404(Replies, id=reply_id)
+        return redirect('round_table:show_all_forum')
+    
+    return redirect('round_table:forum_detail', id=id)
+  
+def delete_reply(request, id):
+    reply = get_object_or_404(Replies, id=id)
     
     if request.user == reply.author:
         reply.delete()
-        return redirect('view-forum', book_id=reply.parent_forum.book_section.id)
+        return redirect('round_table:forum_detail', id=id)
+    
+    return redirect('round_table:forum_detail', id=id)
+
+def search_forums(request):
+    if 'q' in request.GET:
+        query = request.GET['q']
+        title_results = Forum.objects.filter(title__icontains=query)
+        content_results = Forum.objects.filter(content__icontains=query)
+        results = title_results.union(content_results)
     else:
-        print()
+        results = None
+    return render(request, 'search_forums.html', {'results': results,'q':query,'username':request.user.username,'role':roler(request.user)})

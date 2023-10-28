@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if results %}
+    <ul>
+        <h1 class="mt-5">Search Results</h1>
+            {% for forum in results %}
+                <div class="row w-100">
+                    <div class="card w-100 ml-3 mr-3 mt-3">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ forum.title }}</h5>
+                        <p class="card-text">{{ forum.author.username }} - Posted on {{ forum.created_at|date:"F d, Y" }}</p>
+                        <p class="card-text">{{ forum.content|linebreaks }}</p>
+                        <a></a>
+                        {% if user.is_authenticated and user == forum.author %}
+                            <a href="{% url 'round_table:delete_forum' forum.id %}" class="btn btn-danger">Delete</a>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found.</p>
+{% endif %}
+{% endblock content %}

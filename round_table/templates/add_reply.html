@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+{% load static %}
+<head>
+    <title>Add Reply</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="card-title">Add New Reply</h1>
+                        <p class="card-text">Replying: {{ forum.title }}</p>
+                        <p class="card-text">{{ forum.content }}</p>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {% for elem in form%}
+                            <div>
+                                <label>{{elem.label}}</label>
+                                <p>{{elem}}</p>
+                            </div>
+                            {% endfor %}
+                            <button type="submit" class="btn btn-primary">Add Reply</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

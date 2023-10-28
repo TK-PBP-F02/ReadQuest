@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+{% load static %}
+<head>
+    <title>Add Forum</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="card-title">Add New Forum</h1>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {% for elem in form%}
+                                <div>
+                                    <label>{{elem.label}}</label>
+                                    <p>{{elem}}</p>
+                                </div>
+                            {% endfor %}
+                            <button type="submit" class="btn btn-primary">Add Forum</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

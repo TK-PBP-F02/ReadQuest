@@ -2,5 +2,32 @@
 
 {% block content %}
 {% load static %}
-
+<head>
+    <title>Forum</title>
+</head>
+<body>
+  <a href="{% url 'round_table:add_forum' %}" class="btn btn-success mt-3 ">Add Forum</a>
+  <div class="row w-100">
+    {% for forum in forums %}
+    <div class="card w-100 ml-5 mr-4 mt-3">
+      <a href="{% url 'round_table:forum_detail' forum.id %}" style="color:inherit;text-decoration:none;">
+        <div class="card-header">
+          <div style="display: flex; justify-content: space-between;">
+            <h5 class="card-title">{{ forum.title }}</h5>
+            {% if user.is_authenticated and user == forum.author %}
+            <a href="{% url 'round_table:delete_forum' forum.id %}" class="btn btn-danger">Delete</a>
+            {% endif %}
+          </div>
+          <p class="card-text">{{ forum.author.username }} - Posted on {{ forum.created_at|date:"F d, Y" }}</p>
+        </div>
+        <a href="{% url 'round_table:forum_detail' forum.id %}" style="color:inherit;text-decoration:none;">
+        <div class="card-body">
+          <p class="card-text">{{ forum.content|truncatewords:20|linebreaks }}</p>
+        </div>
+        </a>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</body>
 {% endblock %}
