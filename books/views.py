@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Book
 from Inventory.models import Inventory, InventoryBook
 from users.views import custom_login
+from quest.views import roler
 
 # Create your views here.
 
@@ -44,12 +45,7 @@ def add_books(request):
 
         # Add books based on the query using add_books_from_google_books_api function
         add_books_from_google_books_api(query, api_key)
-    role = 'none'
-    if user.role == "PENGGUNA":
-        role = 'pengguna'
-    elif user.role == "ADMIN":
-        role = 'admin'
-    return render(request, 'add_books.html', {'username':user.username, 'role':role})
+    return render(request, 'add_books.html', {'username':user.username, 'role':roler(request)})
 
 
 def display_all_books(request):
@@ -83,7 +79,7 @@ def book_detail(request, pk):
         if user.role == "PENGGUNA":
             print("wesss")
             user_inventories = Inventory.objects.filter(user=user)
-    return render(request, 'book_detail.html', {'book': book, 'user_inventories': user_inventories})
+    return render(request, 'book_detail.html', {'book': book, 'user_inventories': user_inventories, 'role':roler(request)})
 
 
 def remove_book(request):
@@ -93,21 +89,18 @@ def remove_book(request):
         if pk is not None:
             book = get_object_or_404(Book, pk=pk)
             book.delete()
-    role = 'none'
-    if user.role == "PENGGUNA":
-        role = 'pengguna'
-    elif user.role == "ADMIN":
-        role = 'admin'
-    return render(request, 'remove_book.html', {'username':user.username, 'role':role})
+    return render(request, 'remove_book.html', {'username':user.username, 'role':roler(request)})
 
 def search_books(request):
-    user = user.request
+    user = request.user
     if 'q' in request.GET:
         query = request.GET['q']
         results = Book.objects.filter(title__icontains=query)
     else:
         results = None
     role = 'none'
+    if user.is_anonymous:
+        return render(request, 'search_result.html', {'results': results, 'q':query, 'username':user.username, 'role':role})
     if user.role == "PENGGUNA":
         role = 'pengguna'
     elif user.role == "ADMIN":
