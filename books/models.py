@@ -13,3 +13,4 @@ class Book(models.Model):
     lang = models.CharField(max_length=100)
     readed = models.IntegerField(default=0)
     buys = models.IntegerField(default=0)
+    quest_amount = models.IntegerField(default=0)
