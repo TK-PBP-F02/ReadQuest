@@ -12,9 +12,9 @@ from django.shortcuts import render, HttpResponseRedirect, reverse
 # Create your views here.
 
 def show_board(request):
-    nickname_data = Display.objects.all()
+    lboard_data= Display.objects.all()
     context = {
-        'nickname_data' : nickname_data,
+        'lboard_data' : lboard_data,
     }
     return render(request, 'mainboard.html', context)
 
@@ -30,7 +30,7 @@ def register_leaderboard(request):
     return render(request,'regboard.html', context)
 
 def clear_nickname_data(request):
-    for i in Display.objects.all():
-        i.delete()
+    Display.objects.all().delete()
+    messages.success(request, "Nickname data has been cleared.")
     return HttpResponseRedirect(reverse('leaderboard:leaderboard'))
     
