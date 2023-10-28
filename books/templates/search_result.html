@@ -9,13 +9,13 @@
                     <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
                         <div class="card">
                             <a href="{% url 'books:book_detail' book.pk %}" style="text-decoration: none; color: inherit;">
-                                <img class="card-img-top" src="{{ book.thumbnail }}" alt="{{ book.title }}">
+                                <img class="card-img-top" src="{{ book.image_url }}" alt="{{ book.title }}">
                                 <div class="card-body">
                                     <h6 class="card-title" style="text-align: center;">{{ forloop.counter }}</h6>
                                     <h5 class="card-title">{{ book.title }}</h5>
                                     <p class="card-text">Book Id: {{ book.pk }}</p>
                                     <p class="card-text">Author: {{ book.author }}</p>
-                                    <p class="card-text">Published Date: {{ book.published_date }}</p>
+                                    <p class="card-text">Published Date: {{ book.category}}</p>
                                 </div>
                             </a>
                         </div>
