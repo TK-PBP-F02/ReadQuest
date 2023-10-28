@@ -1,7 +1,7 @@
 from django.forms import ModelForm
-from leaderboard.models import form
+from leaderboard.models import Display
 
 class ProductForm(ModelForm):
     class Meta:
-        model = form
-        fields = ["name", "price", "description"]
+        model = Display
+        fields = ["nickname"]
