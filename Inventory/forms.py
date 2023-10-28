@@ -1,9 +1,7 @@
 from django.forms import ModelForm
-from users.models import User
-from books.models import Book
-from .models import UserInventory
+from Inventory.models import Inventory
 
-class InventoryForm(ModelForm):
+class ProductForm(ModelForm):
     class Meta:
-        model = UserInventory
-        fields = ["name", "price", "description"]
+        model = Inventory
+        fields = ["name"]

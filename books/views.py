@@ -1,7 +1,10 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 import requests
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Book
+from Inventory.models import Inventory, InventoryBook
+from users.views import custom_login
 
 # Create your views here.
 
@@ -73,7 +76,14 @@ from .models import Book
 
 def book_detail(request, pk):
     book = get_object_or_404(Book, pk=pk)
-    return render(request, 'book_detail.html', {'book': book})
+    user=request.user
+    user_inventories = None
+
+    if user.is_authenticated:
+        if user.role == "PENGGUNA":
+            print("wesss")
+            user_inventories = Inventory.objects.filter(user=user)
+    return render(request, 'book_detail.html', {'book': book, 'user_inventories': user_inventories})
 
 
 def remove_book(request):
@@ -103,3 +113,29 @@ def search_books(request):
     elif user.role == "ADMIN":
         role = 'admin'
     return render(request, 'search_result.html', {'results': results, 'q':query, 'username':user.username, 'role':role})
+
+def add_book_to_inventory(request, book_id):
+    book = get_object_or_404(Book, pk=book_id)
+    user = request.user
+
+    if request.method == 'POST':
+        folder_id = request.POST.get('folder')
+
+        # Validasi apakah pengguna yang sedang masuk memiliki hak akses ke folder ini
+        folder = get_object_or_404(Inventory, pk=folder_id)
+
+        if folder.user == user:
+            # Pastikan buku belum ada di dalam folder
+            if not InventoryBook.objects.filter(inventory=folder, book=book).exists():
+                # Tambahkan buku ke dalam folder inventory
+                inventory_book = InventoryBook.objects.create(inventory=folder, book=book)
+                # Tambahkan logika lain sesuai kebutuhan Anda
+                return redirect('books:book_detail', pk=book_id)  # Redirect ke halaman detail buku
+            # else:
+                # Buku sudah ada dalam folder
+                # Tambahkan logika atau pesan kesalahan yang sesuai
+        # else:
+            # Pengguna tidak memiliki hak akses ke folder ini
+            # Tambahkan logika atau pesan kesalahan yang sesuai
+    # Handle situasi ketika request bukan POST
+    return redirect('books:book_detail', pk=book_id)  # Redirect kembali ke halaman detail buku

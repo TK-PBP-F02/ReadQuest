@@ -1,8 +1,11 @@
 from django.db import models
-# from django.contrib.auth.models import User  # Import model User dari aplikasi "users"
-from books.models import Book  # Import model Book dari aplikasi "books"
+from users.models import User
+from books.models import Book
 
-class UserInventory(models.Model):
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+class Inventory(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100, default="Inventory")
+
+class InventoryBook(models.Model):
+    inventory = models.ForeignKey(Inventory, on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
-    read = models.BooleanField(default=False)

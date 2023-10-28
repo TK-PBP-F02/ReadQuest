@@ -32,7 +32,7 @@
         
         {% if role == 'pengguna' %}
         <li class="nav-item table-active">
-          <a class="nav-link" href="#">Inventory</a>
+          <a class="nav-link" href="{% url 'Inventory:user_inventory' %}">Inventory</a>
         </li>
         <li class="nav-item table-active">
           <a class="nav-link" href="#">LeaderBoard</a>
@@ -48,7 +48,7 @@
         </li>
         {% elif role == 'admin' %}
         <li class="nav-item table-active">
-          <a class="nav-link" href="#">Inventory</a>
+          <a class="nav-link" href="{% url 'Inventory:user_inventory' %}">Inventory</a>
         </li>
         <li class="nav-item table-active">
           <a class="nav-link" href="#">LeaderBoard</a>
@@ -69,6 +69,9 @@
           <a class="nav-link" href="/logout/">Log Out</a>
         </li>
         {% else %}
+        <li class="nav-item table-active">
+          <a class="nav-link" href="{% url 'Inventory:user_inventory' %}">Inventory</a>
+        </li>
         <li class="nav-item table-active">
           <a class="nav-link" href="#">LeaderBoard</a>
         </li>
