@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+{% block content %}
+<html>
+<head>
+    <title>Adventure Quests</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        p{
+            margin : 0;
+        }
+    </style>
+    <link rel="stylesheet" href="/static/book/styles/book.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="icon-container">
+            <h1 class="mt-5">Adventure Quests</h1>
+            <img src="/static/book/img/sword.gif" style="width: 60px;height: 60px;">
+        </div>
+        
+        {% if role == 'pengguna' %}
+        <div class="icon-container">
+            <img src="/static/book/img/warrior.gif" style="width: 45px;height: 45px;">
+            <h2>{{ username }} Start Questing</h2>
+        </div>
+        <div class="icon-container">
+            <img src="/static/book/img/yen.gif" style="width: 45px;height: 45px;">
+            <h2>Point : {{ point }} BC</h2>
+        </div>        
+        {% elif role == 'admin' %}
+        <div class="icon-container">
+            <img src="/static/book/img/crown.gif" style="width: 45px;height: 45px;">
+            <h2>{{ username }} Adding more challange ?</h2>
+        </div>
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Quest</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form" onsubmit="return false;">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="name" class="col-form-label">Quest Name (max 23 characters):</label>
+                                <input type="text" class="form-control" id="name" name="name" maxlength="23">
+                            </div>
+                            <div class="mb-3">
+                                <label for="desc" class="col-form-label">Description:</label>
+                                <input type="text" class="form-control" id="desc" name="desc">
+                            </div>
+                            <div class="mb-3">
+                                <label for="point" class="col-form-label">Point:</label>
+                                <input type="number" class="form-control" id="point" name="point">
+                            </div>
+                            <div class="mb-3">
+                                <label for="goal" class="col-form-label">Goal:</label>
+                                <select class="form-control" id="goal" name="goal" onchange="toggleBookIdField()">
+                                    <option value="Readded">Readded</option>
+                                    <option value="Buyed">Buyed</option>
+                                    <option value="Review">Review</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="quest_type" class="col-form-label">Quest Type:</label>
+                                <select class="form-control" id="quest_type" name="quest_type" onchange="toggleBookIdField()">
+                                    <option value="WorldQuest">World Quest</option>
+                                    <option value="BookQuest">Book Quest</option>
+                                </select>
+                            </div>
+                            <div class="mb-3" id="id-field" style="display: none;">
+                                <label for="book_id" class="col-form-label">Book Id:</label>
+                                <input type="number" class="form-control" id="book_id" name="book_id" value='0' min="1">
+                            </div>
+                            <div class="mb-3" id="amount-field" style="display: none;">
+                                <label for="amount" class="col-form-label">Amount:</label>
+                                <input type="number" class="form-control" id="amount" name="amount" value='0' min="1">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="button_add" data-dismiss="modal">Add Quest</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Delet Quest</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formDelete" onsubmit="return false;">
+                            {% csrf_token %}
+                            <div class="mb-3" id="id-field">
+                                <label for="book_id" class="col-form-label">Book Id:</label>
+                                <input type="number" class="form-control" id="book_id" name="book_id" value='1' min="1">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="button_delete" data-dismiss="modal">Delete Quest</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add Quest</button>
+        </a>
+        <a>
+            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal">Delete Quest</button>
+        </a>
+        {% endif %}
+        <div class="quest">
+            {% if role == 'pengguna' %}
+                <div class="row">
+                    {% for quest in quests %}
+                        {% if quest.type == 'WorldQuest' %}
+                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" style="margin: 10px 30px 20px 40px;">
+                            <div class="card" style="height: 120px; margin-top: 10px; width: 15rem;">
+                                <a href="{% url 'quest:quest_detail' quest.pk %}" style="text-decoration: none; color: inherit;">
+                                    <div class="card-body" style="padding: 5px; text-align: center;">
+                                        <h5 class="card-title quest-name" style="margin-top: 0;">{{ quest.name }} ({{ quest.point }} BC)</h5>
+                                        <p class="card-text">{{ quest.goal }} {{ quest.amount }} books</p>
+                                        {% if quest.goal == 'Readded' %}
+                                            {% if user.readed >= quest.amount %}
+                                                <p class="card-text">{{ quest.amount }}/{{ quest.amount }}</p>
+                                            {% else %}
+                                                <p class="card-text">{{ user.readed }}/{{ quest.amount }}</p>
+                                            {% endif %}
+                                            {% if user.readed >= quest.amount %}
+                                                <p>Quest Completed</p>
+                                            {% else %}
+                                                <p>Let's complete the quest</p>
+                                            {% endif %}
+                                        {% elif quest.goal == 'Buyed' %}
+                                            {% if user.buyed >= quest.amount %}
+                                                <p class="card-text">{{ quest.amount }}/{{ quest.amount }}</p>
+                                            {% else %}
+                                                <p class="card-text">{{ user.buyed }}/{{ quest.amount }}</p>
+                                            {% endif %}
+                                            {% if user.buyed >= quest.amount %}
+                                                <p>Quest Completed</p>
+                                            {% else %}
+                                                <p>Let's complete the quest</p>
+                                            {% endif %}
+                                        {% elif quest.goal == 'Review' %}
+                                            {% if user.reviewed >= quest.amount %}
+                                                <p class="card-text">{{ quest.amount }}/{{ quest.amount }}</p>
+                                            {% else %}
+                                                <p class="card-text">{{ user.reviewed }}/{{ quest.amount }}</p>
+                                            {% endif %}
+                                            {% if user.reviewed >= quest.amount %}
+                                                <p>Quest Completed</p>
+                                            {% else %}
+                                                <p>Let's complete the quest</p>
+                                            {% endif %}
+                                        {% endif %}
+                                        <p class="card-text"></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="row">
+                    {% for quest in quests %}
+                        {% if quest.type == 'WorldQuest' %}
+                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" style="margin: 10px 30px 20px 40px;">
+                            <div class="card" style="height: 70px; margin-top: 10px; width: 15rem; background-color: rgb(236, 235, 141);">
+                                <a href="{% url 'quest:quest_detail' quest.pk %}" style="text-decoration: none; color: inherit;">
+                                    <div class="card-body" style="padding: 5px; text-align: center;">
+                                        <h5 class="card-title quest-name" style="margin-top: 0;">{{ quest.name }}</h5>
+                                        <p class="card-text">Quest Id: {{ quest.pk }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="card-group">
+            {% for book in books %}
+                {% if book.quest_amount > 0 %}
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
+                        <div class="card" style="background-color: rgb(236, 235, 141);">
+                            <a href="{% url 'quest:quest_book_detail' book.pk %}" style="text-decoration: none; color: inherit;">
+                                <img class="card-img-top" src="{{ book.image_url }}" alt="{{ book.title }}">
+                                <div class="card-body">
+                                    <h6 class="card-title" style="text-align: center;">{{ forloop.counter }}</h6>
+                                    <h5 class="card-title">{{ book.title }}</h5>
+                                    <p class="card-text" style="margin-top: 3px; margin-bottom: 3px;">Book Id: {{ book.pk }}</p>
+                                    <p class="card-text" style="margin-top: 3px; margin-bottom: 3px;">Author: {{ book.author }}</p>
+                                    <p class="card-text" style="margin-top: 3px; margin-bottom: 3px;">Category: {{ book.category }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        toggleBookIdField();
+        
+        function toggleBookIdField() {
+            var questTypeSelect = document.getElementById("quest_type");
+            var bookId = document.getElementById("id-field");
+            var amountField = document.getElementById("amount-field");
+
+            // Show the "Book Id" field if "Book Quest" is selected, hide it otherwise
+            if (questTypeSelect.value == "BookQuest") {
+                bookId.style.display = "block";
+                amountField.style.display = "none";
+                document.getElementById("book_id").value = 0;
+            } else if (questTypeSelect.value == "WorldQuest"){
+                bookId.style.display = "none";
+                amountField.style.display = "block";
+                document.getElementById("amount").value = 0;
+            }
+        }
+
+        function addItem() {
+            fetch("{% url 'quest:quest_create' %}", {
+                method: "POST",
+                body: new FormData(document.querySelector('#form'))
+            })
+            .then(function(response) {
+                if (response.status === 201) {
+                    // If the response status is 201 (created), reload the page
+                    location.reload();
+                } else {
+                    // Handle the response in case of an error
+                    console.log("Error adding quest");
+                }
+            });
+            return false;
+        }
+        document.getElementById("button_add").onclick = addItem;
+
+        function deleteItem() {
+            fetch("{% url 'quest:quest_delete' %}", {
+                method: "POST",
+                body: new FormData(document.querySelector('#formDelete'))
+            })
+            .then(function(response) {
+                if (response.status === 201) {
+                    // If the response status is 201 (created), reload the page
+                    location.reload();
+                } else {
+                    // Handle the response in case of an error
+                    console.log("Error deleting quest");
+                }
+            });
+            return false;
+        }
+        document.getElementById("button_delete").onclick = deleteItem;
+
+    </script>
+
+</body>
+{% endblock content %}
