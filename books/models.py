@@ -2,10 +2,12 @@ from django.db import models
 from users.models import User
 
 class Book(models.Model):
-    isbn = models.CharField(max_length=100)
     title = models.CharField(max_length=255)
-    description = models.TextField()
     author = models.CharField(max_length=255)
+    description = models.TextField()
+    published_date = models.TextField()
+    thumbnail = models.URLField()
+    readed = models.IntegerField(default=0)
     publisher = models.CharField(max_length=255)
     publication_date = models.CharField(max_length=100)
     page_count = models.IntegerField()
