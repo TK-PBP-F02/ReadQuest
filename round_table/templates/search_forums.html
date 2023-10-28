@@ -9,7 +9,7 @@
                         <div class="card-body">
                         <h5 class="card-title">{{ forum.title }}</h5>
                         <p class="card-text">{{ forum.author.username }} - Posted on {{ forum.created_at|date:"F d, Y" }}</p>
-                        <p class="card-text">{{ forum.content|linebreaks }}</p>
+                        <p class="card-text">{{ forum.content|truncatewords:50|linebreaks }}</p>
                         <a></a>
                         {% if user.is_authenticated and user == forum.author %}
                             <a href="{% url 'round_table:delete_forum' forum.id %}" class="btn btn-danger">Delete</a>

@@ -5,43 +5,68 @@
 <head>
   <title>{{ forum.title }}</title>
 </head>
-<body>
-  <div class="row w-100">
-    <div class="card w-100 ml-5 mr-4 mt-3">
-      <div class="card-header">
-        <div style="display: flex; justify-content: space-between;">
-          <h5 class="card-title">{{ forum.title }}</h5>
-          {% if user.is_authenticated and user == forum.author %}
-            <a href="{% url 'round_table:delete_forum' forum.id %}" class="btn btn-danger">Delete</a>
-          {% endif %}
-        </div>
-        <p class="card-text">{{ forum.author.username }} - Posted on {{ forum.created_at|date:"F d, Y" }}</p>
+<div class="row w-100">
+  <div class="card w-100 ml-5 mr-4 mt-3">
+    <div class="card-header">
+      <div style="display: flex; justify-content: space-between;">
+        <h5 class="card-title">{{ forum.title }}</h5>
+        {% if user.is_authenticated and user == forum.author %}
+          <a href="{% url 'round_table:delete_forum' forum.id %}" class="btn btn-danger">Delete</a>
+        {% endif %}
       </div>
-      <div class="card-body">
-        <p class="card-text">{{ forum.content|linebreaks }}</p>
-        <a href="{% url 'round_table:show_all_forum' %}" class="btn btn-secondary">Back to Forums</a>
-        <a href="{% url 'round_table:add_reply' forum.id %}" class="btn btn-success">Add Reply</a>
-      </div>
+      <p class="card-text">{{ forum.author.username }} - Posted on {{ forum.created_at|date:"F d, Y" }}</p>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{ forum.content|linebreaks }}</p>
+      <a href="{% url 'round_table:show_all_forum' %}" class="btn btn-secondary">Back to Forums</a>
+      <a href="{% url 'round_table:add_reply' forum.id %}" class="btn btn-success">Add Reply</a>
     </div>
   </div>
+</div>
 
-  <h2 style="margin-left: 30px; margin-top: 10px;">Replies</h2>
-  <div class="row">
-    {% for reply in replies %}
-      <div class="card w-100 ml-5 mr-5 mt-2">
-        <div class="card-header">
-          <div style="display: flex; justify-content: space-between;">
-            <p class="card-text">{{ reply.author.username }} - Replying on {{ reply.created_at|date:"F d, Y" }}</p>
-            {% if user.is_authenticated and user == reply.author %}
-              <a href="{% url 'round_table:delete_reply' reply.id %}" class="btn btn-danger">Delete</a>
-            {% endif %}
-          </div>
-        </div>
-        <div class="card-body">
-          <p class="card-text">{{ reply.content|linebreaks }}</p>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</body>
+<h2 style="margin-left: 30px; margin-top: 10px;">Replies</h2>
+<div class="row w-100" id="replies"></div>
+
+<script>
+  async function getReplies() {
+      return fetch("{% url 'round_table:get_replies_json' %}").then((res) => res.json())
+  }
+
+  async function refreshReplies() {
+      document.getElementById("replies").innerHTML = ""
+      const replies = await getReplies()
+      let htmlString = ``
+      replies.forEach((reply) => {
+          htmlString += `<div class="card w-100 ml-5 mr-4 mt-2">
+              <div class="card-header">
+                <div style="display: flex; justify-content: space-between;">
+                  <p class="card-text">${reply.author} - Replied on ${formatDate(reply.created_at)}</p>
+                  ${reply.is_owner ? `<button class="btn btn-danger" onclick="deleteReply(${reply.id})">Delete</button>` : ""}
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">${reply.content}</p>
+              </div>
+          </div>`; 
+      })
+      
+      document.getElementById("replies").innerHTML = htmlString
+  }
+
+  refreshReplies()
+
+  function deleteReply(id) {
+    fetch(`delete-reply-ajax/${id}`, {
+        method: "DELETE",
+    }).then(refreshReplies)
+    
+    return false
+  }
+
+  function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-GB', options);
+  }
+</script>
 {% endblock %}
