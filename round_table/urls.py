@@ -7,6 +7,7 @@ urlpatterns = [
     # Your existing URL patterns
     path('', show_all_forum, name='show_all_forum'),
     path('add-forum/', add_forum, name='add_forum'),
+    path('add-forum/<int:book_id>', add_forum, name='add_forum'),
     path('add-reply/<int:id>/', add_reply, name='add_reply'),
     path('<int:id>/', forum_detail, name='forum_detail'),
     path('delete-forum/<int:id>/', delete_forum, name='delete_forum'),

@@ -23,16 +23,19 @@ def forum_detail(request, id):
     replies = Replies.objects.filter(parent_forum=forum)
     return render(request, 'forum_detail.html', {'forum':forum,'replies':replies,'role':roler(request.user)})
 
-def add_forum(request):
-    form = CreateForum(request.POST or None)
+def add_forum(request, book_id=None):
+    form = CreateForum(book_id=book_id)
 
     if request.user.is_anonymous:
         return redirect('user:login')
-    elif form.is_valid() and request.method == 'POST':
-        forum = form.save(commit=False)
-        forum.author = request.user
-        forum.save()
-        return redirect('round_table:show_all_forum')
+    elif request.method == 'POST':
+        form = CreateForum(request.POST, book_id=book_id)
+        if form.is_valid():
+        
+            forum = form.save(commit=False)
+            forum.author = request.user
+            forum.save()
+            return redirect('round_table:show_all_forum')
 
     return render(request, 'add_forum.html', {'form':form,'role':roler(request.user)})
 
