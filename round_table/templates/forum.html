@@ -6,7 +6,9 @@
   <title>Forum</title>
 </head>
 
-<a href="{% url 'round_table:add_forum' %}" class="btn btn-primary" style="margin-right: 5px; margin-top: 5px;">Add Forum</a>
+{% if user.is_authenticated %}
+  <a href="{% url 'round_table:add_forum' %}" class="btn btn-primary" style="margin-right: 5px; margin-top: 5px;">Add Forum</a>
+{% endif %}
 <div class="row w-100" id="forums"></div>
 
 <script>
@@ -26,9 +28,10 @@
                   <h5 class="card-title">${forum.title}</h5>
                   </a>
                   ${forum.is_owner ? `<button class="btn btn-danger" onclick="deleteForum(${forum.id})">Delete</button>` : ""}
-              </div>
+                </div>
             <a href="${forum.id}" style="color:inherit;text-decoration:none;">
-                <p class="card-text">${forum.author} - Posted on ${formatDate(forum.created_at)}</p>
+              <p class="card-text" style="margin-bottom:0px">Discussing ${forum.book_title} by ${forum.book_author}</p>
+              <p class="card-text" style="margin-top:0px">${forum.author} - Posted on ${formatDate(forum.created_at)}</p>
               </div>
               <a href="${forum.id}" style="color:inherit;text-decoration:none;">
               <div class="card-body">
@@ -45,7 +48,6 @@
   refreshForums()
 
   function deleteForum(id) {
-    window.location.href = "forum.html";
     fetch(`delete-forum-ajax/${id}/`, {
         method: "DELETE",
     }).then(refreshForums)

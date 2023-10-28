@@ -6,14 +6,18 @@
             {% for forum in results %}
                 <div class="row w-100">
                     <div class="card w-100 ml-3 mr-3 mt-3">
+                        <div class="card-header">
+                            <div style="display: flex; justify-content: space-between;">
+                              <h5 class="card-title">{{ forum.title }}</h5>
+                              {% if user.is_authenticated and user == forum.author %}
+                                <a href="{% url 'round_table:delete_forum' forum.id %}" class="btn btn-danger">Delete</a>
+                              {% endif %}
+                            </div>
+                            <p class="card-text" style="margin-bottom:0px">Discussing {{forum.book.title}} by {{forum.book.author}}</p>
+                            <p class="card-text">{{ forum.author.username }} - Posted on {{ forum.created_at|date:"d F Y" }}</p>
+                        </div>
                         <div class="card-body">
-                        <h5 class="card-title">{{ forum.title }}</h5>
-                        <p class="card-text">{{ forum.author.username }} - Posted on {{ forum.created_at|date:"F d, Y" }}</p>
-                        <p class="card-text">{{ forum.content|truncatewords:50|linebreaks }}</p>
-                        <a></a>
-                        {% if user.is_authenticated and user == forum.author %}
-                            <a href="{% url 'round_table:delete_forum' forum.id %}" class="btn btn-danger">Delete</a>
-                        {% endif %}
+                            <p class="card-text">{{ forum.content|truncatewords:50|linebreaks }}</p>
                         </div>
                     </div>
                 </div>
