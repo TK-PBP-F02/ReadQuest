@@ -17,6 +17,38 @@
                 <p>Pages: {{ book.page_count }}</p>
                 <p>Genre: {{ book.category }}</p>
                 <p>{{ book.description }}</p>
+
+                {% if "buyed" in finish %}
+                    <p>You have bought this book yet.</p>
+                {% else %}
+                    <p>You haven't bought this book yet.</p>
+                {% endif %}
+                {% if "reviewed" in finish %}
+                    <p>You have reviewed this book yet.</p>
+                {% else %}
+                    <p>You haven't reviewed this book yet.</p>
+                {% endif %}
+                {% if "readed" in finish %}
+                    <p>You have read this book yet.</p>
+                {% else %}
+                    <p>You haven't read this book yet.</p>
+                {% endif %}
+
+                <form method="post" action="{% url 'books:book_act' book.pk %}">
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        {% if "buyed" not in finish %}
+                            <option value="bought">Bought</option>
+                        {% endif %}
+                        {% if "reviewed" not in finish %}
+                            <option value="reviewed">Reviewed</option>
+                        {% endif %}
+                        {% if "readed" not in finish %}
+                            <option value="readed">Read</option>
+                        {% endif %}
+                    </select>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </div>
     </div>

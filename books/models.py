@@ -1,4 +1,5 @@
 from django.db import models
+from users.models import User
 
 class Book(models.Model):
     isbn = models.CharField(max_length=100)
@@ -14,3 +15,18 @@ class Book(models.Model):
     readed = models.IntegerField(default=0)
     buys = models.IntegerField(default=0)
     quest_amount = models.IntegerField(default=0)
+
+class BookRead(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    date_read = models.DateTimeField(auto_now=True)
+
+class BookBought(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    date_bought = models.DateTimeField(auto_now=True)
+
+class BookReviewed(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    date_reviewed = models.DateTimeField(auto_now=True)
