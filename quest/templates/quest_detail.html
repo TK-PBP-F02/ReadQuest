@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <title>{{ quest.name }}</title>
+</head>
+
+<body>
+    <div>
+        <div style="text-align: center;">
+            <div>
+                <h2>{{ quest.name }}</h2>
+                <h3>{{ quest.type }}</h3>
+                <p>Id: {{ quest.pk }}</p>
+                <p>Description: {{ quest.desc }}</p>
+                <p>Goal: {{ quest.goal }}</p>
+                <p>Point: {{ quest.point }}</p>
+                <p>Needed to complete: {{ quest.amount }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content %}
