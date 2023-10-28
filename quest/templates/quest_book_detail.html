@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <title>{{ book.title }}</title>
+</head>
+
+<body>
+    <div>
+        <div style="text-align: center;">
+            <img src="{{ book.image_url }}" alt="{{ book.title }}">
+            <div>
+                <h2>{{ book.title }}</h2>
+            </div>
+
+            <div>
+                <h2>Book Quest</h2>
+                <ul>
+                    {% for c in container %}
+                        <ul>
+                            {% for quest in c.quest_set.all %}
+                                <li>{{ quest.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content %}
