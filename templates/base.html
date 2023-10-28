@@ -7,15 +7,19 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
+        <link rel="stylesheet" href="/static/book/styles/book.css"/>
+
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         {% block meta %}
         {% endblock meta %}
     </head>
 
     <body>
-        {% block navbar %}
-        {% include 'navbar.html' %}
-        {% endblock navbar %}
+        {% block header %}
+        {% include 'header.html' %}
+        {% endblock header %}
         {% block content %}
         {% endblock content %}
     </body>

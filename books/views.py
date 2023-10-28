@@ -1,7 +1,11 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 import requests
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Book
+from quest.views import roler
+from django.db import models
+from quest.views import quest_point
 
 # Create your views here.
 
@@ -13,7 +17,10 @@ def add_books_from_google_books_api(query, api_key):
     data = response.json()
 
     if 'items' in data:
+        
         for item in data['items']:
+            if len(Book.objects.all()) >= 100 :
+                return
             book_info = item.get('volumeInfo', {})
             title = book_info.get('title', '')
             author = ', '.join(book_info.get('authors', []))
@@ -31,19 +38,32 @@ def add_books_from_google_books_api(query, api_key):
             )
 
 def add_books(request):
+    user = request.user
     if request.method == 'POST':
         query = request.POST.get('query', '')  # Retrieve the query from the form
         api_key = 'AIzaSyDXkWtSpUh78YnFk1AFNBvszdmxffY2nEI'
 
         # Add books based on the query using add_books_from_google_books_api function
         add_books_from_google_books_api(query, api_key)
-
-    return render(request, 'add_books.html')
+    return render(request, 'add_books.html', {'username':user.username, 'role':roler(request)})
 
 
 def display_all_books(request):
     books = Book.objects.all()
-    return render(request, 'book.html', {'books': books})
+    user = request.user
+    if not user.is_anonymous:
+        quest_point(request)
+    if user.is_anonymous:
+        user = "none"
+        return render(request, 'book.html', {'books': books, 'user':user, 'role':'not login'})
+    elif user.role == "PENGGUNA":
+        username = user.username
+        point = user.point
+        return render(request, 'book.html', {'books': books, 'username':username, 'point':point, 'role':'pengguna'})
+    elif user.role == "ADMIN" :
+        username = user.username
+        return render(request, 'book.html', {'books': books, 'username':username, 'role':'admin'})
+    return render(request, 'book.html', {'books': books, 'username' : user.username, 'role':'none'})
 
 def books_dataset(request):
     books = Book.objects.all()
@@ -51,25 +71,79 @@ def books_dataset(request):
 
 from django.shortcuts import render, get_object_or_404
 from .models import Book
+from users.models import User
+from .models import BookRead, BookBought, BookReviewed
+from django.views.decorators.csrf import csrf_exempt
 
 def book_detail(request, pk):
     book = get_object_or_404(Book, pk=pk)
-    return render(request, 'book_detail.html', {'book': book})
+    user = request.user
+    finish = []
+    quest_point(request)
+    if BookRead.objects.filter(user=user, book=book).exists():
+        finish.append("readed")
+    if BookBought.objects.filter(user=user, book=book).exists():
+        finish.append("buyed")
+    if BookReviewed.objects.filter(user=user, book=book).exists():
+        finish.append("reviewed")
+    return render(request, 'book_detail.html', {'book': book, 'role':roler(request), 'finish': finish})
 
+@csrf_exempt
+def book_act(request, pk):
+    user = request.user
+    if request.method == 'POST':
+        act = request.POST.get("status")
+        book = Book.objects.get(pk=pk)
+
+        if act == "readed":
+            # Check if the user has already read the book
+            if not BookRead.objects.filter(user=user, book=book).exists():
+                # Increment the user's count of read books
+                # user.readed += 1
+                User.objects.filter(pk=user.pk).update(readed=models.F('readed') + 1)
+                # user.save()
+                BookRead.objects.create(user=user, book=book)
+
+        elif act == "bought":
+            # Check if the user has already bought the book
+            if not BookBought.objects.filter(user=user, book=book).exists():
+                # Increment the user's count of bought books
+                # user.buyed += 1
+                # user.save()
+                User.objects.filter(pk=user.pk).update(buyed=models.F('buyed') + 1)
+                BookBought.objects.create(user=user, book=book)
+
+        elif act == "reviewed":
+            # Check if the user has already reviewed the book
+            if not BookReviewed.objects.filter(user=user, book=book).exists():
+                # Increment the user's count of reviewed books
+                # user.reviewed += 1
+                # user.save()
+                User.objects.filter(pk=user.pk).update(reviewed=models.F('reviewed') + 1)
+                BookReviewed.objects.create(user=user, book=book)
+    return redirect('books:book_detail', pk=pk)
 
 def remove_book(request):
+    user = request.user
     if request.method == 'POST':
         pk = request.POST.get('pk', None)
         if pk is not None:
             book = get_object_or_404(Book, pk=pk)
             book.delete()
-
-    return render(request, 'remove_book.html')
+    return render(request, 'remove_book.html', {'username':user.username, 'role':roler(request)})
 
 def search_books(request):
+    user = request.user
     if 'q' in request.GET:
         query = request.GET['q']
         results = Book.objects.filter(title__icontains=query)
     else:
         results = None
-    return render(request, 'search_result.html', {'results': results, 'q':query})
+    role = 'none'
+    if user.is_anonymous:
+        return render(request, 'search_result.html', {'results': results, 'q':query, 'username':user.username, 'role':role})
+    if user.role == "PENGGUNA":
+        role = 'pengguna'
+    elif user.role == "ADMIN":
+        role = 'admin'
+    return render(request, 'search_result.html', {'results': results, 'q':query, 'username':user.username, 'role':role})
