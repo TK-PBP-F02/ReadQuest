@@ -17,8 +17,7 @@
                 <p>Pages: {{ book.page_count }}</p>
                 <p>Genre: {{ book.category }}</p>
                 <p>{{ book.description }}</p>
-                <a href="{% url 'round_table:add_forum' book.id %}" class="btn btn-primary" style="margin-right: 5px; margin-top: 5px;">Add Forum</a>
-
+<<<<<<<<< Temporary merge branch 1
 
                 {% if "buyed" in finish %}
                     <p>You have bought this book yet.</p>
@@ -51,7 +50,9 @@
                     </select>
                     <input type="submit" value="Submit">
                 </form>
-
+=========
+                <a href="{% url 'round_table:add_forum' book.id %}" class="btn btn-primary" style="margin-right: 5px; margin-top: 5px;">Add Forum</a>
+>>>>>>>>> Temporary merge branch 2
             </div>
         </div>
     </div>
