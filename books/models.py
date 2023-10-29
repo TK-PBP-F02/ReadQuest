@@ -3,6 +3,9 @@ from users.models import User
 
 class Book(models.Model):
     isbn = models.CharField(max_length=100)
+    def __str__(self):
+        return self.title
+    
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     description = models.TextField()
@@ -18,9 +21,6 @@ class Book(models.Model):
     readed = models.IntegerField(default=0)
     buys = models.IntegerField(default=0)
     quest_amount = models.IntegerField(default=0)
-
-    def __str__(self):
-        return self.title
 
 class BookRead(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
