@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a0850b; /* Light brown background */
+            display: table;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            margin: auto;
+            background-image: url('https://kuliahdimana.id/public/news/eb36e31fde3dfaf63d9b0d668418b02a.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .card {
+            background: #f0eee1; /* Light brown card background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            margin: auto;
+        }
+        
+        .title {
+            font-size: 48px; /* Increase the font size for a larger title */
+            font-weight: 700; /* Apply a bold font weight for emphasis */
+            color: #b57900; /* Brownish text color */
+            text-align: center; /* Center-align the title */
+            margin-bottom: 20px;
+        }
+
+        .lboard_tabs ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            background: #b57900; /* Brown background */
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        
+        .lboard_tabs ul li {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .lboard_tabs ul li:first-child {
+            margin-left: 10px;
+        }
+
+        .lboard_section ul {
+            list-style: none; /* Remove default list styles */
+            display: flex;
+            justify-content: space between;
+            padding: 10px 0;
+        }
+        
+        .lboard_section ul li {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #3a3d51;
+            background: #f3e6c5; /* Light brown background */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .lboard_mem {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            background-color: #b57900; /* Brown background for the button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .login-text {
+            color: #0066cc; /* Change to your desired text color */
+            font-size: 26px; /* Adjust the font size as needed */
+            font-weight: bold; /* Apply bold font weight for emphasis */
+            text-decoration: underline; /* Add an underline to make it look like a link */
+        }
+        </style>
+</head>
+
+
+
+<body>
+
+    <div class="card">
+        <div class="title">Users Leaderboard</div>
+        <div class="lboard_tabs">
+            <ul>
+                <li>Nickname</li>
+                <li>Points</li>
+            </ul>
+        </div>
+        
+        <div class="lboard_section">            
+            {% for data in lboard_data %}
+            <ul>
+                <li>{{ data.nickname }}</li>
+                <li>{{ data.akun.point }}</li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        
+        <div class="lboard_mem">
+            {% if role == 'pengguna' %}
+                {% if not specific_object %}
+                    <a href="{% url 'leaderboard:regboard' %}">
+                        <input class="btn btn-primary" type="submit" value="Register to Leaderboard">
+                    </a>
+                {% else %}
+                {% endif %}
+
+            {% elif role == 'admin' %}
+                <a href="{% url 'leaderboard:clear' %}">
+                    <button type="submit" class="btn btn-danger">Clear Leaderboard</button>
+                </a>
+            {% else %}
+                <a class="login-text">Login to participate in the Leaderboard</a>            
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+<script>
+        function addProduct() {
+            fetch("{% url 'leaderboard:regboard' %}", {
+                method: "POST",
+                body: new FormData(document.querySelector('#form'))
+            }).then(refreshProducts)
+            document.getElementById("form").reset()
+            return false
+            
+        }
+    
+        document.getElementById("button_add").onclick = addProduct
+</script>
+
+
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <title>Books List</title>
+    <link rel="stylesheet" href="/static/book/styles/book.css"/>
+    <style>
+        .image-container {
+          width: 100%;
+        }
+      
+        .image-container img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="/static/book/img/map2.jpg" alt="Map Image">
+      </div>
+    <div class="container">
+        <div class="icon-container">
+            <h1 class="mt-5">All Books</h1>
+            <img src="/static/book/img/book.gif" style="width: 70px;height: 70px;">
+        </div>
+        {% if role == 'pengguna' %}
+        <div class="icon-container">
+            <img src="/static/book/img/warrior.gif" style="width: 45px;height: 45px;">
+            <h2> {{ username }}</h2>
+        </div>
+        <div class="icon-container">
+            <img src="/static/book/img/yen.gif" style="width: 45px;height: 45px;">
+            <h2> {{ point }} BC</h2>
+        </div>
+        {% elif role == 'admin' %}
+        <div class="icon-container">
+            <img src="/static/book/img/crown.gif" style="width: 45px;height: 45px;">
+            <h2>Hallo admin {{ username }}</h2>
+        </div>
+        
+        {% endif %}
+<div class="container">
+    <h1>All Books</h1>
+    <div class="row">
+        {% for book in books %}
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{{ book.thumbnail }}" alt="{{ book.title }}">
+                    <div class="card-body">
+                        <h2>{{ forloop.counter }}. {{ book.title }}</h2>
+                        <p class="card-text">Book Id = {{ book.pk }}</p>
+                        <p class="card-text">Author: {{ book.author }}</p>
+                        <p class="card-text">{{ book.description }}</p>
+                        <p class="card-text">Published Date: {{ book.published_date }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
