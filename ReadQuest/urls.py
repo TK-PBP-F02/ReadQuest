@@ -22,5 +22,7 @@ urlpatterns = [
     path('', include('books.urls')),
     path('', include('users.urls')),
     path('', include('Inventory.urls')),
+    path('', include('make_journey_jurnal.urls'))
+    path('forum/', include('round_table.urls')),
     path('', include('quest.urls')),
 ]

@@ -14,4 +14,4 @@ class Quest(models.Model):
     type = models.CharField(max_length=100, default='WordlQuest')
     amount = models.IntegerField(default=1)
     book_id = models.IntegerField(default=0)
-    container = models.ForeignKey(QuestContainer, on_delete=models.CASCADE)
+    container = models.ForeignKey(QuestContainer, on_delete=models.CASCADE, blank=True, null=True)

@@ -13,4 +13,5 @@ urlpatterns = [
     path('books-dataset/', views.books_dataset, name='books_dataset'),
     path('book-detail/<int:pk>/', views.book_detail, name='book_detail'),
     path('add-book-to-inventory/<int:book_id>/', views.add_book_to_inventory, name='add_book_to_inventory')
+    path('book-act/<int:pk>/', views.book_act, name='book_act'),
 ]

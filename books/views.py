@@ -6,6 +6,8 @@ from .models import Book
 from Inventory.models import Inventory, InventoryBook
 from users.views import custom_login
 from quest.views import roler
+from django.db import models
+from quest.views import quest_point
 
 # Create your views here.
 
@@ -51,6 +53,8 @@ def add_books(request):
 def display_all_books(request):
     books = Book.objects.all()
     user = request.user
+    if not user.is_anonymous:
+        quest_point(request)
     if user.is_anonymous:
         user = "none"
         return render(request, 'book.html', {'books': books, 'user':user, 'role':'not login'})
@@ -68,19 +72,59 @@ def books_dataset(request):
     return render(request, 'books.html', {'books': books})
 
 
+from django.shortcuts import render, get_object_or_404
+from .models import Book
+from users.models import User
+from .models import BookRead, BookBought, BookReviewed
+from django.views.decorators.csrf import csrf_exempt
+
 def book_detail(request, pk):
     book = get_object_or_404(Book, pk=pk)
-    user=request.user
-    user_role = user.role
-    user_inventories = None
-    role = 'none'
+    user = request.user
+    finish = []
+    quest_point(request)
+    if BookRead.objects.filter(user=user, book=book).exists():
+        finish.append("readed")
+    if BookBought.objects.filter(user=user, book=book).exists():
+        finish.append("buyed")
+    if BookReviewed.objects.filter(user=user, book=book).exists():
+        finish.append("reviewed")
+    return render(request, 'book_detail.html', {'book': book, 'role':roler(request), 'finish': finish})
 
-    if user.is_authenticated:
-        if user_role == "PENGGUNA":
-            user_inventories = Inventory.objects.filter(user=user)
-            role = roler(request)
-    return render(request, 'book_detail.html', {'book': book, 'user_inventories': user_inventories, 'role':role})
+@csrf_exempt
+def book_act(request, pk):
+    user = request.user
+    if request.method == 'POST':
+        act = request.POST.get("status")
+        book = Book.objects.get(pk=pk)
 
+        if act == "readed":
+            # Check if the user has already read the book
+            if not BookRead.objects.filter(user=user, book=book).exists():
+                # Increment the user's count of read books
+                # user.readed += 1
+                User.objects.filter(pk=user.pk).update(readed=models.F('readed') + 1)
+                # user.save()
+                BookRead.objects.create(user=user, book=book)
+
+        elif act == "bought":
+            # Check if the user has already bought the book
+            if not BookBought.objects.filter(user=user, book=book).exists():
+                # Increment the user's count of bought books
+                # user.buyed += 1
+                # user.save()
+                User.objects.filter(pk=user.pk).update(buyed=models.F('buyed') + 1)
+                BookBought.objects.create(user=user, book=book)
+
+        elif act == "reviewed":
+            # Check if the user has already reviewed the book
+            if not BookReviewed.objects.filter(user=user, book=book).exists():
+                # Increment the user's count of reviewed books
+                # user.reviewed += 1
+                # user.save()
+                User.objects.filter(pk=user.pk).update(reviewed=models.F('reviewed') + 1)
+                BookReviewed.objects.create(user=user, book=book)
+    return redirect('books:book_detail', pk=pk)
 
 def remove_book(request):
     user = request.user
