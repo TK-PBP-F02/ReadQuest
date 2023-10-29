@@ -82,14 +82,19 @@ def book_detail(request, pk):
     book = get_object_or_404(Book, pk=pk)
     user = request.user
     finish = []
-    quest_point(request)
-    if BookRead.objects.filter(user=user, book=book).exists():
-        finish.append("readed")
-    if BookBought.objects.filter(user=user, book=book).exists():
-        finish.append("buyed")
-    if BookReviewed.objects.filter(user=user, book=book).exists():
-        finish.append("reviewed")
-    return render(request, 'book_detail.html', {'book': book, 'role':roler(request), 'finish': finish})
+    user_inventories = None
+    
+    if user.is_authenticated:
+        quest_point(request)
+        if BookRead.objects.filter(user=user, book=book).exists():
+            finish.append("readed")
+        if BookBought.objects.filter(user=user, book=book).exists():
+            finish.append("buyed")
+        if BookReviewed.objects.filter(user=user, book=book).exists():
+            finish.append("reviewed")
+        user_inventories = Inventory.objects.filter(user=user)
+
+    return render(request, 'book_detail.html', {'book': book, 'user_inventories': user_inventories, 'role':roler(request), 'finish': finish})
 
 @csrf_exempt
 def book_act(request, pk):
