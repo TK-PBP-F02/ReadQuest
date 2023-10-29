@@ -58,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'ReadQuest.urls'
@@ -80,6 +81,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ReadQuest.wsgi.application'
 
+STORAGES = {
+    "staticfiles": {
+        "BACKEND":"whitenoise.storage.CompressedManifestStaticFilesStorage",
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -132,7 +138,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
+STATICFILES_DIRS = []
 STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
 
 # Default primary key field type
