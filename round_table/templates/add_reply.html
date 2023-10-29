@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+{% load static %}
+<head>
+    <title>Add Reply</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-16">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="card-title">Add New Reply</h1>
+                        <p class="card-text">Replying: {{ forum.title }}</p>
+                        <p class="card-text">{{ forum.content }}</p>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {% for elem in form%}
+                            <div>
+                                <textarea name="content" class="form-control mb-3" cols="160" rows="10" maxlength="5000" required="" id="id_content" style="height: 129px;" placeholder="Your text here..."></textarea>
+                            </div>
+                            {% endfor %}
+                            <a href="{% url 'round_table:forum_detail' forum.id %}" class="btn btn-secondary">Back</a>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
