@@ -76,20 +76,4 @@ def add_nickname_ajax(request):
             return HttpResponse(b"NOT FOUND", status=205)
     return HttpResponseNotFound()
 
-# @login_required
-# @csrf_exempt
-# def add_quotes_ajax(request):
-#     if request.method == 'POST':
-#         quotes_form = QuotesForm(request.POST)
-#         print('tess')
-#         if quotes_form.is_valid():
-#             print('tess')
-#             quotes = request.POST.get("quotes")
-#             new_quotes = Quotes(user=request.user, quotes=quotes)
-#             new_quotes.save()
-
-#             return HttpResponse(b"CREATED", status=201)
-#         else:
-#             return HttpResponse(b"NOT FOUND", status=205)
-#     return HttpResponseNotFound()
 
