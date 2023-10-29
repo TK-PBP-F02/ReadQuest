@@ -3,6 +3,8 @@ from django.shortcuts import render
 import requests
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Book
+from Inventory.models import Inventory, InventoryBook
+from users.views import custom_login
 from quest.views import roler
 from django.db import models
 from quest.views import quest_point
@@ -68,6 +70,7 @@ def display_all_books(request):
 def books_dataset(request):
     books = Book.objects.all()
     return render(request, 'books.html', {'books': books})
+
 
 from django.shortcuts import render, get_object_or_404
 from .models import Book
@@ -147,3 +150,18 @@ def search_books(request):
     elif user.role == "ADMIN":
         role = 'admin'
     return render(request, 'search_result.html', {'results': results, 'q':query, 'username':user.username, 'role':role})
+
+def add_book_to_inventory(request, book_id):
+    book = get_object_or_404(Book, pk=book_id)
+    user = request.user
+
+    if request.method == 'POST':
+        folder_id = request.POST.get('folder')
+
+        folder = get_object_or_404(Inventory, pk=folder_id)
+
+        if folder.user == user:
+            if not InventoryBook.objects.filter(inventory=folder, book=book).exists():
+                inventory_book = InventoryBook.objects.create(inventory=folder, book=book)
+                return redirect('books:book_detail', pk=book_id)
+    return redirect('books:book_detail', pk=book_id)

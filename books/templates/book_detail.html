@@ -8,6 +8,21 @@
     <div>
         <div style="text-align: center;">
             <img src="{{ book.image_url }}" alt="{{ book.title }}">
+            {% if user.is_authenticated %}
+                <form action="{% url 'books:add_book_to_inventory' book.pk%}" method="post">
+                    {% csrf_token %}
+                    <label for="folder">Choose Wishlist Folder:</label>
+                    <select id="folder" name="folder" style="width: 200px;">
+                        <h1>{{ user_inventories }}</h1>
+                        <option value="" disabled selected>Select an option</option>
+                        {% for folder in user_inventories %}
+                            <option value="{{ folder.pk }}">{{ folder.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" name="book_id">Add to Inventory</button>
+                </form>
+            {% else %}
+            {% endif %}
             <div>
                 <h2>{{ book.title }}</h2>
                 <p>Book Id: {{ book.pk }}</p>
@@ -54,6 +69,7 @@
 
             </div>
         </div>
+        
     </div>
 </body>
 {% endblock content %}
