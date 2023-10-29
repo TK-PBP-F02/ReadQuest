@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-text">Create Your Library Here!</h1>
+                <button type="button" class="addlib-btn" data-bs-toggle="modal" data-bs-target="#addInventoryModal">Add Library</button>
+            </div>
+        </div>    
+        {% for inventory in user_inventories %}
+            <div class="inventory-container">
+                <h2 style="padding-left: 47px; padding-top: 20px; padding-bottom: 10px; color: beige;">{{ inventory.name }}</h2>
+                <div class="row inventory-books">
+                    {% for book in inventory.inventorybook_set.all %}
+                        <div class="col-md-3">
+                            <div class="book-card">
+                                <div class="card" style="border-radius: 16px; padding: 10px;">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center" style="padding: 7px;">
+                                        <img src="{{ book.book.image_url }}" alt="{{ book.book.title }}" style="margin-bottom: 10px;">
+                                        <h6 class="card-title" style="text-align: center; margin-bottom: 5px;">{{ book.book.title }}</h6>
+                                        <h7 class="author-text" style="margin-bottom: 10px; text-align: center;">
+                                            <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 5px;">draw</span>
+                                            <span style="opacity: 80;">{{ book.book.author }}</span>
+                                        </h7>                                                                                                                                                                           
+                                        <form method="post" action="{% url 'Inventory:delete_book' book.id %}">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="inventory_id" value="{{ inventory.id }}">
+                                            <button class="btn-delete" type="submit" style="width: 200px;border: 2px solid #c8553d; border-radius: 30px; background-color: #c8553d; color: white;">Delete From Inventory</button>
+                                        </form>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>                                   
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}        
+        
+        <div class="modal fade" id="addInventoryModal" tabindex="-1" aria-labelledby="addInventoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: #ffffff;">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="addInventoryModalLabel" style="color: #588B8B; font-weight: 600;">Add New Library</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form" onsubmit="return false;">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="name" class="form-label" style="color: #588B8B;">Library Name:</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Enter Library Name" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal" style="color:#588B8B">Close</button>
+                        <button type="button" class="btn" id="button_add" data-bs-dismiss="modal" style="color:#ffffff; background-color: #588B8B; border: 2px; border-radius: 5px;">Add Library</button>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="row" id="product_cards">            
+        </div>
+
+        <script>
+            function addInventory() {
+                fetch("{% url 'Inventory:create_folder' %}", {
+                    method: "POST",
+                    body: new FormData(document.querySelector('#form'))
+                })
+                .then(function (response) {
+                    if (response.status === 200) {
+                        var myModal = new bootstrap.Modal(document.getElementById("addInventoryModal"));
+                        myModal.hide();
+                        document.getElementById("form").reset();
+                    }
+                });
+                location.reload();
+                return false;
+            }
+        
+            document.getElementById("button_add").onclick = addInventory;
+        </script>
+        
+    {% else %}
+        <div class="login-message">
+            <h2>Silakan login untuk melihat inventaris Anda</h2>
+            <a href="/login/" class="btn btn-primary" style="width: 200px; padding: 10px; border: 1px #c8553d;border-radius: 30px; background-color: #c8553d; ">Login</a>
+        </div>
+    
+        
+    {% endif %}
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #588B8B;
+        }
+
+        .hero {
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            background-color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            border-radius: 24px;
+            font-weight: bold;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-text {
+            margin-bottom: 20px;
+            color: #f28f3b;
+        }
+
+        .addlib-btn {
+            background-color: #f28f3b;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            width: 200px;
+        }
+
+        .inventory-books {
+            padding-right: 40px;
+            padding-left: 40px;
+            
+        }
+
+        .book-card {
+            padding-left: 10px;
+            padding-right: 10px;
+            max-width: 350px;
+            gap: 5px;
+        }
+
+        .author-text {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #588B8B;
+        }
+
+        .login-message {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background-color: #ffffff;
+            margin-left: 50px;
+            margin-right: 50px;
+            border-radius: 30px;
+        }
+
+        .login-message h2 {
+            margin-bottom: 20px;
+        }
+
+
+    </style>
+{% endblock %}
