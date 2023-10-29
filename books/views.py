@@ -67,19 +67,19 @@ def books_dataset(request):
     books = Book.objects.all()
     return render(request, 'books.html', {'books': books})
 
-from django.shortcuts import render, get_object_or_404
-from .models import Book
 
 def book_detail(request, pk):
     book = get_object_or_404(Book, pk=pk)
     user=request.user
+    user_role = user.role
     user_inventories = None
+    role = 'none'
 
     if user.is_authenticated:
-        if user.role == "PENGGUNA":
-            print("wesss")
+        if user_role == "PENGGUNA":
             user_inventories = Inventory.objects.filter(user=user)
-    return render(request, 'book_detail.html', {'book': book, 'user_inventories': user_inventories, 'role':roler(request)})
+            role = roler(request)
+    return render(request, 'book_detail.html', {'book': book, 'user_inventories': user_inventories, 'role':role})
 
 
 def remove_book(request):
@@ -114,21 +114,10 @@ def add_book_to_inventory(request, book_id):
     if request.method == 'POST':
         folder_id = request.POST.get('folder')
 
-        # Validasi apakah pengguna yang sedang masuk memiliki hak akses ke folder ini
         folder = get_object_or_404(Inventory, pk=folder_id)
 
         if folder.user == user:
-            # Pastikan buku belum ada di dalam folder
             if not InventoryBook.objects.filter(inventory=folder, book=book).exists():
-                # Tambahkan buku ke dalam folder inventory
                 inventory_book = InventoryBook.objects.create(inventory=folder, book=book)
-                # Tambahkan logika lain sesuai kebutuhan Anda
-                return redirect('books:book_detail', pk=book_id)  # Redirect ke halaman detail buku
-            # else:
-                # Buku sudah ada dalam folder
-                # Tambahkan logika atau pesan kesalahan yang sesuai
-        # else:
-            # Pengguna tidak memiliki hak akses ke folder ini
-            # Tambahkan logika atau pesan kesalahan yang sesuai
-    # Handle situasi ketika request bukan POST
-    return redirect('books:book_detail', pk=book_id)  # Redirect kembali ke halaman detail buku
+                return redirect('books:book_detail', pk=book_id)
+    return redirect('books:book_detail', pk=book_id)

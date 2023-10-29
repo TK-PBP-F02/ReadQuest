@@ -1,19 +1,32 @@
 from django.shortcuts import render, redirect
-from .models import Inventory, InventoryBook, Book
+from .models import Inventory, InventoryBook
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
-from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.core import serializers
-from django.core.exceptions import ObjectDoesNotExist
+from django.urls import reverse
+from django.views.decorators.http import require_POST
+from quest.views import roler
+
+def roler(request):
+    user = request.user
+    role = 'none'
+    if user.role == "PENGGUNA":
+        role = 'pengguna'
+    elif user.role == "ADMIN":
+        role = 'admin'
+    return role
 
 def user_inventory(request):
     user=request.user
     user_inventories = None
+    role = None
 
     if user.is_authenticated:
         if user.role == "PENGGUNA":
             user_inventories = Inventory.objects.filter(user=user)
-    return render(request, 'inventory.html', {'user_inventories': user_inventories})
+            role = roler(request)
+    return render(request, 'inventory.html', {'user_inventories': user_inventories, 'role' : role})
 
 def get_inventory_json(request):
     inventory_item = Inventory.objects.all()
@@ -24,32 +37,16 @@ def create_folder(request):
     if request.method == 'POST':
         user = request.user
         name = request.POST.get("name")
-
-        # print(name)
         new_product = Inventory.objects.create(user=user, name=name)
 
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
 
-def login_users(request):
-    return render(request, 'users/login.html', {})
+@require_POST
+def delete_book(request, book_id):
+    book = InventoryBook.objects.get(id=book_id)
 
-def get_books_in_inventory(request, inventory_name):
-    try:
-        inventory = Inventory.objects.get(name=inventory_name, user=request.user)
-    except ObjectDoesNotExist:
-        return JsonResponse([], safe=False)  # Mengembalikan JSON kosong jika inventaris tidak ditemukan
+    if book.inventory.user == request.user:
+        book.delete()
 
-    # Ambil semua buku dalam inventaris
-    books = InventoryBook.objects.filter(inventory=inventory)
-
-    # Siapkan data buku
-    book_data = [
-        {
-            'title': book.book.title,
-            'author': book.book.author,
-            'description': book.book.description
-        } for book in books
-    ]
-
-    return JsonResponse(book_data, safe=False)
+    return HttpResponseRedirect(reverse('Inventory:user_inventory'))

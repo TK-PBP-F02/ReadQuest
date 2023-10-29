@@ -13,7 +13,8 @@
                     {% csrf_token %}
                     <label for="folder">Choose Wishlist Folder:</label>
                     <select id="folder" name="folder" style="width: 200px;">
-                    <h1>{{ user_inventories }}</h1>
+                        <h1>{{ user_inventories }}</h1>
+                        <option value="" disabled selected>Select an option</option>
                         {% for folder in user_inventories %}
                             <option value="{{ folder.pk }}">{{ folder.name }}</option>
                         {% endfor %}
