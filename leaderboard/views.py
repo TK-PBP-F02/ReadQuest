@@ -1,3 +1,4 @@
+from django.http import HttpResponseNotFound
 from django.shortcuts import redirect, render
 import requests
 from django.shortcuts import render
@@ -7,7 +8,7 @@ from django.urls import reverse
 from leaderboard.models import Display
 from django.contrib import messages  
 from leaderboard.forms import ProductForm
-from django.shortcuts import render, HttpResponseRedirect, reverse
+from django.shortcuts import render, HttpResponseRedirect, reverse, HttpResponse
 from quest.views import roler
 
 
@@ -61,4 +62,34 @@ def add_point(request):
     uuuser.point+=1
     uuuser.save()
     return HttpResponseRedirect(reverse('leaderboard:leaderboard'))
+
+def add_nickname_ajax(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            akun = request.user
+            nickname = request.POST.get("name")
+            new_product = Display(nickname=nickname, akun=akun)
+            new_product.save()
+            return HttpResponse(b"CREATED", status=201)
+        else:
+            return HttpResponse(b"NOT FOUND", status=205)
+    return HttpResponseNotFound()
+
+# @login_required
+# @csrf_exempt
+# def add_quotes_ajax(request):
+#     if request.method == 'POST':
+#         quotes_form = QuotesForm(request.POST)
+#         print('tess')
+#         if quotes_form.is_valid():
+#             print('tess')
+#             quotes = request.POST.get("quotes")
+#             new_quotes = Quotes(user=request.user, quotes=quotes)
+#             new_quotes.save()
+
+#             return HttpResponse(b"CREATED", status=201)
+#         else:
+#             return HttpResponse(b"NOT FOUND", status=205)
+#     return HttpResponseNotFound()
 

@@ -99,10 +99,10 @@
             font-weight: bold; /* Apply bold font weight for emphasis */
             text-decoration: underline; /* Add an underline to make it look like a link */
         }
-
-
-    </style>
+        </style>
 </head>
+
+
 
 <body>
 
@@ -132,15 +132,11 @@
                         <input class="btn btn-primary" type="submit" value="Register to Leaderboard">
                     </a>
                 {% else %}
-                    <a href="{% url 'leaderboard:add_point' %}">
-                        <input class="btn btn-primary" type="submit" value="Add Points">
-                    </a>
                 {% endif %}
 
             {% elif role == 'admin' %}
                 <a href="{% url 'leaderboard:clear' %}">
                     <button type="submit" class="btn btn-danger">Clear Leaderboard</button>
-
                 </a>
             {% else %}
                 <a class="login-text">Login to participate in the Leaderboard</a>            
@@ -148,6 +144,20 @@
         </div>
     </div>
 </body>
+
+<script>
+        function addProduct() {
+            fetch("{% url 'leaderboard:regboard' %}", {
+                method: "POST",
+                body: new FormData(document.querySelector('#form'))
+            }).then(refreshProducts)
+            document.getElementById("form").reset()
+            return false
+            
+        }
+    
+        document.getElementById("button_add").onclick = addProduct
+</script>
 
 
 {% endblock content %}
