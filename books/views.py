@@ -34,7 +34,13 @@ def add_books_from_google_books_api(query, api_key):
                 author=author,
                 description=description,
                 published_date=published_date,
-                thumbnail=thumbnail
+                thumbnail=thumbnail,
+                publisher=book_info.get('publisher', ''),  # Sesuaikan dengan data yang ada di API
+                publication_date=book_info.get('publishedDate', ''),  # Sesuaikan dengan data yang ada di API
+                page_count=book_info.get('pageCount', 0),  # Sesuaikan dengan data yang ada di API
+                category=book_info.get('categories', ''),  # Sesuaikan dengan data yang ada di API
+                image_url=book_info.get('imageLinks', {}).get('thumbnail', ''),  # Sesuaikan dengan data yang ada di API
+                lang=book_info.get('language', ''),  # Sesuaikan dengan data yang ada di API
             )
 
 def add_books(request):

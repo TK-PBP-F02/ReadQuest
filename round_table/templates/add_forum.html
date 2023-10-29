@@ -4,16 +4,14 @@
 {% load static %}
 <head>
     <title>Add Forum</title>
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="/static/round_table/styles/add_forum.css">
 </head>
 <body>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-16">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="header">
                         <div class="row justify-content-center">
                             <h1 class="card-title justify-content-center">Add New Forum</h1>
                         </div>
@@ -32,7 +30,7 @@
                                     <textarea name="content" class="form-control mb-3" cols="160" rows="10" maxlength="5000" required="" id="id_content" style="height: 129px;" placeholder="Your text here..."></textarea>
                                 </div>
                             <a href="{% url 'round_table:show_all_forum' %}" class="btn btn-secondary">Back to Forums</a>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-submit">Submit</button>
                         </form>
                     </div>
                 </div>

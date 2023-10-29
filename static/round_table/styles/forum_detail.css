@@ -1,0 +1,121 @@
+:root {
+    --first: #588b8b;
+    --second: #ffffff;
+    --third: #ffd5c2;
+    --fourth: #f28f3b;
+    --fifth: #c8553d;
+    --sixth: #36FBFF;
+}
+
+.card {
+    background-color: #fff; /* Set the background color to white */
+    border-radius: 30px; /* Add rounded corners to give it a cloud-like appearance */
+    padding: 10px; /* Add some padding for spacing */
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25); /* Add a subtle shadow */
+}
+
+.header {
+    background-color: var(--sixth); /* Header background color */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 10px; /* Add padding to header */
+}
+
+.card-title {
+    font-size: 24px; /* Title font size */
+}
+
+.card-text {
+    font-size: 16px; /* Text font size */
+}
+
+.btn-delete {
+    background-color: #f00; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none; /* Hapus border agar tombol terlihat lebih bulat */
+    border-radius: 50%; /* Menjadikan tombol sepenuhnya bulat */
+    width: 35px; /* Lebar tombol */
+    height: 35px; /* Tinggi tombol */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    font-size: 18px; /* Ukuran font tombol */
+    cursor: pointer; /* Mengubah kursor menjadi tangan saat di atas tombol */
+    transition: transform 0.2s; /* Tambahkan transisi halus saat tombol diberi hover */
+}
+
+.btn-delete:hover {
+    transform: scale(1.1); /* Perbesar tombol saat dihover */
+}
+
+/* CSS tambahan untuk halaman daftar balasan */
+#replies {
+    margin-top: 10px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px; /* Ukuran font */
+    font-weight: bold;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.replies-text {
+    margin-top: 15px;
+    text-align: center;
+    background-color: #fff; /* Warna latar belakang sesuai tema */
+    border-radius: 30px; /* Menambahkan sudut melengkung pada elemen */
+    width: 200px;
+    height: 50px;
+    padding: 10px; /* Menambahkan jarak dari tepi */
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25); /* Menambahkan bayangan pada elemen */
+    position: relative; /* Mengatur posisi elemen */
+    overflow: hidden; /* Memotong konten yang melampaui elemen */
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: black; /* Warna teks sesuai tema */
+    border-radius: 30px; /* Menambahkan sudut melengkung pada tombol */
+    padding: 10px 20px; /* Menambahkan jarak di sekitar tombol */
+    font-size: 16px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s; /* Transisi untuk perubahan warna latar belakang dan transformasi saat hover */
+}
+
+.btn-secondary:hover {
+    background-color: gray; /* Warna latar belakang saat dihover */
+    transform: scale(1.10); /* Perbesar tombol saat dihover */
+}
+
+.btn-add-reply {
+    margin-left: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: black; /* Warna teks sesuai tema */
+    border-radius: 30px; /* Menambahkan sudut melengkung pada tombol */
+    padding: 10px 20px; /* Menambahkan jarak di sekitar tombol */
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s; /* Transisi untuk perubahan warna latar belakang dan transformasi saat hover */
+}
+.btn-add-reply:hover {
+    background-color: var(--sixth); /* Warna latar belakang saat dihover */
+    transform: scale(1.10); /* Perbesar tombol saat dihover */
+}
