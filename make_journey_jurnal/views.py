@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect, JsonResponse
 from make_journey_jurnal.forms import BookForm, BookDeleteForm
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
+from quest.views import roler
 # Create your views here.
 
 def create_book(request):
@@ -13,7 +14,7 @@ def create_book(request):
         form.save()
         return HttpResponseRedirect(reverse('make_journey_jurnal:display_all_books'))
 
-    context = {'form': form}
+    context = {'form': form, 'role':roler(request)}
     return render(request, "create_book.html", context)
 
 def display_all_books(request):
@@ -46,5 +47,5 @@ def delete_book_make(request):
             return HttpResponseRedirect(reverse('make_journey_jurnal:display_all_books'))  
     else:
         form = BookDeleteForm()
-    return render(request, 'remove_book_make.html', {'form': form})
+    return render(request, 'remove_book_make.html', {'form': form, 'role':roler(request)})
 

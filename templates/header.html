@@ -27,7 +27,7 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   
 </div>
-<div style="padding-top: 57px;">
+<div style="padding-top: 55px;">
 <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
   <a class="navbar-brand" href="{% url 'books:display_all_books' %}">
         ReadQuest
@@ -43,7 +43,7 @@
             Books
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Online Book</a>
+            <a class="dropdown-item" href="/">Online Book</a>
             <a class="dropdown-item" href="/display-all-books/">User Book</a>
           </div>
         </li>
@@ -95,7 +95,9 @@
         {% else %}
         <li class="nav-item table-active">
           <a class="nav-link" href="{% url 'Inventory:user_inventory' %}">Inventory</a>
-          <a class="nav-link" href="/forum/">Forum</a>
+        </li>
+        <li>
+          <a class="nav-link table-active" href="/forum/">Forum</a>
         </li>
         <li class="nav-item table-active">
           <a class="nav-link" href="#">LeaderBoard</a>

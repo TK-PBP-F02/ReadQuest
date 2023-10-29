@@ -1,9 +1,8 @@
 {% extends "base.html" %}
-{% load staticfiles %}
 
 {% block content %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="/static/inventory/styles/inventory.css">
+    <script src="/static/inventory/js/inventory.js"></script>
     {% if user.is_authenticated %}
        <div class="full-container g-0 container-fluid">
             <div class="hero">
@@ -67,7 +66,7 @@
         </div>
         <div class="row" id="product_cards">            
         </div>
-
+        
     {% else %}
         <div class="login-message">
             <h2>Silakan login untuk melihat inventaris Anda</h2>

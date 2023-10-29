@@ -23,9 +23,8 @@ def user_inventory(request):
     role = None
 
     if user.is_authenticated:
-        if user.role == "PENGGUNA":
-            user_inventories = Inventory.objects.filter(user=user)
-            role = roler(request)
+        user_inventories = Inventory.objects.filter(user=user)
+        role = roler(request)
     return render(request, 'inventory.html', {'user_inventories': user_inventories, 'role' : role})
 
 def get_inventory_json(request):

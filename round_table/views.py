@@ -21,7 +21,8 @@ def show_all_forum(request):
 def forum_detail(request, id):
     forum = get_object_or_404(Forum, id=id)
     replies = Replies.objects.filter(parent_forum=forum)
-    return render(request, 'forum_detail.html', {'forum':forum,'replies':replies,'role':roler(request.user)})
+    book = forum.book
+    return render(request, 'forum_detail.html', {'forum':forum,'replies':replies,'role':roler(request.user), 'book':book})
 
 def add_forum(request, book_id=None):
     form = CreateForum(book_id=book_id)
@@ -31,7 +32,7 @@ def add_forum(request, book_id=None):
     elif request.method == 'POST':
         form = CreateForum(request.POST, book_id=book_id)
         if form.is_valid():
-        
+    
             forum = form.save(commit=False)
             forum.author = request.user
             forum.save()
