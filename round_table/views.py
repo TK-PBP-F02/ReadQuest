@@ -1,10 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.csrf import csrf_exempt
 from round_table.models import Forum, Replies
-from users.models import User
 from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from .forms import CreateForum, CreateReplies
-from django.core import serializers
+from django.db.models import Q
 
 def roler(user):
     if user.is_anonymous:
@@ -24,16 +23,19 @@ def forum_detail(request, id):
     replies = Replies.objects.filter(parent_forum=forum)
     return render(request, 'forum_detail.html', {'forum':forum,'replies':replies,'role':roler(request.user)})
 
-def add_forum(request):
-    form = CreateForum(request.POST or None)
+def add_forum(request, book_id=None):
+    form = CreateForum(book_id=book_id)
 
     if request.user.is_anonymous:
         return redirect('user:login')
-    elif form.is_valid() and request.method == 'POST':
-        forum = form.save(commit=False)
-        forum.author = request.user
-        forum.save()
-        return redirect('round_table:show_all_forum')
+    elif request.method == 'POST':
+        form = CreateForum(request.POST, book_id=book_id)
+        if form.is_valid():
+        
+            forum = form.save(commit=False)
+            forum.author = request.user
+            forum.save()
+            return redirect('round_table:show_all_forum')
 
     return render(request, 'add_forum.html', {'form':form,'role':roler(request.user)})
 
@@ -75,7 +77,11 @@ def search_forums(request):
         query = request.GET['q']
         title_results = Forum.objects.filter(title__icontains=query)
         content_results = Forum.objects.filter(content__icontains=query)
+        book_results = Forum.objects.filter(
+            Q(book__title__icontains=query) | Q(book__author__icontains=query)
+        )
         results = title_results.union(content_results)
+        results = results.union(book_results)
     else:
         results = None
     return render(request, 'search_forums.html', {'results': results,'q':query,'username':request.user.username,'role':roler(request.user)})
@@ -87,6 +93,9 @@ def get_forums_json(request):
     for forum in forums:
         data = {
             "id": forum.id,
+            "book_title": forum.book.title,
+            "book_author": forum.book.author,
+            "book_thumnail": forum.book.thumbnail,
             "title": forum.title,
             "content": forum.content,
             "author": forum.author.username,
@@ -106,8 +115,9 @@ def delete_forum_ajax(request, id):
     
     return HttpResponseNotFound()
 
-def get_replies_json(request):
-    replies = Replies.objects.all()
+def get_replies_json(request, forum_id):
+    forum = get_object_or_404(Forum, id=forum_id)
+    replies = Replies.objects.filter(parent_forum=forum)
     forum_data = []
 
     for reply in replies:

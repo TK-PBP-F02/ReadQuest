@@ -2,7 +2,13 @@ from django.db import models
 from users.models import User
 
 class Book(models.Model):
+<<<<<<< HEAD
     isbn = models.CharField(max_length=100)
+=======
+    def __str__(self):
+        return self.title
+    
+>>>>>>> de4bcd25428db364305c5704d96e89ad195c3cec
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     description = models.TextField()

@@ -22,13 +22,17 @@
                         <form method="POST">
                             {% csrf_token %}
                                 <div>
+                                    <label for="id_book" class="col-form-label">Book:</label>
+                                    <div>
+                                        {{ form.book }}
+                                    </div>
                                     <label for="id_title" class="col-form-label">Title:</label>
                                     <input name="title" type="text" class="form-control mb-3" class="form-control mb-3" cols="160" maxlength="100" required="" id="id_title" placeholder="Your text here..."></input>
                                     <label for="id_content" class="col-form-label">Description:</label>
                                     <textarea name="content" class="form-control mb-3" cols="160" rows="10" maxlength="5000" required="" id="id_content" style="height: 129px;" placeholder="Your text here..."></textarea>
                                 </div>
                             <a href="{% url 'round_table:show_all_forum' %}" class="btn btn-secondary">Back to Forums</a>
-                            <button type="submit" class="btn btn-primary">Add Forum</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
