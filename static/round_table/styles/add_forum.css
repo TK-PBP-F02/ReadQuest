@@ -1,0 +1,76 @@
+:root {
+    --first: #588b8b;
+    --second: #ffffff;
+    --third: #ffd5c2;
+    --fourth: #f28f3b;
+    --fifth: #c8553d;
+    --sixth: #36FBFF;
+}
+
+.container {
+    margin-top: 10px;
+}
+
+/* CSS untuk formulir Add New Forum */
+.card {
+    background-color: var(--second); /* Warna latar belakang sesuai tema */
+    border-radius: 30px; /* Menambahkan sudut melengkung */
+    padding: 20px; /* Menambahkan jarak di sekitar elemen */
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25); /* Menambahkan bayangan subtil */
+}
+
+.header {
+    background-color: var(--sixth); /* Warna latar belakang header sesuai tema */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px; /* Menambahkan jarak di sekitar header */
+}
+
+.card-title {
+    font-size: 24px; /* Ukuran font judul */
+    text-align: center; /* Pusatkan judul */
+}
+
+.form-control {
+    border-radius: 30px; /* Menambahkan sudut melengkung pada input form */
+}
+
+textarea {
+    border-radius: 30px; /* Menambahkan sudut melengkung pada textarea */
+}
+
+.btn-secondary {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: black; /* Warna teks sesuai tema */
+    border-radius: 30px; /* Menambahkan sudut melengkung pada tombol */
+    padding: 10px 20px; /* Menambahkan jarak di sekitar tombol */
+    font-size: 16px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s; /* Transisi untuk perubahan warna latar belakang dan transformasi saat hover */
+}
+
+.btn-secondary:hover {
+    background-color: gray; /* Warna latar belakang saat dihover */
+    transform: scale(1.10); /* Perbesar tombol saat dihover */
+}
+
+.btn-submit {
+    margin-left: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: black; /* Warna teks sesuai tema */
+    border-radius: 30px; /* Menambahkan sudut melengkung pada tombol */
+    padding: 10px 20px; /* Menambahkan jarak di sekitar tombol */
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s; /* Transisi untuk perubahan warna latar belakang dan transformasi saat hover */
+}
+.btn-submit:hover {
+    background-color: var(--sixth); /* Warna latar belakang saat dihover */
+    transform: scale(1.10); /* Perbesar tombol saat dihover */
+}

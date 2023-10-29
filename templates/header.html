@@ -4,14 +4,32 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<style>
+  .custom-navbar {
+    background-color: #52F1EBff; /* Replace with your desired color code */
+  }
 
+  /* Change the color of the search input text */
+  .custom-navbar .form-control {
+    color: #FF5733; /* Replace with your desired text color */
+  }
+  
+  /* Change the background and text color of the dropdown menu */
+  .custom-navbar .dropdown-menu {
+    background-color: #04eaed; /* Replace with your desired background color */
+  }
+
+  .custom-navbar .dropdown-item {
+    color: #00519c; /* Replace with your desired text color */
+  }
+</style>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   
 </div>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{% url 'books:display_all_books' %}">
+<div style="padding-top: 55px;">
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
+  <a class="navbar-brand" href="{% url 'books:display_all_books' %}">
         ReadQuest
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,20 +43,23 @@
             Books
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Online Book</a>
-            <a class="dropdown-item" href="#">User Book</a>
+            <a class="dropdown-item" href="/">Online Book</a>
+            <a class="dropdown-item" href="/display-all-books/">User Book</a>
           </div>
         </li>
         
         {% if role == 'pengguna' %}
         <li class="nav-item table-active">
-          <a class="nav-link" href="#">Inventory</a>
+          <a class="nav-link" href="{% url 'Inventory:user_inventory' %}">Inventory</a>
+        </li>
+        <li class="nav-item table-active">
+          <a class="nav-link" href="/forum/">Forum</a>
         </li>
         <li class="nav-item table-active">
           <a class="nav-link" href="/leaderboard/">LeaderBoard</a>
         </li>
         <li class="nav-item table-active">
-          <a class="nav-link" href="#">Make Book</a>
+          <a class="nav-link" href="/create-book/">Make Book</a>
         </li>
         <li class="nav-item table-active">
           <a class="nav-link" href="/quest/">Quest</a>
@@ -48,13 +69,16 @@
         </li>
         {% elif role == 'admin' %}
         <li class="nav-item table-active">
-          <a class="nav-link" href="#">Inventory</a>
+          <a class="nav-link" href="{% url 'Inventory:user_inventory' %}">Inventory</a>
+        </li>
+        <li class="nav-item table-active">
+          <a class="nav-link" href="/forum/">Forum</a>
         </li>
         <li class="nav-item table-active">
           <a class="nav-link" href="/leaderboard/">LeaderBoard</a>
         </li>
         <li class="nav-item table-active">
-          <a class="nav-link" href="#">Make Book</a>
+          <a class="nav-link" href="/create-book/">Make Book</a>
         </li>
         <li class="nav-item table-active">
           <a class="nav-link" href="/quest/">Quest</a>
@@ -70,6 +94,12 @@
         </li>
         {% else %}
         <li class="nav-item table-active">
+          <a class="nav-link" href="{% url 'Inventory:user_inventory' %}">Inventory</a>
+        </li>
+        <li>
+          <a class="nav-link table-active" href="/forum/">Forum</a>
+        </li>
+        <li class="nav-item table-active">
           <a class="nav-link" href="/leaderboard/">LeaderBoard</a>
         </li>
         <li class="nav-item table-active">
@@ -80,13 +110,19 @@
         </li>
         {% endif %}
       </ul>
-      <form class="form-inline my-2 my-lg-0" action="{% url 'books:search_books' %}" method="get">
-    <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form>
 
+      {% if request.path|slice:":7" == '/forum/' %}
+      <form class="form-inline my-2 my-lg-0" action="{% url 'round_table:search_forums' %}" method="get">
+        <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      {% else %}
+      <form class="form-inline my-2 my-lg-0" action="{% url 'books:search_books' %}" method="get">
+        <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      {% endif %}
     </div>
   </nav>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+</div>
   </button>

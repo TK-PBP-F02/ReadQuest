@@ -12,6 +12,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import render, HttpResponseRedirect, reverse
 from django.contrib import messages
+from quest.views import quest_point
 
 def custom_login(request):
     if request.method == 'POST':
@@ -20,6 +21,7 @@ def custom_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)  # Use Django's login function
+            quest_point(request)
             response = HttpResponseRedirect(reverse("books:display_all_books"))
             return response
         else:
@@ -39,7 +41,7 @@ def register_admin(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your account has been successfully created!')
-            return redirect('books:display_all_books')
+            return redirect('user:login')
     context = {'form':form, 'link':'/register/user', 'role':'Admin', 'other_role':'User'}
     return render(request, 'register.html', context)
 
@@ -50,6 +52,6 @@ def register_users(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your account has been successfully created!')
-            return redirect('books:display_all_books')
+            return redirect('user:login')
     context = {'form':form, 'link':'/register/admin', 'role':'User', 'other_role':'Admin'}
     return render(request, 'register.html', context)

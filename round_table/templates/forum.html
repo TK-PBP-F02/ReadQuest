@@ -1,0 +1,91 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+{% load static %}
+<head>
+  <title>Forum</title>
+  <link rel="stylesheet" href="/static/round_table/styles/forum.css">
+</head>
+
+<div class="centered">
+  <div class="round_table_title">
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <h1 class="poppins">Round Table</h1>
+    {% if user.is_authenticated %}
+      <a href="{% url 'round_table:add_forum' %}"><button class="add-forum-btn">Add Forum</button></a>
+    {% endif %}
+  </div>
+</div>
+
+<div class="row w-100" id="forums"></div>
+
+<script>
+  async function getForums() {
+      return fetch("{% url 'round_table:get_forums_json' %}").then((res) => res.json())
+  }
+
+  async function refreshForums() {
+      document.getElementById("forums").innerHTML = ""
+      const forums = await getForums()
+      let htmlString = ``
+      forums.forEach((forum) => {
+          htmlString += `<div class="card w-100 ml-5 mr-4 mt-3">
+            <a href="${forum.id}" style="color:inherit;text-decoration:none;">
+              <div class="card-header">
+                <div class="cloud-header"></div>
+                <div class="cloud-header"></div>
+                <div class="cloud-header"></div>
+                <div class="cloud-header"></div>
+                <div style="display: flex; justify-content: space-between;">
+                  <h5 class="card-title">${forum.title}</h5>
+                  </a>
+                  ${forum.is_owner ? `<button class="btn btn-danger btn-delete" onclick="deleteForum(${forum.id})"><img src="/static/round_table/icon/delete_icon.png"></button>` : ""}
+                </div>
+            <a href="${forum.id}" style="color:inherit;text-decoration:none;">
+              <p class="card-text" style="margin-bottom:0px">Discussing ${forum.book_title} by ${forum.book_author}</p>
+              <p class="card-text" style="margin-top:0px">${forum.author} - Posted on ${formatDate(forum.created_at)}</p>
+              </div>
+              <a href="${forum.id}" style="color:inherit;text-decoration:none;">
+              <div class="card-body">
+                <p class="card-text">${truncateText(forum.content, 200)}</p>
+              </div>
+              </a>
+            </a>
+          </div>`; 
+      })
+      
+      document.getElementById("forums").innerHTML = htmlString
+  }
+
+  refreshForums()
+
+  function deleteForum(id) {
+    const isConfirmed = confirm("Are you sure you want to delete this forum? all of the replies will be deleted too");
+
+    if (isConfirmed) {
+      fetch(`delete-forum-ajax/${id}/`, {
+        method: "DELETE",
+      }).then(refreshForums);
+    }
+
+    return false;
+  }
+
+  function truncateText(text, maxLength) {
+    if (text && text.length > maxLength) {
+        return text.slice(0, maxLength) + '...';
+    }
+    return text;
+  }
+
+  function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-GB', options);
+  }
+</script>
+{% endblock %}

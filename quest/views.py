@@ -5,10 +5,17 @@ from .models import Quest, QuestContainer
 from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from .forms import QuestForm  # Import your QuestForm
 from django.views.decorators.csrf import csrf_exempt
+from users.models import User
+from django.db.models import F
+from django.core import serializers
+
+
 
 def roler(request):
     user = request.user
     role = 'none'
+    if user.is_anonymous:
+        return role
     if user.role == "PENGGUNA":
         role = 'pengguna'
     elif user.role == "ADMIN":
@@ -31,18 +38,20 @@ def create_quest(request):
             book = Book.objects.get(pk=id)
             container, created = QuestContainer.objects.get_or_create(book_key=book)
             Quest.objects.create(name=name, desc=desc, goal=goal, point=point, type=type, container=container)
+            book.quest_amount = 1
+            book.save()
         return HttpResponse(b"CREATED", status=201)
 
     return HttpResponseNotFound()
 
 def quest_book_detail(request, pk):
+    user = request.user
     book = get_object_or_404(Book, pk=pk)
     container = QuestContainer.objects.filter(book_key = book)
-    return render(request, 'quest_book_detail.html', {'book': book, 'container':container, 'role':roler(request)})
+    return render(request, 'quest_book_detail.html', {'book': book, 'container':container, 'role':roler(request), 'user':user})
 
 @csrf_exempt
 def delete_quest(request):
-    print("masuk1")
     if request.method == "POST":
         try:
             id = int(request.POST.get("book_id"))
@@ -81,7 +90,23 @@ def view_quest(request):
     if user.role == "PENGGUNA":
         username = user.username
         point = user.point
-        return render(request, 'quest.html', {'books': books, 'username':username, 'point':point, 'role':'pengguna', 'quests':quests})
+        return render(request, 'quest.html', {'books': books, 'user':user, 'username':username, 'point':point, 'role':'pengguna', 'quests':quests})
     elif user.role == "ADMIN" :
         username = user.username
-        return render(request, 'quest.html', {'books': books, 'username':username, 'role':'admin', 'quests':quests})
+        return render(request, 'quest.html', {'books': books, 'user':user, 'username':username, 'role':'admin', 'quests':quests})
+
+def quest_point(request):
+    user = request.user
+    point = 0
+    quests = Quest.objects.all()
+
+    for quest in quests:
+        if quest.goal == 'Readded' and user.readed >= quest.amount:
+            point += quest.point
+        elif quest.goal == 'Buyed' and user.buyed >= quest.amount:
+            point += quest.point
+        elif quest.goal == 'Review' and user.reviewed >= quest.amount:
+            point += quest.point
+
+    User.objects.filter(pk=user.pk).update(point=point)
+            
