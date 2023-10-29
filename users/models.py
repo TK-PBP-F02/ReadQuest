@@ -14,7 +14,6 @@ class User(AbstractUser):
     buyed = models.IntegerField(default=0)
     reviewed = models.IntegerField(default=0)
     role = models.CharField(max_length=20, choices=Role.choices)
-    # daftar_diri = models.BooleanField(default=False)
     def save(self, *args, **kwargs):
         if not self.pk:
             self.role = self.base_role

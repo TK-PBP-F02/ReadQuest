@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<head>
+    <title>Register to Leaderboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a0850b; /* Light brown background */
+            display: table;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            margin: auto;
+            background-image: url('https://kuliahdimana.id/public/news/eb36e31fde3dfaf63d9b0d668418b02a.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .card {
+            width: 30rem;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin: 170px auto; /* Adjusted for consistency with the mainboard */
+        }
+
+        .card__title {
+            font-size: 23px;
+            font-weight: 900;
+            color: #333;
+        }
+
+        .card__content {
+            font-size: 13px;
+            line-height: 18px;
+            color: #333;
+        }
+
+        .card__form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card__form input {
+            outline: 0;
+            background: rgb(255, 255, 255);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            padding: 0.6em;
+            border-radius: 14px;
+            border: 1px solid #333;
+            color: #333;
+        }
+
+        .card__form button {
+            border: 0;
+            background: #b57900; /* Brown background for the button */
+            color: #fff;
+            padding: 0.68em 1.5em; /* Increase padding for a more prominent button */
+            border-radius: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .card__form button:hover {
+            background: #c68f03; /* Darken the button on hover */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+{% endblock meta %}
+
+{% block content %}
+<form method="POST" action="">
+    {% csrf_token %}
+    <div class="box">
+        <div class="card">
+            <span class="card__title">Register to leaderboard</span>
+            <p class="card__content">Get your profile to appear on the leaderboard</p>
+            <div class="card__form">
+                <input placeholder="Your Nickname" name="nickname" type="text" maxlength="20">
+                <a href="{% url 'leaderboard:leaderboard' %}">
+                    <button type="submit">Register</button>
+                </a>
+            </div>
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %} 
+        </div>
+    </div>
+</form>
+{% endblock content %}
