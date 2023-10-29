@@ -108,9 +108,5 @@ def quest_point(request):
         elif quest.goal == 'Review' and user.reviewed >= quest.amount:
             point += quest.point
 
-    # Update the user's point field in the database
     User.objects.filter(pk=user.pk).update(point=point)
-
-    # Fetch the user object again to get the updated value
-    user = User.objects.get(pk=user.pk)
             

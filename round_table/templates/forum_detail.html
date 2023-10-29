@@ -20,7 +20,7 @@
     </div>
     <div class="card-body">
       <div class="centered">
-        <img class="img-thumbnail" src="{{ forum.book.thumbnail }}" alt="{{ forum.book.title }}">
+        <img class="img-thumbnail" src="{{ forum.book.image_url }}" alt="{{ forum.book.title }}">
       </div>
         <p class="card-text">{{ forum.content|linebreaks }}</p>
         <a href="{% url 'round_table:show_all_forum' %}"><button class="btn-secondary">Back to Forums</button></a>
