@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
+<head>
+    <title>Search Forum</title>
+    <link rel="stylesheet" href="/static/round_table/styles/forum.css">
+</head>
 {% if results %}
     <ul>
         <h1 class="mt-5">Search Results</h1>
             {% for forum in results %}
                 <div class="row w-100">
                     <div class="card w-100 ml-3 mr-3 mt-3">
-                        <div class="card-header">
+                        <div class="header">
                             <div style="display: flex; justify-content: space-between;">
                               <h5 class="card-title">{{ forum.title }}</h5>
                               {% if user.is_authenticated and user == forum.author %}
-                                <a href="{% url 'round_table:delete_forum' forum.id %}" class="btn btn-danger">Delete</a>
+                                <a href="{% url 'round_table:delete_forum' forum.id %}"><button class="btn-delete"><img src="/static/round_table/icon/delete_icon.png"></button></a>
                               {% endif %}
                             </div>
                             <p class="card-text" style="margin-bottom:0px">Discussing {{forum.book.title}} by {{forum.book.author}}</p>

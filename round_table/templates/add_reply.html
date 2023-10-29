@@ -3,14 +3,15 @@
 {% block content %}
 {% load static %}
 <head>
-    <title>Add Reply</title>
+    <title>Add Forum</title>
+    <link rel="stylesheet" href="/static/round_table/styles/add_reply.css   ">
 </head>
 <body>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-16">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="header">
                         <h1 class="card-title">Add New Reply</h1>
                         <p class="card-text">Replying: {{ forum.title }}</p>
                         <p class="card-text">{{ forum.content }}</p>
@@ -24,7 +25,7 @@
                             </div>
                             {% endfor %}
                             <a href="{% url 'round_table:forum_detail' forum.id %}" class="btn btn-secondary">Back</a>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-add-reply">Add Reply</button>
                         </form>
                     </div>
                 </div>
