@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'books',
     'users',
+    'make_journey_jurnal',
 ]
 
 MIDDLEWARE = [

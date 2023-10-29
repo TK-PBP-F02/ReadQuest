@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>All Books</h1>
+    <div class="row">
+        {% for book in books %}
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{{ book.thumbnail }}" alt="{{ book.title }}">
+                    <div class="card-body">
+                        <h2>{{ forloop.counter }}. {{ book.title }}</h2>
+                        <p class="card-text">Book Id = {{ book.pk }}</p>
+                        <p class="card-text">Author: {{ book.author }}</p>
+                        <p class="card-text">{{ book.description }}</p>
+                        <p class="card-text">Published Date: {{ book.published_date }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
