@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
-<html>
 <head>
     <title>Books List</title>
     <link rel="stylesheet" href="/static/book/styles/book.css"/>
@@ -23,7 +21,7 @@
       </div>
     <div class="container">
         <div class="icon-container">
-            <h1 class="mt-5">Online Books</h1>
+            <h1 class="mt-5">All Books</h1>
             <img src="/static/book/img/book.gif" style="width: 70px;height: 70px;">
         </div>
         {% if role == 'pengguna' %}
@@ -42,25 +40,23 @@
         </div>
         
         {% endif %}
-        <div class="card-group">
-            {% for book in books %}
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-                    <div class="card" style="background-color: rgb(236, 235, 141);">
-                        <a href="{% url 'books:book_detail' book.pk %}" style="text-decoration: none; color: inherit;">
-                            <img class="card-img-top" src="{{ book.image_url }}" alt="{{ book.title }}">
-                            <div class="card-body">
-                                <h6 class="card-title" style="text-align: center;">{{ forloop.counter }}</h6>
-                                <h5 class="card-title">{{ book.title }}</h5>
-                                <p class="card-text">Book Id: {{ book.pk }}</p>
-                                <p class="card-text">Author: {{ book.author }}</p>
-                                <p class="card-text">Published Date: {{ book.category}}</p>
-                            </div>
-                        </a>
+<div class="container">
+    <h1>All Books</h1>
+    <div class="row">
+        {% for book in books %}
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{{ book.thumbnail }}" alt="{{ book.title }}">
+                    <div class="card-body">
+                        <h2>{{ forloop.counter }}. {{ book.title }}</h2>
+                        <p class="card-text">Book Id = {{ book.pk }}</p>
+                        <p class="card-text">Author: {{ book.author }}</p>
+                        <p class="card-text">{{ book.description }}</p>
+                        <p class="card-text">Published Date: {{ book.published_date }}</p>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
     </div>
-</body>
+</div>
 {% endblock content %}
-
