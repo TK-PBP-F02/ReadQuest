@@ -5,11 +5,8 @@
     <title>Adventure Quests</title>
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        p{
-            margin : 0;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/quest/quest.css"/>
+
     <link rel="stylesheet" href="/static/book/styles/book.css"/>
 </head>
 <body>
@@ -176,7 +173,7 @@
                     {% for quest in quests %}
                         {% if quest.type == 'WorldQuest' %}
                         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" style="margin: 10px 30px 20px 40px;">
-                            <div class="card" style="height: 70px; margin-top: 10px; width: 15rem; background-color: rgb(236, 235, 141);">
+                            <div class="card" style="height: 70px; margin-top: 10px; width: 15rem;">
                                 <a href="{% url 'quest:quest_detail' quest.pk %}" style="text-decoration: none; color: inherit;">
                                     <div class="card-body" style="padding: 5px; text-align: center;">
                                         <h5 class="card-title quest-name" style="margin-top: 0;">{{ quest.name }}</h5>

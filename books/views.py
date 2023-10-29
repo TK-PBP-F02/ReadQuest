@@ -47,6 +47,8 @@ def add_books_from_google_books_api(query, api_key):
 
 def add_books(request):
     user = request.user
+    if user.is_anonymous or user.role == "PENGGUNA":
+        return render(request, '404.html', {'role':roler(request)})
     if request.method == 'POST':
         query = request.POST.get('query', '')  # Retrieve the query from the form
         api_key = 'AIzaSyDXkWtSpUh78YnFk1AFNBvszdmxffY2nEI'
@@ -139,6 +141,8 @@ def book_act(request, pk):
 
 def remove_book(request):
     user = request.user
+    if user.is_anonymous or user.role == "PENGGUNA":
+        return render(request, '404.html', {'role':roler(request)})
     if request.method == 'POST':
         pk = request.POST.get('pk', None)
         if pk is not None:
