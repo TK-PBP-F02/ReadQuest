@@ -2,6 +2,11 @@
 {% block content %}
 <head>
     <title>{{ book.title }}</title>
+    <style>
+        p{
+            margin : 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -10,17 +15,73 @@
             <img src="{{ book.image_url }}" alt="{{ book.title }}">
             <div>
                 <h2>{{ book.title }}</h2>
+                <h2>{{ book.quest_amount }}</h2>
             </div>
 
             <div>
                 <h2>Book Quest</h2>
-                <ul>
+                <ul style="display: flex; flex-direction: row; align-items: center;">
                     {% for c in container %}
-                        <ul>
                             {% for quest in c.quest_set.all %}
-                                <li>{{ quest.name }}</li>
+                                {% if role == 'pengguna' %}
+                                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" style="margin: 10px 20px 20px 20px;">
+                                        <div class="card" style="height: 140px; margin-top: 10px; width: 20rem;">
+                                            <a href="{% url 'quest:quest_detail' quest.pk %}" style="text-decoration: none; color: inherit;">
+                                                <div class="card-body" style="padding: 5px; text-align: center;">
+                                                    <h5 class="card-title quest-name" style="margin-top: 0;">{{ quest.name }} ({{ quest.point }} BC)</h5>
+                                                    <p class="card-text">{{ quest.goal }} {{ quest.amount }} books</p>
+                                                    {% if quest.goal == 'Readded' %}
+                                                        {% if user.readed >= quest.amount %}
+                                                            <p class="card-text">{{ quest.amount }}/{{ quest.amount }}</p>
+                                                        {% else %}
+                                                            <p class="card-text">{{ user.readed }}/{{ quest.amount }}</p>
+                                                        {% endif %}
+                                                        {% if user.readed >= quest.amount %}
+                                                            <p>Quest Completed</p>
+                                                        {% else %}
+                                                            <p>Let's complete the quest</p>
+                                                        {% endif %}
+                                                    {% elif quest.goal == 'Buyed' %}
+                                                        {% if user.buyed >= quest.amount %}
+                                                            <p class="card-text">{{ quest.amount }}/{{ quest.amount }}</p>
+                                                        {% else %}
+                                                            <p class="card-text">{{ user.buyed }}/{{ quest.amount }}</p>
+                                                        {% endif %}
+                                                        {% if user.buyed >= quest.amount %}
+                                                            <p>Quest Completed</p>
+                                                        {% else %}
+                                                            <p>Let's complete the quest</p>
+                                                        {% endif %}
+                                                    {% elif quest.goal == 'Review' %}
+                                                        {% if user.reviewed >= quest.amount %}
+                                                            <p class="card-text">{{ quest.amount }}/{{ quest.amount }}</p>
+                                                        {% else %}
+                                                            <p class="card-text">{{ user.reviewed }}/{{ quest.amount }}</p>
+                                                        {% endif %}
+                                                        {% if user.reviewed >= quest.amount %}
+                                                            <p>Quest Completed</p>
+                                                        {% else %}
+                                                            <p>Let's complete the quest</p>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                    <p class="card-text"></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" style="margin: 10px 10px 20px 10px;">
+                                        <div class="card" style="height: 90px; margin-top: 10px; width: 15rem;">
+                                            <a href="{% url 'quest:quest_detail' quest.pk %}" style="text-decoration: none; color: inherit;">
+                                                <div class="card-body" style="padding: 5px; text-align: center;">
+                                                    <h5 class="card-title quest-name" style="margin-top: 0;">{{ quest.name }}</h5>
+                                                    <p class="card-text">Quest Id: {{ quest.pk }}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                {% endif %}
                             {% endfor %}
-                        </ul>
                     {% endfor %}
                 </ul>
             </div>

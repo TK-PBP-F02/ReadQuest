@@ -1,23 +1,51 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 <html>
 <head>
     <title>Books List</title>
-    
+    <link rel="stylesheet" href="/static/book/styles/book.css"/>
+    <style>
+        .image-container {
+          width: 100%;
+        }
+      
+        .image-container img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      </style>
 </head>
 <body>
+    <div class="image-container">
+        <img src="/static/book/img/map2.jpg" alt="Map Image">
+      </div>
     <div class="container">
-        <h1 class="mt-5">All Books</h1>
+        <div class="icon-container">
+            <h1 class="mt-5">All Books</h1>
+            <img src="/static/book/img/book.gif" style="width: 70px;height: 70px;">
+        </div>
         {% if role == 'pengguna' %}
-        <h2>Username : {{ username }}</h2>
-        <h2>Point : {{ point }}</h2>
+        <div class="icon-container">
+            <img src="/static/book/img/warrior.gif" style="width: 45px;height: 45px;">
+            <h2> {{ username }}</h2>
+        </div>
+        <div class="icon-container">
+            <img src="/static/book/img/yen.gif" style="width: 45px;height: 45px;">
+            <h2> {{ point }} BC</h2>
+        </div>
         {% elif role == 'admin' %}
-        <h2>Hallo admin {{ username }}</h2>
+        <div class="icon-container">
+            <img src="/static/book/img/crown.gif" style="width: 45px;height: 45px;">
+            <h2>Hallo admin {{ username }}</h2>
+        </div>
+        
         {% endif %}
         <div class="card-group">
             {% for book in books %}
                 <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-                    <div class="card">
+                    <div class="card" style="background-color: rgb(236, 235, 141);">
                         <a href="{% url 'books:book_detail' book.pk %}" style="text-decoration: none; color: inherit;">
                             <img class="card-img-top" src="{{ book.image_url }}" alt="{{ book.title }}">
                             <div class="card-body">
