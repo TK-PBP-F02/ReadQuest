@@ -1,0 +1,12 @@
+.icon-container{
+    display: flex;
+    align-items: center;
+}
+
+body {
+    background-image: url(/static/book/img/image.png);
+    /* background-color: #4FB745; */
+    width: 100%;
+    height: auto;
+    display: block;
+}

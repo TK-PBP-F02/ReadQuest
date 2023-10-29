@@ -4,7 +4,7 @@
 
 ## Link Web
 (Maybe work <?>)  
-[ReadQuest](readquest-f02-tk.pbp.cs.ui.ac.id)
+[ReadQuest](http://readquest-f02-tk.pbp.cs.ui.ac.id)
 
 ### Angota Kelompok
 ------

@@ -1,0 +1,11 @@
+p{
+    margin : 0;
+}
+
+.card{
+    background-color: #71a9a9;
+}
+
+#form, #formDeletem, .modal-dialog, .modal-content, .modal-header, .modal-body{
+    background-color: aqua;
+}
