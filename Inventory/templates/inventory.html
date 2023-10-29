@@ -12,7 +12,7 @@
             </div>    
             {% for inventory in user_inventories %}
                 <div class="inventory-container">
-                    <h2 style="padding-left: 47px; padding-top: 20px; padding-bottom: 10px; margin-top: 5px; color: beige;">{{ inventory.name }}</h2>
+                    <h2 style="padding-left: 47px; padding-top: 20px; padding-bottom: 10px; margin-top: 5px; color: white;">{{ inventory.name }}</h2>
                     <div class="row inventory-books">
                         {% for book in inventory.inventorybook_set.all %}
                             <div class="col-md-3">
