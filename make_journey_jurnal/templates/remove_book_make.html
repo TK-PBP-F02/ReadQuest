@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <title>Remove User-Created Book by ID</title>
+</head>
+<body>
+    <!-- delete_book_by_user.html -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Delete Book</button>
+    </form>
+
+</body>
+{% endblock content %}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'books',
     'users',
+    'make_journey_jurnal',
     'round_table',
     'quest',
 ]
