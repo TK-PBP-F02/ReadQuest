@@ -8,6 +8,8 @@ from users.views import custom_login
 from quest.views import roler
 from django.db import models
 from quest.views import quest_point
+from django.core import serializers
+
 
 # Create your views here.
 
@@ -180,3 +182,7 @@ def add_book_to_inventory(request, book_id):
                 inventory_book = InventoryBook.objects.create(inventory=folder, book=book)
                 return redirect('books:book_detail', pk=book_id)
     return redirect('books:book_detail', pk=book_id)
+
+def view_json(request):
+    data = Book.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
