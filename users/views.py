@@ -13,7 +13,9 @@ from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import render, HttpResponseRedirect, reverse
 from django.contrib import messages
 from quest.views import quest_point
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def custom_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -29,11 +31,13 @@ def custom_login(request):
     context = {}
     return render(request, 'login.html', context)
 
+@csrf_exempt
 def logout_user(request):
     logout(request)
     response = HttpResponseRedirect(reverse('books:display_all_books'))
     return response
 
+@csrf_exempt
 def register_admin(request):
     form = AdminRegistrationForm()
     if request.method == "POST":
@@ -45,6 +49,7 @@ def register_admin(request):
     context = {'form':form, 'link':'/register/user', 'role':'Admin', 'other_role':'User'}
     return render(request, 'register.html', context)
 
+@csrf_exempt
 def register_users(request):
     form = PenggunaRegistrationForm()
     if request.method == "POST":
