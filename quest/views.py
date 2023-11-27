@@ -109,4 +109,7 @@ def quest_point(request):
             point += quest.point
 
     User.objects.filter(pk=user.pk).update(point=point)
-            
+
+def view_json_quest(request):
+    data = Quest.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
