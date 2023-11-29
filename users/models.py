@@ -5,8 +5,6 @@ class Role(models.TextChoices):
         PENGGUNA = "PENGGUNA", 'Pengguna'
         ADMIN = "ADMIN", 'Admin'
 
-
-
 class User(AbstractUser):
     base_role = Role.PENGGUNA
     point = models.IntegerField(default=0)
