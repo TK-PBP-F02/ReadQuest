@@ -101,5 +101,6 @@ def view_json_user(request):
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def view_json_user_id(request, id):
-    data = User.objects.get(pk=id)
+    data = User.objects.filter(pk=id)
+    print(data)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
