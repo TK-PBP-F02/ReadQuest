@@ -17,4 +17,10 @@ urlpatterns = [
     path('delete-forum-ajax/<int:id>/', delete_forum_ajax, name='delete_forum_ajax'),
     path('<int:forum_id>/get-replies/', get_replies_json, name='get_replies_json'),
     path('<int:forum_id>/delete-reply-ajax/<int:reply_id>/', delete_reply_ajax, name='delete_reply_ajax'),
+    path('json_forums/', show_forums_json, name='show_forums_json'),
+    path('json_replies/<int:forum_id>/', show_replies_json, name='show_replies_json'),
+
+    
+
+    
 ]

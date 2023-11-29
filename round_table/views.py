@@ -4,6 +4,8 @@ from round_table.models import Forum, Replies
 from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from .forms import CreateForum, CreateReplies
 from django.db.models import Q
+from django.core import serializers
+
 
 def roler(user):
     if user.is_anonymous:
@@ -141,3 +143,11 @@ def delete_reply_ajax(request, forum_id, reply_id):
         return HttpResponse(b"DELETED", status=200)
     
     return HttpResponseNotFound()
+
+def show_forums_json(request):
+    data = Forum.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_replies_json(request, forum_id):
+    data = Replies.objects.filter(parent_forum=forum_id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")

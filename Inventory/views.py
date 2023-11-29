@@ -50,10 +50,14 @@ def delete_book(request, book_id):
 
     return HttpResponseRedirect(reverse('Inventory:user_inventory'))
 
-def view_json_inventory(request):
-    data = Inventory.objects.all()
+def view_json_inventory(request, pk):
+    data = Inventory.objects.filter(user=pk)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def view_json_inventory_book(request):
     data = InventoryBook.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def view_json_inventory_book_id(request, pk):
+    data = InventoryBook.objects.filter(inventory=pk)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
