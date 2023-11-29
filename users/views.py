@@ -34,7 +34,8 @@ def login_flutter(request):
             return JsonResponse({
                 "username": user.username,
                 "status": True,
-                "message": "Login sukses!"
+                "message": "Login sukses!",
+                "pk" : user.pk
                 # Tambahkan data lainnya jika ingin mengirim data ke Flutter.
             }, status=200)
         else:
@@ -97,4 +98,8 @@ def register_users(request):
 
 def view_json_user(request):
     data = User.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def view_json_user_id(request, id):
+    data = User.objects.get(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
