@@ -13,4 +13,5 @@ urlpatterns = [
     path('user/json-all/', views.view_json_user, name='user_json'),
     path('user/json/<int:id>/', views.view_json_user_id, name='user_json_id'),
     path('login-flutter/', views.login_flutter, name='login_flutter'),
-]
+    path('logout-flutter/', views.logout_flutter, name='logout_flutter'),
+]   
