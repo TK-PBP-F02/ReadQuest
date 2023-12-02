@@ -60,7 +60,6 @@ def delete_quest(request):
             return HttpResponse(b"DELETED", status=201)
         except:
             return HttpResponseNotFound()
-            # return render(request, 'pagenotfound.html', status=404)
 
     return HttpResponseNotFound()
 
@@ -112,4 +111,12 @@ def quest_point(request):
 
 def view_json_quest(request):
     data = Quest.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def view_json_quest_world(request):
+    data = Quest.objects.filter(id=0)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def view_json_quest_book(request):
+    data = Quest.objects.filter(amount=0)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
