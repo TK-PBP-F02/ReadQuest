@@ -112,11 +112,11 @@ def view_json_quest(request):
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def view_json_quest_world(request):
-    data = Quest.objects.filter(book_id=0)
+    data = Quest.objects.filter(container__isnull=True)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def view_json_quest_book(request):
-    data = Quest.objects.filter(amount=0)
+    data = Quest.objects.filter(container__isnull=False)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def view_json_container(request, id):
