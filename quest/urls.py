@@ -15,4 +15,6 @@ urlpatterns = [
     path('quest/json-world/', views.view_json_quest_world, name='view_json_quest_world'),
     path('quest/json-book/', views.view_json_quest_book, name='view_json_quest_book'),
     path('quest/container/<int:id>', views.view_json_container, name='view_json_container'),
+    path('quest/create-book-quest/', views.create_book_quest, name='create-book-quest'),
+    path('quest/create-world-quest/', views.create_world_quest, name='create-world-quest'),
 ]
