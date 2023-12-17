@@ -26,6 +26,7 @@ def forum_detail(request, id):
     book = forum.book
     return render(request, 'forum_detail.html', {'forum':forum,'replies':replies,'role':roler(request.user), 'book':book})
 
+@csrf_exempt
 def add_forum(request, book_id=None):
     form = CreateForum(book_id=book_id)
 
@@ -42,6 +43,7 @@ def add_forum(request, book_id=None):
 
     return render(request, 'add_forum.html', {'form':form,'role':roler(request.user)})
 
+@csrf_exempt
 def add_reply(request, id):
     forum = get_object_or_404(Forum, id=id)
     form = CreateReplies(request.POST or None)
@@ -103,7 +105,7 @@ def get_forums_json(request):
             "content": forum.content,
             "author": forum.author.username,
             "created_at": forum.created_at,
-            "is_owner": request.user.is_authenticated and request.user == forum.author,
+            "is_owner": request.user == forum.author,
         }
         forum_data.append(data)
 
@@ -130,7 +132,7 @@ def get_replies_json(request, forum_id):
             "content": reply.content,
             "author": reply.author.username,
             "created_at": reply.created_at,
-            "is_owner": request.user.is_authenticated and request.user == reply.author,
+            "is_owner": request.user == reply.author,
         }
         forum_data.append(data)
 
