@@ -1,11 +1,11 @@
+import json
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.csrf import csrf_exempt
+from books.models import Book
 from round_table.models import Forum, Replies
 from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from .forms import CreateForum, CreateReplies
 from django.db.models import Q
-from django.core import serializers
-
 
 def roler(user):
     if user.is_anonymous:
@@ -98,7 +98,7 @@ def get_forums_json(request):
             "id": forum.id,
             "book_title": forum.book.title,
             "book_author": forum.book.author,
-            "book_thumnail": forum.book.thumbnail,
+            "book_thumbnail": forum.book.image_url,
             "title": forum.title,
             "content": forum.content,
             "author": forum.author.username,
@@ -126,6 +126,7 @@ def get_replies_json(request, forum_id):
     for reply in replies:
         data = {
             "id": reply.id,
+            "ForumId": forum_id,
             "content": reply.content,
             "author": reply.author.username,
             "created_at": reply.created_at,
@@ -144,10 +145,49 @@ def delete_reply_ajax(request, forum_id, reply_id):
     
     return HttpResponseNotFound()
 
-def show_forums_json(request):
-    data = Forum.objects.all()
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+@csrf_exempt
+def create_forum_flutter(request):
+    if request.method == 'POST':
 
-def show_replies_json(request, forum_id):
-    data = Replies.objects.filter(parent_forum=forum_id)
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+        data = json.loads(request.body)
+        book_from_id = get_object_or_404(Book, pk=int(data['book']))
+
+        new_forum = Forum.objects.create(
+            author = request.user,
+            book = book_from_id,
+            title = data["title"],
+            content = data["content"],
+        )
+        new_forum.save()
+
+        return JsonResponse({"status": "success"}, status=200)
+    else:
+        return JsonResponse({"status": "error"}, status=401)
+    
+@csrf_exempt
+def create_replies_flutter(request):
+    if request.method == 'POST':
+        
+        data = json.loads(request.body)
+        parent_forum_from_id = get_object_or_404(Forum, pk=int(data['parent_forum']))
+
+        new_replies = Replies.objects.create(
+            author = request.user,
+            parent_forum = parent_forum_from_id,
+            content = data["content"],
+        )
+
+        new_replies.save()
+
+        return JsonResponse({"status": "success"}, status=200)
+    else:
+        return JsonResponse({"status": "error"}, status=401)
+    
+@csrf_exempt
+def delete_forum_flutter(request, id):
+    if request.method == 'DELETE':
+        forum = get_object_or_404(Forum, pk=id)
+        forum.delete()
+        return JsonResponse({"status": "success"}, status=200)
+    else:
+        return JsonResponse({"status": "error"}, status=401)
