@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+import json
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 import requests
 from django.shortcuts import render, get_object_or_404, redirect
@@ -171,7 +172,6 @@ def search_books(request):
 def add_book_to_inventory(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     user = request.user
-
     if request.method == 'POST':
         folder_id = request.POST.get('folder')
 
@@ -186,3 +186,37 @@ def add_book_to_inventory(request, book_id):
 def view_json(request):
     data = Book.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def book_detail_json(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    data = serializers.serialize("json", [book])
+
+    return HttpResponse(data, content_type="application/json")
+
+@csrf_exempt
+def add_book_to_inventory_flutter(request, book_id):
+    book = get_object_or_404(Book, pk=book_id)
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        inventory_data_str = json.dumps(data.get('Inventory.inventorybook', []))
+        if inventory_data_str:
+            inventory_data = json.loads(inventory_data_str)
+            if inventory_data:
+                inventory_entry = inventory_data[0]
+                this_inventory = inventory_entry.get("fields")
+                inventory_id = this_inventory.get('inventory')
+                inventory = get_object_or_404(Inventory, pk=inventory_id)
+                if not InventoryBook.objects.filter(inventory = inventory, book = book).exists():
+                    add_book = InventoryBook.objects.create(
+                        inventory =  inventory,
+                        book = book,
+                    )
+
+                    add_book.save()
+
+                    return JsonResponse({"status": "success"}, status=200)
+                else:
+                    return JsonResponse({"status": "exist"}, status=200)
+
+    else:
+        return JsonResponse({"status": "error"}, status=401)
