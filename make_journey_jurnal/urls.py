@@ -1,5 +1,5 @@
 from django.urls import path, include
-from make_journey_jurnal.views import create_book, display_all_books, book_detail_make, delete_book_make
+from make_journey_jurnal.views import create_book, display_all_books, book_detail_make, delete_book_make, create_book_flutter
 
 app_name = 'make_journey_jurnal'
 
@@ -8,4 +8,5 @@ urlpatterns = [
     path('display-all-books/', display_all_books, name='display_all_books'),
     path('book-detail-make/<int:pk>/',book_detail_make, name='book_detail_make'),
     path('delete-book-make/', delete_book_make, name='delete_book_make'),
+    path('create-flutter/', create_book_flutter, name='create_book_flutter'),
     ]
