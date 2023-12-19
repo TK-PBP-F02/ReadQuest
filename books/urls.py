@@ -16,5 +16,6 @@ urlpatterns = [
     path('book-act/<int:pk>/', views.book_act, name='book_act'),
     path('json-all/', views.view_json, name='json_all'),
     path('json-book/<int:pk>/', views.book_detail_json, name='book_detail_json'),
-    path('add-book-to-inventory-flutter/<int:book_id>/', views.add_book_to_inventory_flutter, name='add_book_to_inventory_flutter')
+    path('add-book-to-inventory-flutter/<int:book_id>/', views.add_book_to_inventory_flutter, name='add_book_to_inventory_flutter'),
+    path('json-book/<int:id>', views.view_json_book_id, name='json_book_id'),
 ]

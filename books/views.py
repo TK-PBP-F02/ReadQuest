@@ -142,6 +142,7 @@ def book_act(request, pk):
                 BookReviewed.objects.create(user=user, book=book)
     return redirect('books:book_detail', pk=pk)
 
+@csrf_exempt
 def remove_book(request):
     user = request.user
     if user.is_anonymous or user.role == "PENGGUNA":
@@ -220,3 +221,7 @@ def add_book_to_inventory_flutter(request, book_id):
 
     else:
         return JsonResponse({"status": "error"}, status=401)
+
+def view_json_book_id(request, id):
+    data = Book.objects.filter(pk=id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")

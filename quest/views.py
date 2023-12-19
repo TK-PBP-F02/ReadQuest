@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import get_object_or_404, render
 from books.models import Book
 from .models import Quest, QuestContainer
@@ -8,8 +9,6 @@ from django.views.decorators.csrf import csrf_exempt
 from users.models import User
 from django.db.models import F
 from django.core import serializers
-
-
 
 def roler(request):
     user = request.user
@@ -38,7 +37,7 @@ def create_quest(request):
             book = Book.objects.get(pk=id)
             container, created = QuestContainer.objects.get_or_create(book_key=book)
             Quest.objects.create(name=name, desc=desc, goal=goal, point=point, type=type, container=container)
-            book.quest_amount = 1
+            book.quest_amount += 1
             book.save()
         return HttpResponse(b"CREATED", status=201)
 
@@ -114,9 +113,58 @@ def view_json_quest(request):
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def view_json_quest_world(request):
-    data = Quest.objects.filter(id=0)
+    data = Quest.objects.filter(container__isnull=True)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def view_json_quest_book(request):
-    data = Quest.objects.filter(amount=0)
+    data = Quest.objects.filter(container__isnull=False)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def view_json_container(request, id):
+    data = QuestContainer.objects.filter(pk=id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+@csrf_exempt
+def create_book_quest(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        books = Book.objects.filter(title=data["book_id"])
+        book = books[0]
+        container, created = QuestContainer.objects.get_or_create(book_key=book)
+        new_quest = Quest.objects.create(
+            name = data["name"],
+            desc = data["desc"],
+            goal = data["goal"],
+            point = int(data["point"]),
+            type = "BookQuest", 
+            amount = 1,
+            container = container
+        )
+        new_quest.save()
+        book.quest_amount += 1
+        book.save()
+
+        return JsonResponse({"status" : "success"}, status=200)
+
+    else:
+        return JsonResponse({"status" : "error"}, status=401)
+    
+@csrf_exempt
+def create_world_quest(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        new_quest = Quest.objects.create(
+            name = data["name"],
+            desc = data["desc"],
+            goal = data["goal"],
+            point = int(data["point"]),
+            type = "WorldQuest",
+            amount = data["amount"],
+            container = None
+        )
+        new_quest.save()
+
+        return JsonResponse({"status" : "success"}, status=200)
+    
+    else:
+        return JsonResponse({"status" : "error"}, status=401)
