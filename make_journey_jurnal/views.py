@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Book
 from django.http import HttpResponseRedirect, JsonResponse
@@ -16,6 +17,16 @@ def create_book(request):
 
     context = {'form': form, 'role':roler(request)}
     return render(request, "create_book.html", context)
+
+def create_book_flutter(request):
+    form = BookForm(request.POST or None)
+
+    if form.is_valid() and request.method == "POST":
+        form.save()
+        data = json.loads(request.body)
+        return JsonResponse({"status": "success"}, status=200)
+    else:
+        return JsonResponse({"status": "error"}, status=401)
 
 def display_all_books(request):
     books = Book.objects.all()
